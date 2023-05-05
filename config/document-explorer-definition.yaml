@@ -33,24 +33,7 @@
     link: docs/getting-started.md
 - sections:
   - title: Release notes
-   - sections:  
-     - title: Android
-       link: docs/release-notes/2022/march.md
-     - sections:
-       - title: Updated Kotlin
-         link: docs/release-notes/2022/march.md
-       - sections:
-         - title: ZelleSDK_V_1.5.1.aar
-           link: docs/release-notes/2022/march.md
-     - sections:
-       - title: Downgraded Kotlin
-         link: docs/release-notes/2022/march.md
-       - sections:
-         - title: ZelleSDK_V_2.1.3.aar
-           link: docs/release-notes/2022/march.md
-   - sections:
-     - title: iOS
-       link: docs/release-notes/2022/march.md  
-     - sections:
-       - title: ZelleSDK_V_1.4.5.xcframework
-         link: docs/release-notes/2022/march.md
+- sections:  
+  - title: Android
+    link: docs/release-notes/2022/march.md
+     
