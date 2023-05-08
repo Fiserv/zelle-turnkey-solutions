@@ -36,7 +36,8 @@
 - sections:  
   - title: Android
     link: docs/release-notes/2022/march.md
-    - sections:
+   
+   - sections:
        - title: Updated Kotlin
          link: docs/release-notes/2022/march.md
      
