@@ -38,6 +38,6 @@
     link: docs/release-notes/2022/march.md
    
    - sections:
-       - title: Updated Kotlin
-         link: docs/release-notes/2022/march.md
+     - title: Updated Kotlin
+       link: docs/release-notes/2022/march.md
      
