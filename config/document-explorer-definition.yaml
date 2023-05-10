@@ -66,6 +66,8 @@
               sections:
               - title: ZelleSDK_V_2.1.2
                 link: docs/release-notes/Android/downgraded-kotlin/ZelleSDK_V_2.1.2.md
+              - title: ZelleSDK_V_2.1.1
+                link: docs/release-notes/Android/downgraded-kotlin/ZelleSDK_V_2.1.2.md
 
         - title: iOS
           sections:
