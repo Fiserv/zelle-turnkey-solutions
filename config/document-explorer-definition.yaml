@@ -29,13 +29,24 @@
 ################################################################################
 
 - sections:
-  - title: Getting Started
-    link: docs/getting-started.md
+    - title: Getting Started
+      link: docs/getting-started.md
 - sections:
-  - title: Release notes
-    x-child-product-name: Android
-    x-group-name: Updated Kotlin
-    x-proxy-name: ZelleSDK_V_1.5.1
+    - title: Release notes
+      link:
+      open: true
+      sections:
+        - title: Android latest build
+          sections:
+            - title: ZelleSDK_V_1.5.2
+              link: docs/release-notes/Android/updated-kotlin/ZelleSDK_V_1.5.2.md
+            - title: ZelleSDK_V_2.1.2
+              link: docs/release-notes/Android/downgraded-kotlin/ZelleSDK_V_2.1.2.md
+
+        - title: iOS latest build
+          sections:
+            - title: ZelleSDK_V_1.4.5
+              link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
 
 
      

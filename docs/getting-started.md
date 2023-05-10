@@ -1,4 +1,4 @@
-# Documentation
+# About ZelleSDK
 
 ZelleSDK is library which enables native capabilities such access to native contacts book, camera access, gallery access, print, share the images etc.
 for android and iOS platforms.
