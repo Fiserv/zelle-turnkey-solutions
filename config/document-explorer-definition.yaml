@@ -31,6 +31,7 @@
 - sections:
     - title: Getting Started
       link: docs/getting-started.md
+
 - sections:
     - title: Release notes
       link:
@@ -47,6 +48,48 @@
           sections:
             - title: ZelleSDK_V_1.4.5
               link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
+
+- sections:
+    - title: Version History
+      link:
+      open: true
+      sections:
+        - title: Android
+          sections:
+            - title: Updated Kotlin
+              sections:
+                - title: ZelleSDK_V_1.5.2
+                  link: docs/release-notes/Android/updated-kotlin/ZelleSDK_V_1.5.2.md
+                - title: ZelleSDK_V_1.5.1
+                  link: docs/release-notes/Android/updated-kotlin/ZelleSDK_V_1.5.2.md
+                - title: ZelleSDK_V_1.5.0
+                  link: docs/release-notes/Android/updated-kotlin/ZelleSDK_V_1.5.2.md
+                - title: ZelleSDK_V_1.4.9
+                  link: docs/release-notes/Android/updated-kotlin/ZelleSDK_V_1.5.2.md
+
+            - title: Downgraded Kotlin
+              sections:
+                - title: ZelleSDK_V_2.1.2
+                  link: docs/release-notes/Android/downgraded-kotlin/ZelleSDK_V_2.1.2.md
+                - title: ZelleSDK_V_2.1.1
+                  link: docs/release-notes/Android/downgraded-kotlin/ZelleSDK_V_2.1.2.md
+                - title: ZelleSDK_V_2.1.0
+                  link: docs/release-notes/Android/downgraded-kotlin/ZelleSDK_V_2.1.2.md
+                - title: ZelleSDK_V_2.0.9
+                  link: docs/release-notes/Android/downgraded-kotlin/ZelleSDK_V_2.1.2.md
+
+        - title: iOS
+          sections:
+            - title: ZelleSDK_V_1.4.5
+              link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
+            - title: ZelleSDK_V_1.4.4
+              link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
+            - title: ZelleSDK_V_1.4.3
+              link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
+            - title: ZelleSDK_V_1.4.2
+              link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
+
+
 
 
      
