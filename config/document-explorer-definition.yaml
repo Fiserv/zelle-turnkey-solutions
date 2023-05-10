@@ -31,7 +31,6 @@
 - sections:
     - title: Getting Started
       link: docs/getting-started.md
-
 - sections:
     - title: Release notes
       link:
