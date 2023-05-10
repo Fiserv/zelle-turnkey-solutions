@@ -60,6 +60,8 @@
               sections:
               - title: ZelleSDK_V_1.5.2
                 link: docs/release-notes/Android/updated-kotlin/ZelleSDK_V_1.5.2.md
+              - title: ZelleSDK_V_1.5.1
+                link: docs/release-notes/Android/updated-kotlin/ZelleSDK_V_1.5.2.md
             - title: Downgraded Kotlin
               sections:
               - title: ZelleSDK_V_2.1.2
