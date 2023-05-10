@@ -55,7 +55,6 @@
       sections:
         - title: Android
           link:
-          open: true
           sections:
             - title: Updated Kotlin
               sections:
