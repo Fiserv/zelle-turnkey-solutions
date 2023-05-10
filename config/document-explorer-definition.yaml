@@ -33,16 +33,11 @@
     link: docs/getting-started.md
 - sections:
   - title: Release notes
-  - sections:  
-    - title: Android
-      link: docs/release-notes/2022/march.md
-    - sections:
-      - title: Updated Kotlin
-        link: docs/release-notes/2022/march.md
-    - sections:
-      - title: Downgraded Kotlin
-        link: docs/release-notes/2022/march.md
-  - sections:
-    - title: iOS
-      link: docs/release-notes/2022/march.md
+    x-child-product-name: Android
+    x-group-name: Updated Kotlin
+    x-proxy-name: ZelleSDK_V_1.5.1
+    x-group-name: Downgraded Kotlin
+    x-proxy-name: ZelleSDK_V_2.1.2
+    x-child-product-name: iOS
+    x-proxy-name: ZelleSDK_V_1.4.4
      
