@@ -112,8 +112,6 @@
             - title: Integration Steps
               link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
             - title: DLL Files
-              link:
-              open: true
               sections:
                 - title: Android
                   sections:
