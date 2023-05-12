@@ -127,6 +127,32 @@
                   - title: ZelleSDK_V_1.0.1
                     link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
 
+        - title: Flutter
+          sections:
+            - title: Integration Steps
+              link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
+
+        - title: ReactNative
+          sections:
+            - title: Integration Steps
+              link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
+
+        - title: Cordova
+          sections:
+            - title: Integration Steps
+              link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
+            - title: Plugin Files
+              sections:
+                - title: ZelleSDK_V_1.0.0
+                  link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
+                - title: ZelleSDK_V_1.0.1
+                  link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
+
+        - title: Kony
+          sections:
+            - title: Integration Steps
+              link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
+
 
 
 
