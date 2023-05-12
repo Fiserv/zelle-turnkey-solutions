@@ -88,6 +88,48 @@
             - title: ZelleSDK_V_1.4.2
               link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
 
+- sections:
+    - title: Supporting Platforms
+      link:
+      open: true
+      sections:
+        - title: Android
+          sections:
+            - title: Kotlin
+              link: docs/release-notes/Android/updated-kotlin/ZelleSDK_V_1.5.2.md
+            - title: Java
+              link: docs/release-notes/Android/downgraded-kotlin/ZelleSDK_V_2.1.2.md
+
+        - title: iOS
+          sections:
+            - title: Swift
+              link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
+            - title: Objective C
+                link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
+
+        - title: Xamarin
+          sections:
+            - title: Integration Steps
+              link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
+            - title: DLL Files
+              sections:
+                - title: Android
+                  sections:
+                  - title: ZelleSDK_V_1.0.0
+                    link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
+                  - title: ZelleSDK_V_1.0.1
+                    link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
+
+                - title: iOS
+                  sections:
+                  - title: ZelleSDK_V_1.0.0
+                    link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
+                  - title: ZelleSDK_V_1.0.1
+                    link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
+
+
+
+
 
 
      
