@@ -1,20 +1,20 @@
 # Release Notes
 
-April 03 2022
+April 30 2023
 
-## v1.0.0 (api version)
+## v_1.5.2 (SDK version)
 
 ## What's New
 
-- Something new that was added or introduced like a documents or a services.  [Possible link to the doc](?path=/docs/getting-started.md)
+- FI can customise the loader color and it's background during the loading time.
 
 ## Enhancements
 
-- Description of an improvement or a change
+- Custom loader implementation
 
 ## Fixed
 
-- github issue that was fixed. [Possible github issue link ](https://github.com/Fiserv/Support/issues)
+- Memory leak that was fixed.
 
 ## Known Issues
 
@@ -22,8 +22,13 @@ April 03 2022
 
 ## Deprecated
 
-- regarded as obsolete and best avoided
+- ZelleSDKC_V_1.5.0
+- ZelleSDKB_V_1.5.0
 
 
-March 17 2022
+February 17 2023
+
+## Supporting platforms
+
+- [Flutter](?path=docs/getting-started.md)
 
