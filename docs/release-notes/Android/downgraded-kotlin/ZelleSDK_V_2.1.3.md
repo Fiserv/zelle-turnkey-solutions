@@ -2,7 +2,7 @@
 
 April 30 2023
 
-## V_1.5.2 (SDK version)
+## V_2.1.3 (SDK version)
 
 ## What's New
 
@@ -18,8 +18,8 @@ April 30 2023
 
 ## Deprecated
 
-- ZelleSDKC_V_1.5.0
-- ZelleSDKB_V_1.5.0
+- ZelleSDKC_V_2.1.2
+- ZelleSDKB_V_2.1.2
 
 ## Supporting platforms
 

@@ -1,29 +1,30 @@
 # Release Notes
 
-April 03 2022
+April 30 2023
 
-## v1.0.0 (api version)
+## V_1.4.5 (SDK version)
 
 ## What's New
 
-- Something new that was added or introduced like a documents or a services.  [Possible link to the doc](?path=/docs/getting-started.md)
+- FI can customize the loader color and it's background during the loading time.
 
 ## Enhancements
 
-- Description of an improvement or a change
+- Custom loader implementation
 
 ## Fixed
 
-- github issue that was fixed. [Possible github issue link ](https://github.com/Fiserv/Support/issues)
-
-## Known Issues
-
-- persistent issue that's not fixed.
+- Memory leak that was fixed.
 
 ## Deprecated
 
-- regarded as obsolete and best avoided
+- ZelleSDKC_V_1.4.4
+- ZelleSDKB_V_1.4.4
 
+## Supporting platforms
 
-March 17 2022
-
+- [Cordova](?path=docs/supporting-documents/cordova.md)
+- [Flutter](?path=docs/supporting-documents/fultter.md)
+- [Kony](?path=docs/supporting-documents/kony.md)
+- [React Native](?path=docs/supporting-documents/react-native.md)
+- [Xamarin](?path=docs/supporting-documents/xamarin.md)
