@@ -16,17 +16,10 @@ April 30 2023
 
 - Memory leak that was fixed.
 
-## Known Issues
-
-- persistent issue that's not fixed.
-
 ## Deprecated
 
 - ZelleSDKC_V_1.5.0
 - ZelleSDKB_V_1.5.0
-
-
-February 17 2023
 
 ## Supporting platforms
 
