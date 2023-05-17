@@ -16,6 +16,10 @@ April 30 2023
 
 - Memory leak that was fixed.
 
+## Build
+
+- [ZelleSDK_V_2.1.3](?path=docs/builds/Android/downgraded-kotlin/ZelleSDK_V_2.1.3.aar)
+
 ## Deprecated
 
 - ZelleSDKC_V_2.1.2

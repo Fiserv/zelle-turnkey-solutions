@@ -13,7 +13,7 @@ July 15 2022
 
 - Prominent Disclosure implementation for Contact Permission
 
-### Prominent Disclosure Initialisation
+### Prominent Disclosure Initialization
 
 ```json
 val pdContact = mapOf(
@@ -42,4 +42,8 @@ val zelle = Zelle(
 appData = appData
 )
 ``` 
+
+## Build
+
+- [ZelleSDK_V_2.0.5](?path=docs/builds/Android/downgraded-kotlin/ZelleSDK_V_2.0.5.aar)
 

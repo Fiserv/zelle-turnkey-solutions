@@ -16,7 +16,19 @@ April 30 2023
 
 - Memory leak that was fixed.
 
+## Build
+
+- [ZelleSDK_V_1.5.1](?path=docs/builds/Android/upgraded-kotlin/ZelleSDK_V_1.5.1.aar)
+
 ## Deprecated
 
 - ZelleSDKC_V_1.5.0
 - ZelleSDKB_V_1.5.0
+
+## Supporting platforms
+
+- [Cordova](?path=docs/supporting-documents/cordova.md)
+- [Flutter](?path=docs/supporting-documents/flutter.md)
+- [Kony](?path=docs/supporting-documents/kony.md)
+- [React Native](?path=docs/supporting-documents/react-native.md)
+- [Xamarin](?path=docs/supporting-documents/xamarin.md)
