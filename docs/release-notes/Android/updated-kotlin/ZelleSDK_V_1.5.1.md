@@ -16,6 +16,17 @@ April 30 2023
 
 - Memory leak that was fixed.
 
+### Custom Loader Implementation
+
+```json
+val zelle = Zelle(
+loaderData = mapOf(
+"loaderColor" to "#ffffff",
+"bgColor" to "#747474"
+)
+)
+```
+
 ## Build
 
 - [ZelleSDK_V_1.5.1](?path=docs/builds/Android/upgraded-kotlin/ZelleSDK_V_1.5.1.aar)
