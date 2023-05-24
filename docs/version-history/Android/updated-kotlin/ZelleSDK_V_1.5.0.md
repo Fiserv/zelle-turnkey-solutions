@@ -6,7 +6,7 @@ February 17 2023
 
 ## What's New
 
-- To prevent crashing while executing in the main thread, a second thread was created to open the PD alert.
+- To prevent crashing while executing in the main thread, a secondary thread was created to open the PD alert.
 
 ## Fixed
 

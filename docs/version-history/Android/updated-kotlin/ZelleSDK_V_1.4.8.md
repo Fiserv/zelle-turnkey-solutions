@@ -1,30 +1,38 @@
 # Release Notes
 
-April 30 2023
+October 21 2022
 
-## V_1.5.2 (SDK version)
+## V_1.4.8 (SDK version)
 
 ## What's New
 
-- FI can customize the loader color and it's background during the loading time.
-
-## Enhancements
-
-- Custom loader implementation
+- This feature will make it easier for Zelle UI and the parent app to open the desired screen out of Zelle Screen.
 
 ## Fixed
 
-- Memory leak that was fixed.
+- Generic Callback Update.
 
-## Deprecated
+### Generic Callback Implementation
 
-- ZelleSDKC_V_1.5.0
-- ZelleSDKB_V_1.5.0
+```json
+Class ZelleLaunchFragment: Fragment (), GenericTag{
+override fun onCreateView(inflater: LayoutInflater, container ViewGroup?, savedInstanceState: Bundle?) {
+_binding = FragmentZelleLaunchBinding.inflater.inflate(inflater, container, false)
+        
+***Initialize generic tag***
+genericTag = this
+        
+return binding.root
+}
+}
 
-## Supporting platforms
+override fun getValue(name: String) { 
+    if (name == “TAG_NAME”) {
+        ***Here navigates the application to the desired screen. (This function will help to communicate between Zelle UI and parent app)***
+    } 
+} 
+```
 
-- [Cordova](?path=docs/supporting-documents/cordova.md)
-- [Flutter](?path=docs/supporting-documents/flutter.md)
-- [Kony](?path=docs/supporting-documents/kony.md)
-- [React Native](?path=docs/supporting-documents/react-native.md)
-- [Xamarin](?path=docs/supporting-documents/xamarin.md)
+## Build
+
+- [ZelleSDK_V_1.4.8](?path=docs/builds/Android/upgraded-kotlin/ZelleSDK_V_1.4.8.aar)
