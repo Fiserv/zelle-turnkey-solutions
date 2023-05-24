@@ -15,6 +15,7 @@ February 17 2023
 ## Build
 
 - [ZelleSDK_V_1.5.0](https://github.com/Fiserv/zelle-turnkey-solutions/blob/develop/docs/builds/Android/upgraded-kotlin/ZelleSDK_V_1.5.1.aar)
+<a href="https://github.com/Fiserv/zelle-turnkey-solutions/blob/develop/docs/builds/Android/upgraded-kotlin/ZelleSDK_V_1.5.1.aar" download>ZelleSDK_V_1.5.1</a>
 <a href="docs/builds/Android/upgraded-kotlin/ZelleSDK_V_1.5.1.aar" download>ZelleSDK_V_1.5.1</a>
 <a href="/docs/builds/Android/upgraded-kotlin/ZelleSDK_V_1.5.1.aar" download>ZelleSDK_V_1.5.1</a>
 <a href="../docs/builds/Android/upgraded-kotlin/ZelleSDK_V_1.5.1.aar" download>ZelleSDK_V_1.5.1</a>
