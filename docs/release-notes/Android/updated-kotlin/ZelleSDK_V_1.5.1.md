@@ -29,7 +29,7 @@ loaderData = mapOf(
 
 ## Build
 
-- [ZelleSDK_V_1.5.1](docs/builds/Android/upgraded-kotlin/ZelleSDK_V_1.5.1.aar)
+- [ZelleSDK_V_1.5.1](https://github.com/Fiserv/zelle-turnkey-solutions/blob/develop/docs/builds/Android/upgraded-kotlin/ZelleSDK_V_1.5.1.aar)
 
 ## Deprecated
 
