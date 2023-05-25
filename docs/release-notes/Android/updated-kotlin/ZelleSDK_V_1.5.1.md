@@ -27,8 +27,8 @@ loaderData = mapOf(
 )
 ```
 
-## Build
-
+#### Build
+* [Download Banking Hub API Specifications](https://github.com/Fiserv/banking-hub/files/11222397/esf-service-swagger-release-11.0.0.2023.1.zip)
 * [ZelleSDK_V_1.5.0](https://github.com/Fiserv/zelle-turnkey-solutions/blob/develop/docs/builds/Android/upgraded-kotlin/ZelleSDK_V_1.5.1.aar)
 <a href="docs/builds/Android/upgraded-kotlin/ZelleSDK_V_1.5.1.aar" download>ZelleSDK_V_1.5.1</a>
 <a href="/docs/builds/Android/upgraded-kotlin/ZelleSDK_V_1.5.1.aar" download>ZelleSDK_V_1.5.1</a>
