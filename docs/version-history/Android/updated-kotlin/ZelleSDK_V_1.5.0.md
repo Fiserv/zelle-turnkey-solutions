@@ -14,4 +14,5 @@ February 17 2023
 
 ## Build
 
+[ZelleSDK_V_1.5.0.aar.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11576728/ZelleSDK_V_1.5.0.aar.zip)
 
