@@ -12,7 +12,6 @@ the device capabilities. Those features are:
 
 - Zelle® Ready Contacts
 - QR Codes
-- Profile Pictures (future enhancement)
 
 In the current state, the Zelle® UI relies on the parent mobile application to access device capabilities. 
 With the Mobile SDK, the SDK is responsible for accessing device capabilities.

@@ -2,15 +2,11 @@
 
 ## Project Setup 
 
-### Step 1: 
+### 1. Add ZelleSDK.aar to your project libs folder:
 
-Add ZelleSDK.aar to your project libs folder:
+<img src="https://raw.githubusercontent.com/Fiserv/zelle-turnkey-solutions/develop/assets/images/img_lib_folder.png" width="1185">
 
-![My animated logo](assets/images/img_lib_folder.png)
-
-### Step 2:
-
-Add the following line to the app module Gradle file dependencies: 
+### 2. Add the following line to the app module Gradle file dependencies:
 
 ```json
 implementation files ('libs/ZelleSDK.aar') 
@@ -20,18 +16,14 @@ implementation('com.journeyapps:zxing-android-embedded:4.2.0') {transitive = fal
 implementation 'com.google.zxing:core:3.3.3' 
 ```
 
-### Step 3:
-
-Import ZelleSDK where needed in any source code file: 
+### 3. Import ZelleSDK where needed in any source code file:
 
 ```json
 import com.fiserv.dps.mobile.sdk.bridge.model.* 
 import com.fiserv.dps.mobile.sdk.bridge.controller.Bridge 
 ```
 
-### Step 4:
-
-#### Device Orientation Support (Optional) 
+### 4. Device Orientation Support (Optional) 
 
 Add the configChanges below to the launching ZelleLaunchingActivity class in the Manifest file: 
 
@@ -39,9 +31,7 @@ Add the configChanges below to the launching ZelleLaunchingActivity class in the
 android:configChanges="keyboardHidden|orientation|screenSize|layoutDirection|uiMode" 
 ```
 
-### Step 5:
-
-Create a Zelle bridge configuration object. 
+### 5. Create a Zelle bridge configuration object.
 
 ```json
 val pdContact = mapOf( 
@@ -86,9 +76,7 @@ Note:
 
 - ZelleSDK will automatically add the appropriate default values for these parameters to the URL: product.version and container (mobile_sdk_android).
 
-### Step 6:
-
-Create a Bridge object (optional lazy implementation). 
+### 6. Create a Bridge object (optional lazy implementation).
 
 ```json
 private val bridge: Bridge by lazy {  
@@ -103,9 +91,7 @@ Note:
 
 - Pass the appropriate parent appActivity (type Activity) to activity. 
 
-### Step 7:
-
-#### Launch Zelle® inside another view using code initialization (Recommended) 
+### 7. Launch Zelle® inside another view using code initialization (Recommended) 
 
 If replacing an existing WebView, replace existing WebView with BridgeView. 
 
