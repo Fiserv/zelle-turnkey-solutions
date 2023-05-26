@@ -13,5 +13,3 @@ February 17 2023
 - Prominent Disclosure issue fix.
 
 ## Build
-
-- [ZelleSDK_V_2.1.2](?path=docs/builds/Android/downgraded-kotlin/ZelleSDK_V_2.1.2.aar)

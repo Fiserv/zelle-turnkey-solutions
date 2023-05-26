@@ -29,7 +29,6 @@ loaderData = mapOf(
 
 ## Build
 
-- [ZelleSDK_V_2.1.3](?path=docs/builds/Android/downgraded-kotlin/ZelleSDK_V_2.1.3.aar)
 
 ## Deprecated
 

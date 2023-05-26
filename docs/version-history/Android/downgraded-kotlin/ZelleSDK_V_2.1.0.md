@@ -35,4 +35,3 @@ override fun getValue(name: String) {
 
 ## Build
 
-- [ZelleSDK_V_2.1.0](?path=docs/builds/Android/downgraded-kotlin/ZelleSDK_V_2.1.0.aar)

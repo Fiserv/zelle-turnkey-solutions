@@ -17,10 +17,7 @@ April 30 2023
 - Memory leak that was fixed.
 
 ## Build
-[ZelleSDK_V_1.4.5.xcframework.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11575413/ZelleSDK_V_1.4.5.xcframework.zip)
-[ZelleSDK_V_1.5.1.aar.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11575444/ZelleSDK_V_1.5.1.aar.zip)
 
-* [ZelleSDK_V_1.4.5](?path=docs/builds/iOS/ZelleSDK_V_1.4.5.xcframework.zip)
 
 ## Deprecated
 
