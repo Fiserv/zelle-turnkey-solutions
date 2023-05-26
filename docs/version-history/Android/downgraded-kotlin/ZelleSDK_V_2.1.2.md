@@ -13,3 +13,5 @@ February 17 2023
 - Prominent Disclosure issue fix.
 
 ## Build
+
+[ZelleSDK_V_2.1.2.aar.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11576747/ZelleSDK_V_2.1.2.aar.zip)
