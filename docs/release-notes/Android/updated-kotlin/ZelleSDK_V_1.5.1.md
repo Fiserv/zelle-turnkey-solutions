@@ -29,6 +29,7 @@ loaderData = mapOf(
 
 #### Build
 
+[ZelleSDK_V_1.5.1.aar.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11576725/ZelleSDK_V_1.5.1.aar.zip)
 
 ## Deprecated
 
