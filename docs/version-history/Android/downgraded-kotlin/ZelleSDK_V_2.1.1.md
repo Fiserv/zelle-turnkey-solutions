@@ -35,3 +35,7 @@ override fun getValue(name: String) {
 
 ## Build
 
+[ZelleSDK_V_2.1.1.aar.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11576752/ZelleSDK_V_2.1.1.aar.zip)
+
+
+
