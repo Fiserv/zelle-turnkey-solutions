@@ -18,7 +18,7 @@ April 30 2023
 
 ## Build
 
-* [ZelleSDK_V_1.4.5](https://github.com/Fiserv/zelle-turnkey-solutions/blob/develop/docs/builds/iOS/ZelleSDK_V_1.4.5.xcframework.zip)
+* [ZelleSDK_V_1.4.5](?path=docs/builds/iOS/ZelleSDK_V_1.4.5.xcframework.zip)
 
 ## Deprecated
 
