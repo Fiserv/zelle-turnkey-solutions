@@ -35,3 +35,5 @@ if (name == “Landing”){
 ```
 
 ## Build
+
+[ZelleSDK_V_1.4.4.aar.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11590465/ZelleSDK_V_1.4.4.aar.zip)
