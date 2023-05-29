@@ -1,30 +1,37 @@
 # Release Notes
 
-April 30 2023
+August 03 2022
 
-## V_1.5.2 (SDK version)
+## V_1.4.4 (SDK version)
 
 ## What's New
 
-- FI can customize the loader color and it's background during the loading time.
+- When the Zelle UI session has ended, the Zelle SDK will call the FI app's session timeout callback function.
 
 ## Enhancements
 
-- Custom loader implementation
+- Custom callback method was implemented for session timeout.
 
-## Fixed
+### Session Timeout Implementation
 
-- Memory leak that was fixed.
+```json
+*** Implement the GenericTag with Activity/Fragment ***
 
-## Deprecated
+Class ZelleLaunchFragment: Fragment (), GenericTag{
+override fun onCreateView(inflater: LayoutInflater, container ViewGroup?, savedInstanceState: Bundle?) {
+_binding = FragmentZelleLaunchBinding.inflater.inflate(inflater, container, false)
+//Initialize generic tag 
+genericTag = this
+return binding.root
+}
+}
 
-- ZelleSDKC_V_1.5.0
-- ZelleSDKB_V_1.5.0
+*** Inside the class override the sessionTag method ***
+override fun sessionTag(name: String) {
+if (name == “Landing”){
+  *** Here navigates the application to the desired screen. (This function will be triggered after the session expires) ***  
+}
+} 
+```
 
-## Supporting platforms
-
-- [Cordova](?path=docs/supporting-documents/cordova.md)
-- [Flutter](?path=docs/supporting-documents/flutter.md)
-- [Kony](?path=docs/supporting-documents/kony.md)
-- [React Native](?path=docs/supporting-documents/react-native.md)
-- [Xamarin](?path=docs/supporting-documents/xamarin.md)
+## Build

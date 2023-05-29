@@ -1,30 +1,48 @@
 # Release Notes
 
-April 30 2023
+August 11 2022
 
-## V_1.5.2 (SDK version)
+## V_1.4.5 (SDK version)
 
 ## What's New
 
-- FI can customize the loader color and it's background during the loading time.
+- FI can customize the prominent disclosure popup title and message for Contact, Camera and Gallery permission, which will
+  trigger before accessing the native contact permission alert.
 
 ## Enhancements
 
-- Custom loader implementation
+- Prominent Disclosure implementation for Contact, Camera and Gallery Permission.
 
-## Fixed
+### Prominent Disclosure Initialization
 
-- Memory leak that was fixed.
+```json
+val pdContact = mapOf(
+"title" to "Contact Title",
+"message" to "Contact Message")
 
-## Deprecated
+val pdCamera = mapOf(
+"title" to  "Camera Title",
+"message" to "Camera Message")
 
-- ZelleSDKC_V_1.5.0
-- ZelleSDKB_V_1.5.0
 
-## Supporting platforms
+val pdPhoto = mapOf(
+"title" to  "Photo Title",
+"message" to "Photo Message")
 
-- [Cordova](?path=docs/supporting-documents/cordova.md)
-- [Flutter](?path=docs/supporting-documents/flutter.md)
-- [Kony](?path=docs/supporting-documents/kony.md)
-- [React Native](?path=docs/supporting-documents/react-native.md)
-- [Xamarin](?path=docs/supporting-documents/xamarin.md)
+val appData = mapOf(
+"pd_contact" to pdContact,
+"pd_camera" to pdCamera,
+"pd_gallery" to pdPhoto)
+``` 
+
+### Prominent Disclosure Implementation
+
+```json
+val zelle = Zelle(
+appData = appData
+)
+```
+
+## Build
+
+

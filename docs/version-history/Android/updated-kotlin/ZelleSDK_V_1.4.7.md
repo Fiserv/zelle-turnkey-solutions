@@ -1,30 +1,15 @@
 # Release Notes
 
-April 30 2023
+September 29 2022
 
-## V_1.5.2 (SDK version)
+## V_1.4.7 (SDK version)
 
 ## What's New
 
-- FI can customize the loader color and it's background during the loading time.
-
-## Enhancements
-
-- Custom loader implementation
+- Webview will adjust the height and width properties based on the device height and width to load the Zelle UI.
 
 ## Fixed
 
-- Memory leak that was fixed.
+- Webview height and width were fixed.
 
-## Deprecated
-
-- ZelleSDKC_V_1.5.0
-- ZelleSDKB_V_1.5.0
-
-## Supporting platforms
-
-- [Cordova](?path=docs/supporting-documents/cordova.md)
-- [Flutter](?path=docs/supporting-documents/flutter.md)
-- [Kony](?path=docs/supporting-documents/kony.md)
-- [React Native](?path=docs/supporting-documents/react-native.md)
-- [Xamarin](?path=docs/supporting-documents/xamarin.md)
+## Build

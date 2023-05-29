@@ -1,30 +1,15 @@
 # Release Notes
 
-April 30 2023
+August 23 2022
 
-## V_1.5.2 (SDK version)
+## V_1.4.6 (SDK version)
 
 ## What's New
 
-- FI can customize the loader color and it's background during the loading time.
+- To manage the light and dark theme modes of the ZelleSDK, Material and AppCompat were included.
 
 ## Enhancements
 
-- Custom loader implementation
+- Implemented the AppCompat and Material Theme.
 
-## Fixed
-
-- Memory leak that was fixed.
-
-## Deprecated
-
-- ZelleSDKC_V_1.5.0
-- ZelleSDKB_V_1.5.0
-
-## Supporting platforms
-
-- [Cordova](?path=docs/supporting-documents/cordova.md)
-- [Flutter](?path=docs/supporting-documents/flutter.md)
-- [Kony](?path=docs/supporting-documents/kony.md)
-- [React Native](?path=docs/supporting-documents/react-native.md)
-- [Xamarin](?path=docs/supporting-documents/xamarin.md)
+## Build

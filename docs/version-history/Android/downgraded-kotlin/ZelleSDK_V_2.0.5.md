@@ -6,8 +6,8 @@ July 15 2022
 
 ## What's New
 
-- FI can customize the prominent disclosure popup title and message for contact permission, which will
-  trigger before accessing the native contact permission alert.
+- FI can customize the prominent disclosure popup title and message for Contact permission, which will
+  trigger before accessing the native Contact permission alert.
 
 ## Enhancements
 
@@ -20,19 +20,8 @@ val pdContact = mapOf(
 "title" to "Contact Title",
 "message" to "Contact Message")
 
-val pdCamera = mapOf(
-"title" to  "Camera Title",
-"message" to "Camera Message")
-
-
-val pdPhoto = mapOf(
-"title" to  "Photo Title",
-"message" to "Photo Message")
-
 val appData = mapOf(
-"pd_contact" to pdContact,
-"pd_camera" to pdCamera,
-"pd_gallery" to pdPhoto)
+"pd_contact" to pdContact )
 ``` 
 
 ### Prominent Disclosure Implementation

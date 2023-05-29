@@ -6,7 +6,7 @@ November 22 2022
 
 ## What's New
 
-- This feature will make it easier for Zelle UI and the parent app to open the desired screen out of Zelle Screen.
+- When the parent app has passed true for the fi_callback parameter, if the user clicks on a web link such as the "Privacy Policy" link on the Zelle UI, then the getValue method will be triggered and pass "privacy policy" as the value for the name parameter. The parent app handles this callback on their side.
 
 ## Fixed
 
@@ -30,7 +30,11 @@ override fun getValue(name: String) {
     if (name == “TAG_NAME”) {
         ***Here navigates the application to the desired screen. (This function will help to communicate between Zelle UI and parent app)***
     } 
-} 
+}
+
+Zelle zelle = new Zelle(
+fi_callback : true ** fi_callback is true when handling getValue method otherwise false **
+); 
 ```
 
 ## Build

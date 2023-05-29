@@ -10,7 +10,7 @@ October 21 2022
 
 ## Fixed
 
-- Generic Callback Update.
+- Custom Callback Implemented.
 
 ### Generic Callback Implementation
 
