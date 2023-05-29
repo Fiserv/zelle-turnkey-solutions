@@ -139,7 +139,7 @@
         - title: ReactNative
           sections:
             - title: Integration Steps
-              link: docs/supporting-documents/flutter.md
+              link: docs/supporting-documents/react-native.md
 
         - title: Cordova
           sections:
