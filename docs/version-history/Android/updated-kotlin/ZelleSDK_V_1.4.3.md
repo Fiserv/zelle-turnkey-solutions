@@ -34,5 +34,6 @@ appData = appData
 
 ## Build
 
-- [ZelleSDK_V_1.4.3](?path=docs/builds/Android/upgraded-kotlin/ZelleSDK_V_1.4.3.aar)
+[ZelleSDK_V_1.4.3.aar.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11590475/ZelleSDK_V_1.4.3.aar.zip)
+
 
