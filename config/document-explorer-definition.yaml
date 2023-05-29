@@ -66,8 +66,16 @@
                 link: docs/version-history/Android/updated-kotlin/ZelleSDK_V_1.4.8.md
               - title: ZelleSDK_V_1.4.7
                 link: docs/version-history/Android/updated-kotlin/ZelleSDK_V_1.4.7.md
+              - title: ZelleSDK_V_1.4.6
+                link: docs/version-history/Android/updated-kotlin/ZelleSDK_V_1.4.6.md
+              - title: ZelleSDK_V_1.4.5
+                link: docs/version-history/Android/updated-kotlin/ZelleSDK_V_1.4.5.md
+              - title: ZelleSDK_V_1.4.4
+                link: docs/version-history/Android/updated-kotlin/ZelleSDK_V_1.4.4.md
               - title: ZelleSDK_V_1.4.3
                 link: docs/version-history/Android/updated-kotlin/ZelleSDK_V_1.4.3.md
+              - title: ZelleSDK_V_1.4.2
+                link: docs/version-history/Android/updated-kotlin/ZelleSDK_V_1.4.2.md
             - title: Downgraded Kotlin
               sections:
               - title: ZelleSDK_V_2.1.2
@@ -78,8 +86,16 @@
                 link: docs/version-history/Android/downgraded-kotlin/ZelleSDK_V_2.1.0.md
               - title: ZelleSDK_V_2.0.9
                 link: docs/version-history/Android/downgraded-kotlin/ZelleSDK_V_2.0.9.md
+              - title: ZelleSDK_V_2.0.8
+                link: docs/version-history/Android/downgraded-kotlin/ZelleSDK_V_2.0.8.md
+              - title: ZelleSDK_V_2.0.7
+                link: docs/version-history/Android/downgraded-kotlin/ZelleSDK_V_2.0.7.md
+              - title: ZelleSDK_V_2.0.6
+                link: docs/version-history/Android/downgraded-kotlin/ZelleSDK_V_2.0.6.md
               - title: ZelleSDK_V_2.0.5
                 link: docs/version-history/Android/downgraded-kotlin/ZelleSDK_V_2.0.5.md
+              - title: ZelleSDK_V_2.0.4
+                link: docs/version-history/Android/downgraded-kotlin/ZelleSDK_V_2.0.4.md
 
         - title: iOS
           sections:
