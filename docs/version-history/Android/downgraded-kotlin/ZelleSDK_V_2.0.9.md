@@ -13,3 +13,5 @@ September 29 2022
 - Webview height and width were fixed.
 
 ## Build
+
+[ZelleSDK_V_2.0.9.aar.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11590522/ZelleSDK_V_2.0.9.aar.zip)
