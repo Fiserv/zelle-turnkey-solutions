@@ -45,5 +45,8 @@ appData = appData
 
 ## Build
 
+[ZelleSDK_V_2.0.7.aar.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11590541/ZelleSDK_V_2.0.7.aar.zip)
+
+
 
 
