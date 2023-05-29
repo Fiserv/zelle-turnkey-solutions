@@ -13,3 +13,5 @@ June 23 2022
 - Notification bar color fix.
 
 ## Build
+
+[ZelleSDK_V_2.0.4.aar.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11590558/ZelleSDK_V_2.0.4.aar.zip)
