@@ -6,6 +6,8 @@
 
 ![img_lib_folder](https://github.com/Fiserv/zelle-turnkey-solutions/blob/develop/assets/images/img_lib_folder.png?raw=true)
 
+<img width="129" alt="img_lib_folder" src="https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/c9d54a12-817a-4abd-a739-5e08776fce00">
+
 ### 2. Add the following line to the app module Gradle file dependencies:
 
 ```json
