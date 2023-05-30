@@ -12,9 +12,16 @@ March 30 2023
 
 - Custom loader implementation
 
-## Fixed
+### Custom Loader Implementation
 
-- Memory leak that was fixed.
+```json
+private let zelle = Zelle(
+loaderData: [
+"loaderColor" : "hex color",
+"bgColor" : "hex color",
+], // Optional (Nullable)
+) 
+```
 
 ## Build
 

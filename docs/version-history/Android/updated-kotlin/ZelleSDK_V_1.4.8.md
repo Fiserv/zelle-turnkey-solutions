@@ -8,7 +8,7 @@ October 21 2022
 
 - This feature will make it easier for Zelle UI and the parent app to open the desired screen out of Zelle Screen.
 
-## Fixed
+## Enhancements
 
 - Custom Callback Implemented.
 

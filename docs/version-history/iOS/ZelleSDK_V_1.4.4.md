@@ -1,29 +1,17 @@
 # Release Notes
 
-April 03 2022
+February 27 2023
 
-## v1.0.0 (api version)
+## v1.4.4 (api version)
 
 ## What's New
 
-- Something new that was added or introduced like a documents or a services.  [Possible link to the doc](?path=/docs/getting-started.md)
-
-## Enhancements
-
-- Description of an improvement or a change
+- ZelleSDK creates instances of objects which is retained in memory even after ZelleSDK is killed/logged out. To avoid this, ZelleSDK creates weak references between objects so that objects gets released once ZelleSDK is killed/logged out.
 
 ## Fixed
 
-- github issue that was fixed. [Possible github issue link ](https://github.com/Fiserv/Support/issues)
+- Memory leak that was fixed.
 
-## Known Issues
+## Build
 
-- persistent issue that's not fixed.
-
-## Deprecated
-
-- regarded as obsolete and best avoided
-
-
-March 17 2022
 

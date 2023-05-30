@@ -1,29 +1,16 @@
 # Release Notes
 
-April 03 2022
+January 05 2023
 
-## v1.0.0 (api version)
+## v1.4.3 (api version)
 
 ## What's New
 
-- Something new that was added or introduced like a documents or a services.  [Possible link to the doc](?path=/docs/getting-started.md)
+- iOS14 and above OS versions do not require user’s permission to access Photo gallery. PHPViewController class manages the handling of gallery related activities.
 
 ## Enhancements
 
-- Description of an improvement or a change
+- iOS 14 gallery permission updates.
 
-## Fixed
-
-- github issue that was fixed. [Possible github issue link ](https://github.com/Fiserv/Support/issues)
-
-## Known Issues
-
-- persistent issue that's not fixed.
-
-## Deprecated
-
-- regarded as obsolete and best avoided
-
-
-March 17 2022
+## Build
 
