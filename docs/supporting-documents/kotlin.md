@@ -1,10 +1,10 @@
 # Steps for Quick Start 
 
-## Project Setups 
+## Project Setup 
 
 ### 1. Add ZelleSDK.aar to your project libs folder:
 
-<img src="https://github.com/Fiserv/zelle-turnkey-solutions/blob/develop/assets/images/img_lib_folder.png" width="1185">
+![img_lib_folder](https://github.com/Fiserv/zelle-turnkey-solutions/blob/develop/assets/images/img_lib_folder.png?raw=true)
 
 ### 2. Add the following line to the app module Gradle file dependencies:
 
