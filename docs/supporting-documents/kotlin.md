@@ -1,6 +1,6 @@
 # Steps for Quick Start 
 
-## Project Setup 
+## Project Setups 
 
 ### 1. Add ZelleSDK.aar to your project libs folder:
 
