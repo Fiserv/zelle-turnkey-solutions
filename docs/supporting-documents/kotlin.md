@@ -4,7 +4,7 @@
 
 ### 1. Add ZelleSDK.aar to your project libs folder:
 
-<img src="https://github.com/Fiserv/zelle-turnkey-solutions/develop/assets/images/img_lib_folder.png" width="1185">
+<img src="https://github.com/Fiserv/zelle-turnkey-solutions/blob/develop/assets/images/img_lib_folder.png" width="1185">
 
 ### 2. Add the following line to the app module Gradle file dependencies:
 
