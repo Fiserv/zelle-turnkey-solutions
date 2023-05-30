@@ -1,6 +1,6 @@
 # Release Notes
 
-April 30 2023
+March 30 2023
 
 ## V_1.4.5 (SDK version)
 
@@ -18,7 +18,6 @@ April 30 2023
 
 ## Build
 
-[ZelleSDK_V_1.4.5.xcframework.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11576769/ZelleSDK_V_1.4.5.xcframework.zip)
 
 ## Deprecated
 
@@ -27,6 +26,8 @@ April 30 2023
 
 ## Supporting platforms
 
+- [Swift](?path=docs/supporting-documents/swift.md)
+- [Objective C](?path=docs/supporting-documents/objectivec.md)
 - [Cordova](?path=docs/supporting-documents/cordova.md)
 - [Flutter](?path=docs/supporting-documents/fultter.md)
 - [Kony](?path=docs/supporting-documents/kony.md)

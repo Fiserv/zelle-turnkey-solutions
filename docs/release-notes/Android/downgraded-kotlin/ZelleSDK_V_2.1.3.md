@@ -38,6 +38,8 @@ loaderData = mapOf(
 
 ## Supporting platforms
 
+- [Kotlin](?path=docs/supporting-documents/kotlin.md)
+- [Java](?path=docs/supporting-documents/java.md)
 - [Cordova](?path=docs/supporting-documents/cordova.md)
 - [Flutter](?path=docs/supporting-documents/flutter.md)
 - [Kony](?path=docs/supporting-documents/kony.md)
