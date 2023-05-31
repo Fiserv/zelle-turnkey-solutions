@@ -110,7 +110,7 @@ supportFragmentManager.beginTransaction().apply {
 } 
 ```
 
-#### Launch Zelle® as a popup (not inside another view) 
+### Launch Zelle® as a popup (not inside another view) 
 
 ```json
 // optionally: set the contact pre-caching flag (default: false) 
@@ -120,7 +120,7 @@ val zellePopup = bridge.popup()
 zellePopup.show(supportFragmentManager, zellePopup.tag) 
 ```
 
-#### Session Timeout and Intercepting Web Links 
+### Session Timeout and Intercepting Web Links 
 
 ```json
 //Implement the GenericTag with Activity/Fragment
@@ -152,15 +152,15 @@ override fun getValue(name: String) {
 } 
 ```
 
-#### Supported Versions
+### Supported Versions
 
 - Minimum SDK: 24
 - Minimum OS: Android 7.0 Nougat
 
-#### Zelle Mobile SDK Size
+### Zelle Mobile SDK Size
 
 224 KB
 
-#### Dependency
+### Dependency
 
 zxing:core - 3.3.3 (QR Code library) 
