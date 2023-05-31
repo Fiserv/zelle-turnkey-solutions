@@ -14,3 +14,4 @@ September 08 2022
 
 ## Build
 
+[ZelleSDK_V_1.3.9.xcframework.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11609748/ZelleSDK_V_1.3.9.xcframework.zip)
