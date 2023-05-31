@@ -35,4 +35,6 @@ if (name == “Landing”) {
 
 ## Build
 
+[ZelleSDK_V_1.3.8.xcframework.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11609750/ZelleSDK_V_1.3.8.xcframework.zip)
+
 
