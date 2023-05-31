@@ -21,6 +21,8 @@
 
 <img src="https://raw.githubusercontent.com/Fiserv/zelle-turnkey-solutions/develop/assets/images/ios_embed.jpg?token=GHSAT0AAAAAACC7V4U2SBLFKK5UZMXGMZRYZDXFSTQ" width="1185">
 
+![ios_embed&sign](ios_embed&sign.jpg)
+
 ![ios_embed](https://github.com/Fiserv/zelle-turnkey-solutions/blob/develop/assets/images/ios_embed.jpg?raw=true)
 
 <img src="https://github.com/Fiserv/zelle-turnkey-solutions/blob/develop/assets/images/ios_embed&sign.jpg" width="1185">
