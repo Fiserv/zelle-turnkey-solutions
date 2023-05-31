@@ -39,4 +39,6 @@ if (name == “TAG_NAME”) {
 
 ## Build
 
+[ZelleSDK_V_1.4.1.xcframework.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11609738/ZelleSDK_V_1.4.1.xcframework.zip)
+
 
