@@ -19,9 +19,9 @@
 
 ### 3. Set ZelleSDK.xcframework to “Embed & Sign”:
 
-<img src="https://raw.githubusercontent.com/Fiserv/zelle-turnkey-solutions/develop/assets/images/ios_embed.jpg?token=GHSAT0AAAAAACC7V4U2SBLFKK5UZMXGMZRYZDXFSTQ" width="600">
+![ios_embed](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/88065cc8-3184-4fe5-9ba3-2a25eef452c5)
 
-<img src="https://raw.githubusercontent.com/Fiserv/zelle-turnkey-solutions/develop/assets/images/ios_embed&sign.jpg?token=GHSAT0AAAAAACC7V4U2SBLFKK5UZMXGMZRYZDXFSTQ" width="600">
+![ios_embed sign](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/a1668e2e-efae-4ba6-9cbb-39410196f082)
 
 ### 4. Import ZelleSDK as needed in any source code files. 
 
