@@ -29,42 +29,10 @@
 ################################################################################
 header:
   productName: Zelle SDK
-  productionDescription: REPLACEME
-  whoIsItFor: REPLACEME
-  image: 
-    link: "/assets/images/Fiserv_Logo.jpg"
-    altText: REPLACEME™
-featuredFeatures:
-  - title: REPLACE ME
-    description:  REPLACE ME
-    tags: ["REPLACEME", "REPLACEME", "REPLACEME"]
-    bullets: ["REPLACEME", "REPLACEME" ]  
-    relatedDocs:
-      - relatedDoc: 
-        title: REPLACEME
-        description: REPLACEME
-        link: ./docs/REPLACE-ME1.md
-      - relatedDoc: 
-        title: REPLACEME
-        description: REPLACEME
-        link: ./docs/REPLACE-ME2.md
-      - relatedDoc: 
-        title: REPLACEME
-        description: REPLACEME
-        link: ./docs/REPLACE-ME3.md
-    relatedAPIs:
-      - relatedAPI: 
-        title: REPLACEME
-        description: REPLACEME
-        type: "patch"        
-        path: "/v1/REPLACEME1"
-      - relatedAPI: 
-        title: REPLACEME
-        description: REPLACEME
-        type: "post"        
-        path: "/v1/REPLACEME2"
-      - relatedAPI: 
-        title: REPLACEME
-        description: REPLACEME
-        type: "get"        
-        path: "/v1/REPLACEME3"
+  productionDescription: Mobile SDK offers a turnkey solution for enabling
+  an enhanced mobile user experience. The current web based hosted Zelle® UI offers the flexibility
+  to be enabled in both online and mobile banking applications, but it does not enable access to
+  the mobile device capabilities (e.g., contact list, camera, photo gallery, and sharing capabilities)
+  that are expected with a native mobile app experience.
+getStarted: /docs/getting-started.md
+
