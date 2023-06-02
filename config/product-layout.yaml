@@ -29,10 +29,7 @@
 ################################################################################
 header:
   productName: Zelle SDK
-  productionDescription: Mobile SDK offers a turnkey solution for enabling
-  an enhanced mobile user experience. Zelle® UI offers the flexibility access to
-  the mobile device capabilities (e.g., contact list, camera, photo gallery, and sharing capabilities)
-  that are expected with a native mobile app experience.
+  productionDescription: ZelleSDK offers the flexibility to access the mobile device capabilities for Zelle® UI (e.g., contact list, camera, photo gallery, and sharing).
 getStarted: /docs/getting-started.md
 featuredFeatures:
   - title: REPLACE ME
