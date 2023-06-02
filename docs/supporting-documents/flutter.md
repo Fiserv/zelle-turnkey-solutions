@@ -15,7 +15,9 @@
 
 ### 3. Select project type as Application and provide respective package name. 
 
-### 4. Select specific language support for both Android and iOS and click finish to create the project.  
+### 4. Select specific language support for both Android and iOS and click finish to create the project.
+
+![flutter_project_creation](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/de019f59-c08b-4c4e-9a07-e50d1d5eabac)
 
 ### 5. Once project has created navigate to lib folder and create dart class with respective widget to lauch Zelle.
 
@@ -89,6 +91,8 @@ final String result = await platform.invokeMethod('launchZelle',{
 
 ### 13. Place the latest version of ZelleSDK.aar file inside the libs folder.
 
+![flutter_android_sdkpath](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/b2367a94-3490-46f7-aad0-f0add7183c82)
+
 ### 14. To add respective dependencies, open build.gradle file and inside dependencies add required dependency given below.
 
 ```json
@@ -119,7 +123,9 @@ intent.putExtra("data", hashMap)startActivity(intent)
 }
 ```
 
-### 18. Open activity_launch_zelle  xml file inside layout folder and create a framelayout to initialize zelle view.
+### 18. Open activity_launch_zelle.xml file inside layout folder and create a framelayout to initialize zelle view.
+
+![flutter_framelayout](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/be3e4867-8f25-4ea5-9aeb-4b542a38a7da)
 
 ### 19. Open LauchZelle.kt file inside onCreateView function initialize Zelle, Bridge and BridgeView (or) BridgePopup with respective parameters.
 
@@ -216,11 +222,15 @@ zelleResult = "Failed to get result: '${e.message}'.";
 
 ### 25. Place the ZelleSDK XCframework file inside the Runner.
 
+![flutter_ios_sdk](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/7a50c1f9-5151-4dc0-8769-d6fd5f7cdc24)
+
 ### 26. Add the ZelleSDK required permissions in Info.plist file.
 - Example: 
 - 1) Contact permission
 - 2) Camera permission
 - 3) Gallery Permission
+
+![flutter_ios_info](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/6165de31-cfec-48d1-928b-2670629a8d18)
 
 ### 27. Open the file AppDelegate.swift located under Runner > Runner in the Project navigator.
 
@@ -342,3 +352,6 @@ navigationController.pushViewController(nextVC, animated: true)
 ```
 
 ### Sample Project:
+
+[dps-zelle-sdk-testapp-flutter.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11637807/dps-zelle-sdk-testapp-flutter.zip)
+
