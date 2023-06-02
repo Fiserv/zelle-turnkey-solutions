@@ -34,7 +34,6 @@ header:
   to be enabled in both online and mobile banking applications, but it does not enable access to
   the mobile device capabilities (e.g., contact list, camera, photo gallery, and sharing capabilities)
   that are expected with a native mobile app experience.
-getStarted: /docs/getting-started.md
 featuredFeatures:
   - title: REPLACE ME
     description:  REPLACE ME
