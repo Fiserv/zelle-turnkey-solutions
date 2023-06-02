@@ -167,8 +167,10 @@
 
         - title: Flutter
           sections:
-            - title: Integration Steps
+            - title: ZelleSDK Integration For Flutter
               link: docs/supporting-documents/flutter.md
+            - title: ZelleSDK NativeView Embedded Integration For Flutter
+              link: docs/supporting-documents/flutter_nativeview.md
 
         - title: ReactNative
           sections:
