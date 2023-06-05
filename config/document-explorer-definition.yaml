@@ -184,9 +184,9 @@
             - title: Plugin Files
               sections:
                 - title: ZellePlugin_V_1.0.1
-                  link: docs/release-notes/iOS/ZellePlugin_V_1.0.1.md
+                  link: docs/supporting-documents/CordovaPluginFiles/ZellePlugin_V_1.0.1.md
                 - title: ZellePlugin_V_1.0.0
-                  link: docs/release-notes/iOS/ZellePlugin_V_1.0.0.md
+                  link: docs/supporting-documents/CordovaPluginFiles/ZellePlugin_V_1.0.0.md
 
         - title: Kony
           sections:
