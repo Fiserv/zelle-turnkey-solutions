@@ -26,13 +26,19 @@
 
 ### 6. Screenshot of plugin: - This refers to the plugin folder. 
 
+![cordova_plugin_folder](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/8bc89c67-925e-4ade-906e-ae9c96e9be81)
+
 ### 7. Screenshot of plugin Files: - This refers to the created plugin files.
+
+![cordova_plugin_files](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/a5bb853e-1a48-4031-b5f8-ba10354dcdb3)
 
 ### 8. Inside ZelleSDK Plugin folder except AAR folder all folders and files are automatically generated.
 
 ### 9. To access our ZelleSDK we can create AAR folder to place our SDK into it.
 
 ### 10. Screenshot refers to SDK file: -
+
+![cordova_plugin_aarfile](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/9d375088-411d-480b-8203-a5bff6914009)
 
 ### 11. In src folder, it has two folders which is android and iOS.
 
@@ -43,6 +49,8 @@
 ### 14. This js and native file only communicates with each other for passing the parameters from js to java.
 
 ### 15. Screenshot refers to files created inside android folder: -
+
+![cordova_android_folder](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/4c43528e-7fe7-40fc-a25f-1b2fe41f1a4c)
 
 ### 16. For android, new java class and xml files can be created which will act as interface to access ZelleSDK.
 
@@ -61,7 +69,11 @@
 
 ### 21. Screenshot refers to plugin added in Cordova project: -
 
+![cordova_plugin_added](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/61d1ac5a-6632-4fca-809f-85517853e07f)
+
 ### 22. After plugin is added, plugin files will be included in Cordova project.
+
+![cordova_project_strct](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/105cd4d8-23ca-4004-b7c5-bb6a06b2b664)
 
 ### 23. ZelleSDK can be launched from any Cordova application by calling the function created in plugin folder(www/ZellePlugin.js) with the respective parameters like below.
 
@@ -112,44 +124,46 @@ ZellePlugin.zelle_activity(person ,success,failure); //here we need to pass the 
 
 ### 5. Screenshot of plugin: - This refers to the plugin folder.
 
-### 6. Screenshot of plugin files: - This refers to the created plugin files.
+![cordova_ios_folder](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/7fcbdf53-ff35-4ccf-8d15-ab4f6051c6e8)
 
-### 7. Inside ZelleSDK Plugin folder except Framework folder all folders and files are automatically generated.
+### 6. Inside ZelleSDK Plugin folder except Framework folder all folders and files are automatically generated.
 
-### 8. To access our ZelleSDK we can create a Framework folder to place our SDK into it.
+### 7. To access our ZelleSDK we can create a Framework folder to place our SDK into it.
 
-### 9. Screenshot refers to SDK file: -
+### 8. Screenshot refers to SDK file: -
 
-### 10. In the src folder it has two folders which is android and iOS.
+![cordova_ios_plugin](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/2dd9834c-6afd-41c8-bf9d-f5564d885017)
 
-### 11. Inside iOS folder we have objective c/swift file which extends Cordova plugin.
+### 9. In the src folder it has two folders which is android and iOS.
 
-### 12. Inside www folder we have a js file with same file name of Objective C/Swift file created in src.
+### 10. Inside iOS folder we have objective c/swift file which extends Cordova plugin.
 
-### 13. This js and native file only communicates each other for passing the parameters from js to Objective C/Swift file.
+### 11. Inside www folder we have a js file with same file name of Objective C/Swift file created in src.
 
-### 14. Screenshot refers to files created inside iOS folder: -
+### 12. This js and native file only communicates each other for passing the parameters from js to Objective C/Swift file.
 
-### 15. For iOS, new objective c/swift and storyboard files can be created which will act as interface to access ZelleSDK.
+### 13. For iOS, new objective c/swift and storyboard files can be created which will act as interface to access ZelleSDK.
 
-### 16. In the plugin.xml file, location path for the created Objective c/Swift, storyboard files can be added in iOS platform tag.
+### 14. In the plugin.xml file, location path for the created Objective c/Swift, storyboard files can be added in iOS platform tag.
 
-### 17. After plugin is created, this can be imported in any Cordova project to access ZelleSDK.
+### 15. After plugin is created, this can be imported in any Cordova project to access ZelleSDK.
 
-### 18. Below are the steps to integrate the plugin in Cordova project.
+### 16. Below are the steps to integrate the plugin in Cordova project.
 
-### 19. Navigate to respective Cordova project folder inside terminal to add our plugin.
+### 17. Navigate to respective Cordova project folder inside terminal to add our plugin.
 
 - a. cordova plugin add your-plugin-local-path folder
 -    e.g., cordova plugin add "Users/Cordova/ZellePlugin"
 - b. cordova build “platform-name”
 -    e.g., cordova build ios
 
-### 20. Screenshot refers to plugin added in Cordova project: -
+### 18. Screenshot refers to plugin added in Cordova project: -
 
-### 21. ZelleSDK can be launched from any Cordova application by calling the function created in plugin folder(www/ZellePlugin.js) with the respective parameters like below.
+![cordova_ios_strct](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/f7657df7-d990-4d19-9f53-5874e5c5f9ff)
 
-### 22. Create the openZelle function in your .js file (e.g. index.js) and pass the required parameters to ZellePlugin.
+### 19. ZelleSDK can be launched from any Cordova application by calling the function created in plugin folder(www/ZellePlugin.js) with the respective parameters like below.
+
+### 20. Create the openZelle function in your .js file (e.g. index.js) and pass the required parameters to ZellePlugin.
 
 ```json
 function openZelle(){
@@ -192,3 +206,4 @@ ZellePlugin.zelle_activity(person ,success,failure); //here we need to pass the 
 
 ### Sample Project:
 
+[dps-zelle-sdk-testapp-cordova-master.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11654405/dps-zelle-sdk-testapp-cordova-master.zip)
