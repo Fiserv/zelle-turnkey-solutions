@@ -12,7 +12,7 @@
 - Xcode   
 - Cordova   
 
-#### a. Cordova Plugin for ZelleSDK(Android)
+## a. Cordova Plugin for ZelleSDK(Android)
 
 ### 2. To integrate ZelleSDK into any Cordova projects, plugin files will be created which will act a bridge between native code and JavaScript. 
 
@@ -98,7 +98,7 @@ ZellePlugin.zelle_activity(person ,success,failure); //here we need to pass the 
 }
 ```
 
-#### b. Cordova Plugin for ZelleSDK(iOS)
+## b. Cordova Plugin for ZelleSDK(iOS)
 
 ### 1. To integrate ZelleSDK into any Cordova projects, plugin files will be created which will act a bridge between native code and JavaScript.
 
