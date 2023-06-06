@@ -5,12 +5,11 @@
 ### 1. Prerequisites:
 
 - Node JS
+- Cordova
 - Android SDK
+- Xcode
 - Android Emulator (or) Real Device
 - iOS Simulator (or) Real Device
-- Android SDK
-- Xcode   
-- Cordova   
 
 ## a. Cordova Plugin for ZelleSDK(Android)
 
