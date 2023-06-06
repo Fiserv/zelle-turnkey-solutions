@@ -29,5 +29,8 @@ loaderData = mapOf(
 
 #### Plugin
 
+[ZellePlugin.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11664595/ZellePlugin.zip)
+
+
 
 
