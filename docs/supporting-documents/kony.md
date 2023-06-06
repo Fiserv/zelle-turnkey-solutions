@@ -330,7 +330,7 @@ Note: Kony plugin should be used with latest Turnkey Service for Zelle Mobile SD
 
 - Add the file ZelleSDK.xcframework in the dependency module. 
 
-![K_ZelleSDK.xcframework](https://github.com/Fiserv/zelle-turnkey-solutions/assets/images/K_ZelleSDK.xcframework.png?raw=true)
+![K_ZelleSDK.xcframework](../../assets/images/K_ZelleSDK.xcframework.png)
 
 - Create the ViewController class in the DemoFFI project along with the storyboard UI.
 
