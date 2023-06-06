@@ -11,19 +11,31 @@
 - Android SDK
 - Xcode    
 
-### 2. Create new flutter application with both Android and iOS platform enabled. 
+### 2. Create new flutter application
 
-### 3. Select project type as Application and provide respective package name. 
+Create new flutter application with both Android and iOS platform enabled. 
 
-### 4. Select specific language support for both Android and iOS and click finish to create the project.
+### 3. Set Package Name
+
+Select project type as Application and provide respective package name. 
+
+### 4. Set Project Language
+
+Select specific language support for both Android and iOS and click finish to create the project.
 
 ![flutter_project_creation](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/de019f59-c08b-4c4e-9a07-e50d1d5eabac)
 
-### 5. Once project has created navigate to lib folder and create dart class with respective widget to lauch Zelle.
+### 5. Create Zelle dart class
 
-### 6. To create a bridge between native and dart, First construct the channel. Use a Method channel with a single platform method that returns the data from dart to native and wise versa.
+Once project has created navigate to lib folder and create dart class with respective widget to lauch Zelle.
 
-### 7. The client and host sides of a channel are connected through a channel name passed in the channel constructor. 
+### 6. Create a Method Channel
+
+To create a bridge between native and dart, First construct the channel. Use a Method channel with a single platform method that returns the data from dart to native and wise versa.
+
+### 7. Provide Channel Name
+
+The client and host sides of a channel are connected through a channel name passed in the channel constructor. 
 
 ### 8. All channel names used in single app must be unique; prefix the channel name with a unique ‘domain prefix’. 
 - Example: static const platform = MethodChannel(‘zellesdk.launch’);
@@ -33,7 +45,9 @@ class _MyHomePageState extends State<MyHomePage> {
   static const platform = MethodChannel('zellesdk.launch');
 ```
 
-### 9. Next, invoke a method on the method channel, specifying the concrete method to call using the String identifier launchZelle. 
+### 9. Invoke a method on the method channel
+
+Next, invoke a method on the method channel, specifying the concrete method to call using the String identifier launchZelle. 
 
 ### 10. Pass the respective parameter to lauch zellesdk in key, value pair in invokeMethod.
 
@@ -87,13 +101,19 @@ final String result = await platform.invokeMethod('launchZelle',{
 
 ## Android Platform:
 
-### 12. Open Android platform inside android studio and create libs folder inside app.
+### 12. Create a lib folder
 
-### 13. Place the latest version of ZelleSDK.aar file inside the libs folder.
+Open Android platform inside android studio and create libs folder inside app.
+
+### 13. Import ZelleSDK.aar file
+
+Place the latest version of ZelleSDK.aar file inside the libs folder.
 
 ![flutter_android_sdkpath](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/b2367a94-3490-46f7-aad0-f0add7183c82)
 
-### 14. To add respective dependencies, open build.gradle file and inside dependencies add required dependency given below.
+### 14. Add Required Dependencies
+
+To add respective dependencies, open build.gradle file and inside dependencies add required dependency given below.
 
 ```json
 implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -106,9 +126,13 @@ implementation 'androidx.core:core-ktx:1.6.0'
 implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
 ```
 
-### 15. Open the file MainActivity.kt located in the kotlin folder in the Project view. Inside the configureFlutterEngine() method, create a MethodChannel and call setMethodCallHandler(). Make sure to use the same channel name as was used on the Flutter client side.
+### 15. Create a MethodChannel Inside Android Platform
 
-### 16. Create new activity to initialize and launch our ZelleSDK.
+Open the file MainActivity.kt located in the kotlin folder in the Project view. Inside the configureFlutterEngine() method, create a MethodChannel and call setMethodCallHandler(). Make sure to use the same channel name as was used on the Flutter client side.
+
+### 16. Create LauchZelle class file
+
+Create new activity to initialize and launch our ZelleSDK.
 
 ### 17. Get the arguments from the client side and pass those arguments to LaunchZelle.kt.
 
@@ -123,7 +147,9 @@ intent.putExtra("data", hashMap)startActivity(intent)
 }
 ```
 
-### 18. Open activity_launch_zelle.xml file inside layout folder and create a framelayout to initialize zelle view.
+### 18. Create Framelayout
+
+Open activity_launch_zelle.xml file inside layout folder and create a framelayout to initialize zelle view.
 
 ![flutter_framelayout](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/be3e4867-8f25-4ea5-9aeb-4b542a38a7da)
 
@@ -161,7 +187,9 @@ class LaunchZelle : AppCompatActivity() {
   }
 }
 ```
-### 20. Create ZelleTheme inside Styles (or) Theme.xml file.
+### 20. Set Theme for SDK
+
+Create ZelleTheme inside Styles (or) Theme.xml file.
 
 ```json
 <style name="ZelleTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
@@ -214,11 +242,15 @@ zelleResult = "Failed to get result: '${e.message}'.";
 }
 ```
 
-### 23. Inside getValue override method get the data from Zelle and send result back to client side.
+### 23. Initialize GenericTag
+
+Inside getValue override method get the data from Zelle and send result back to client side.
 
 ## iOS Platform:
 
-### 24. Open iOS platform inside Xcode and create new ViewController to launch Zelle.
+### 24. Create a ViewController
+
+Open iOS platform inside Xcode and create new ViewController to launch Zelle.
 
 ### 25. Place the ZelleSDK XCframework file inside the Runner.
 
