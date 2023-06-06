@@ -1,11 +1,13 @@
 # Kony Integration (Android)
 
+Prerequisites: Kony Visualizer 8, Android, Xcode, Android emulator/android phone, iOS simulator/iPhone
+
 There are 2 approaches to integrate ZelleSDK with Kony Project
 
 - Integrating ZelleSDK with Kony using KonyAdapter class to launch the ZelleSDK in separate window.
 - Integrating ZelleSDK with Kony using KonyWrapper method in android studio to embed the ZelleSDK in Kony Container.
 
-## Integrating ZelleSDK with Kony using KonyAdapter
+## I. Integrating ZelleSDK with Kony using KonyAdapter
 
 ### 1. Create Android Application with an Activity 
 
@@ -181,7 +183,7 @@ function ffiCallback(data){
 } 
 ```
 
-## Integration of ZelleSDK with Kony Project using KonyWrapper
+## II. Integration of ZelleSDK with Kony Project using KonyWrapper
 
 ### 1. Create Android Application with a Wrapper class
 
@@ -320,3 +322,86 @@ com.mki.zellekonyffi.initializeNFI(Zelleparam);
 
 Note: Kony plugin should be used with latest Turnkey Service for Zelle Mobile SDK version. 
 
+# Kony Integration (iOS) 
+
+### 1. Create a Sample iOS Application with a ViewController 
+
+- Go to Xcode and create a new iOS (Objective-C) application with the name “DemoFFI”.
+
+- Add the file ZelleSDK.xcframework in the dependency module. 
+
+![K_ZelleSDK.xcframework](https://github.com/Fiserv/zelle-turnkey-solutions/assets/images/K_ZelleSDK.xcframework.png?raw=true)
+
+- Create the ViewController class in the DemoFFI project along with the storyboard UI.
+
+- The ViewController method named “loadZelleSDK” contains logic to initialize the Turnkey for Zelle® Mobile SDK.
+
+ViewController.h
+![K_ViewControllerh](../../assets/images/K_ViewControllerh.png)
+
+ViewController.m 
+![K_ViewControllerm](../../assets/images/K_ViewControllerm.png)
+
+- Copy the ViewController.h, ViewController.m, and Main.storyboard files from the project to a separate folder named DemoFFI. Create a zip file of the folder. 
+
+![K_DemoFFI](../../assets/images/K_DemoFFI.png)
+
+### 2. Create the KonyiOSDemo Project in Kony Visualizer 
+
+- Create a project and name it “KonyiOSDemo”. When you create the project, it will auto generate several files and folders. 
+
+![K_KonyProject](../../assets/images/K_KonyProject.png)
+
+- Navigate to KonyiOSDemo/resources/customlibs/lib/iPhone and paste the DemoFFI.zip here. 
+
+![K_KonyiOSDemo](../../assets/images/K_KonyiOSDemo.png)
+
+- Go to Edit > Integrate Third Party > Manage Custom Libraries to create the FFI (Foreign Function Interface). 
+
+![K_FFI](../../assets/images/K_FFI.png)
+
+- Create a package named TestZelle. 
+
+![K_TestZelle](../../assets/images/K_TestZelle.png)
+
+- Create a javascript class ZelleClass inside the TestZelle package. 
+
+![K_javascript](../../assets/images/K_javascript.png)
+
+- Navigate to Native Mappings > Mobile > iPhone and add the details for the DemoFFI.zip file. 
+
+![K_NativeMapping](../../assets/images/K_NativeMapping.png)
+
+- Navigate to JavaScript Definition and create a javascript function named loadSDK. 
+
+![K_loadSDK](../../assets/images/K_loadSDK.png)
+
+- Navigate to Native Mappings and map loadSDK to the class method definition (ViewController’s loadZelleSDK). Select Finish. 
+
+![K_MapWithClass](../../assets/images/K_MapWithClass.png)
+
+- In Forms, add a button (btnSDK in this example) to Form1 with the label name “Launch Zelle”.  
+
+![K_LaunchZelle](../../assets/images/K_LaunchZelle.png)
+
+- Create a listener.js file in the Modules folder and add the following code snippets. 
+
+```json
+function launchSDK() { 
+  //Creates an object of class 'ZelleClass' 
+  var ZelleClassObject = new TestZelle.ZelleClass(); 
+  //Invokes method 'loadSDK’ on the object 
+  ZelleClassObject.loadSDK(); 
+} 
+```
+![K_listener](../../assets/images/K_listener.png)
+
+- Connect the launchSDK function created in the listener.js file with the button’s onClick event (in this example, ACTION_ID: AS_Button_ac7a6fa704074ad68a17f9daa05d736c). 
+
+![K_ButtonEvent](../../assets/images/K_ButtonEvent.png)
+
+- Launch the app in the simulator/device and click on the Launch Zelle button to launch the Turnkey Service for Zelle® Mobile SDK. 
+
+![ZelleLanding](../../assets/images/ZelleLanding.png)
+
+Note: Kony plugin should be used with latest Turnkey Service for Zelle® Mobile SDK version. 
