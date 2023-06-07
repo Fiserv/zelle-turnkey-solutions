@@ -64,7 +64,7 @@ public void Button_Clicked(object sender, EventArgs args)
 }
 ```
 
-#### a) ZelleSDK Integration for Xamarin(Android)
+## a) ZelleSDK Integration for Xamarin(Android)
 
 ### 1. Import Library
 
@@ -285,7 +285,7 @@ SupportFragmentManager // Get the support fragment manager instead of the Fragme
 
 Run the application to launch the Zelle.
 
-#### b) ZelleSDK Integration for Xamarin(iOS)
+## b) ZelleSDK Integration for Xamarin(iOS)
 
 ### 1. There are 2 approaches to integrate the swift library with Xamarin Application Project.
 
