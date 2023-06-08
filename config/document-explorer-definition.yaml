@@ -153,17 +153,15 @@
               sections:
                 - title: Android
                   sections:
-                  - title: ZelleSDK_V_1.0.0
-                    link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
                   - title: ZelleSDK_V_1.0.1
-                    link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
+                    link: docs/supporting-documents/XamarinDLLFiles/Android/ZelleDLL_V_1.0.1.md
+                  - title: ZelleSDK_V_1.0.0
+                    link: docs/supporting-documents/XamarinDLLFiles/Android/ZelleDLL_V_1.0.0.md
 
                 - title: iOS
                   sections:
                   - title: ZelleSDK_V_1.0.0
-                    link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
-                  - title: ZelleSDK_V_1.0.1
-                    link: docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
+                    link: docs/supporting-documents/XamarinDLLFiles/iOS/ZelleDLL_V_1.0.0.md
 
         - title: Flutter
           sections:
