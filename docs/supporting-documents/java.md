@@ -161,3 +161,7 @@ public void getValue(String name) {
 ### Dependency
 
 zxing:core - 3.3.3 (QR Code library) 
+
+### Sample Project
+
+[Zelle Payment.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11689585/Zelle.Payment.zip)
