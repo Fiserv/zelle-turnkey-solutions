@@ -17,6 +17,8 @@ Create a IZelleService.cs interface class inside Xamarin Solution.
 
 This IZelleService.cs class will create a bridge between Xamarin Solution to Xamarin Android and iOS.
 
+![Xamarin_service](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/0d133867-c20c-4e3c-8491-dbcbd9f50302)
+
 ### 3. Code Snippet for IZelleService Interface class:
 
 ```json
@@ -35,6 +37,8 @@ namespace FIApp
 ### 4. Launch Zelle using DependencyService
 
 In Xamarin solution launch the Zelle by passing the required parameters through interface by using DependencyService.
+
+<img width="507" alt="xamarin_launchzelle" src="https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/104f2f83-99e7-4ec4-ad89-dd3ab8b987e5">
 
 ```json
 using System;
@@ -72,9 +76,13 @@ Add the required library’s from NuGet for Xamarin android inside <AppName.andr
 
 The library’s which is shown in the below image packages folder is required to launch ZelleSDK.
 
+![xamarin_android_package](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/6377744c-3bc1-41d9-a4be-f6f8d50901e6)
+
 ### 2. Add Required Permission
 
 Add the required permission and declare the respective class file path and tools:node="replace" inside application tag in Properties.AndroidManifest.xml file.
+
+![xamarin_android_manifest](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/4dd69da0-0606-4ef8-8dd5-b141103d1651)
 
 ```json
 <?xml version="1.0" encoding="utf-8"?>
@@ -102,7 +110,11 @@ android:theme="@style/MainTheme">
 
 Add the ZelleSDKAndroidBinding and ZxingEmbedded .dll file inside References folder.
 
+![xamarin_android_reference](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/6c604c18-a6af-4cb8-abb5-df4c558e4b54)
+
 Open the MainActivity.cs file and implement the interface class inside <ProjectName.android> folder.
+
+![xamarin_android_mainactivity](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/164c881e-f186-46f5-a16c-b64edd9c4f6f)
 
 Add the assembly for the interface communication connection from Xamarin solution to Xamarin android and ios.
 
@@ -161,6 +173,8 @@ MainActivity.Instance.StartActivity(intent);
 
 Get the values from launchZelle function and by using intent pass the values from one page to another.
 
+![xamarin_android_intent](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/3477ee2b-e820-4953-a9c6-fedb22d76dac)
+
 ```json
 public void launchZell(string applicationName, string baseUrl, string institutionId, string ssoKey, string product, IDictionary parameters)
 {
@@ -179,6 +193,8 @@ MainActivity.Instance.StartActivity(intent);   }
 ### 4. Create a Framelayout
 
 Create XML file inside layout folder to design the framelayout to access Zelle.
+
+<img width="187" alt="xamarin_android_xml" src="https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/b6faebb2-d223-4a50-8604-43d50fa9e751">
 
 ```json
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -205,6 +221,8 @@ Set the View for that class inside OnCreate function:
 ### 6. Initialize Zelle
 
 Get the values from the previous activity using intent and initialize Zelle with respective params.
+
+![xamarin_android_zelle](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/2839992d-c7e1-4a30-af40-d046bdd28c3b)
 
 ```json
 Code Snippet of  Zelle Class:
@@ -299,19 +317,31 @@ We have followed the second approach where we are creating Proxy Framework which
 
 Open Xcode and create new Swift framework, which will be a proxy between Xamarin.iOS code and ZelleSDK Swift framework. Click File > New > Project and follow the wizard steps:
 
+![xamarin_ios_createframework](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/19f7155c-9095-4bf3-bd1b-bc6a67f728d2)
+
+![xamarin_ios_frameworkName](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/17c3eb68-83ec-4c30-9d88-6d3484934540)
+
 Select the SwiftFrameworkProxy from the project files explorer then select the General tab.
 
 ### 3. Import ZelleSDK.xcframework:
 
 Drag and drop the ZelleSDK.xcframework package to the Xcode Frameworks and Libraries list under the General tab check the Copy items if needed option while adding the framework.
 
+![xamarin_ios_dropxcframework](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/2776ce99-656f-4ca0-ae8b-383f55ee561f)
+
 Verify that the Swift framework has been added to the project otherwise the following options will not be available.
 
-Ensure that the Do Not Embed option is selected, which will be later controlled manually.
+Ensure that the **Do Not Embed** option is selected, which will be later controlled manually.
 
-Ensure that the Build Settings option Always Embed Swift Standard Libraries, which includes Swift libraries with the framework is set to No. It will be later manually controlled, which Swift dylibs are included into the final package.
+![xamarin_ios_donotEmbed](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/25b8170c-0c36-44bd-9f15-dbe3b80d187a)
 
-Ensure that the Enable Bitcode option is set to No. As of right now Xamarin.iOS doesn't include Bitcode while Apple requires all libraries to support the same architectures.
+Ensure that the Build Settings option **Always Embed Swift Standard Libraries**, which includes Swift libraries with the framework is set to No. It will be later manually controlled, which Swift dylibs are included into the final package.
+
+![xamarin_ios_alwaysEmbed](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/dfe00aeb-e8ae-4b98-8bdf-7920f0344fe6)
+
+Ensure that the **Enable Bitcode** option is set to No. As of right now Xamarin.iOS doesn't include Bitcode while Apple requires all libraries to support the same architectures.
+
+![xamarin_ios_enableBitcode](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/03b51462-e196-4736-a2f9-155a441b3f87)
 
 You can verify that the resulted framework has the Bitcode option disabled by running the following terminal command against the framework:
 
@@ -321,17 +351,25 @@ The output should be empty otherwise you want to review the project settings for
 
 ### 4. Specifies a Header Name
 
-Ensure that the Objective-C Generated interface Header Name option is enabled and specifies a header name. The default name is <FrameworkName>-Swift.h:
+Ensure that the **Objective-C Generated interface Header Name** option is enabled and specifies a header name. The default name is <FrameworkName>-Swift.h:
+    
+![xamarin_ios_objectiveC](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/367e3abc-2c49-46fa-afbe-fc6fc91d0c1f)
 
-Expose desired methods and mark them with @objc attribute and apply additional rules defined below. If you build the framework without this step, the generated Objective-C header will be empty and Xamarin.iOS won't be able to access the Swift framework members. Expose the initialization logic for the underlying Gigya Swift SDK by creating a new Swift file ZelleProxy.swift and defining the following code:
+Expose desired methods and mark them with @objc attribute and apply additional rules defined below. If you build the framework without this step, the generated Objective-C header will be empty and Xamarin.iOS won't be able to access the Swift framework members. Expose the initialization logic for the underlying Gigya Swift SDK by creating a new Swift file **ZelleProxy.swift** and defining the following code:
+    
+![xamarin_ios_zelleProxy](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/53e63c82-d12e-433a-98ba-cc64902992ab)
 
 ### 5. Set Release Build
 
-Change the scheme build configuration from Debug to Release. In order to do that, open the Xcode > Target > Edit Scheme dialog and then set the Build Configuration option to Release:
+Change the scheme build configuration from **Debug** to **Release**. In order to do that, open the **Xcode > Target > Edit Scheme** dialog and then set the **Build Configuration** option to **Release**:
+    
+![xamarin_ios_release](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/5ba7109d-d0c8-4d45-8fb9-d2e78df53d8c)
+    
+![xamarin_ios_releaseBuild](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/ed64397a-0657-443a-9cd1-414a621b41a0)
 
-At this point, the Framework is ready to be created. Build the framework for both simulator and device architectures and then combine the outputs as a single framework package. Identify installed SDK versions in order to build the source code using xcodebuild tool:
+At this point, the Framework is ready to be created. Build the framework for both simulator and device architectures and then combine the outputs as a single framework package. Identify installed SDK versions in order to build the source code using **xcodebuild tool**:
 
-- xcodebuild -showsdks
+**- xcodebuild -showsdks**
 
 ### 6. The output will be similar to the following:
 
@@ -419,13 +457,17 @@ void LaunchZelleWithViewController (UIViewController viewController, string appl
 
 The next step is to create a Xamarin.iOS binding project using the Visual Studio binding template, add required metadata, native references and then build the project to produce a consumable library:
 
-Open Visual Studio for Mac and create a new Xamarin.iOS binding library project, give it a name, in this case SwiftFrameworkProxy.Binding and complete the wizard. The Xamarin.iOS binding template is located by the following path: iOS > Library > Binding Library:
+Open Visual Studio for Mac and create a new Xamarin.iOS binding library project, give it a name, in this case SwiftFrameworkProxy.Binding and complete the wizard. The Xamarin.iOS binding template is located by the following path: **iOS > Library > Binding Library**:
+    
+![xamarin_ios_bindinglib](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/69133daa-8211-487f-897c-e2d2bad00e41)
 
 ### 14. Add ApiDefinition.cs and Structs.cs file
 
-Delete existing metadata files ApiDefinition.cs and Structs.cs as they will be replaced completely with the metadata generated by the Objective Sharpie tool.
+Delete existing metadata files **ApiDefinition.cs** and **Structs.cs** as they will be replaced completely with the metadata generated by the Objective Sharpie tool.
 
-Copy metadata generated by Sharpie at one of the previous steps, select the following Build Action in the properties window: ObjBindingApiDefinition for the ApiDefinitions.cs file and ObjBindingCoreSource for the StructsAndEnums.cs file:
+Copy metadata generated by Sharpie at one of the previous steps, select the following Build Action in the properties window: **ObjBindingApiDefinition** for the **ApiDefinitions.cs** file and **ObjBindingCoreSource** for the **StructsAndEnums.cs** file:
+        
+![xamarin_ios_addApiDef](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/70baddcb-960b-4c6a-91e7-d993538a1200)
 
 The metadata itself describes each exposed Objective-C class and member using C# language. You are able to see the original Objective-C header definition alongside with the C# declaration:
 
@@ -447,20 +489,28 @@ Even though it's a valid C# code, it's not used as is but instead is used by Xam
 
 Add native reference to the generated earlier fat framework, as well as each dependency of that framework. In this case, add both SwiftFrameworkProxy and ZelleSDK framework native references to the binding project:
 
-- To add native framework references, open finder and navigate to the folder with the frameworks. Drag and drop the frameworks under the Native References location in the Solution Explorer. Alternatively, you can use the context menu option on the Native References folder and click Add Native Reference to look up the frameworks and add them:
+- To add native framework references, open finder and navigate to the folder with the frameworks. Drag and drop the frameworks under the Native References location in the Solution Explorer. Alternatively, you can use the context menu option on the Native References folder and click **Add Native Reference** to look up the frameworks and add them:
+    
+![xamarin_ios_addReference](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/377f77e0-01a4-4918-b08a-35ec5066d901)
 
 - Update properties of every native reference and check three important options:
   •	Set Smart Link = true
   •	Set Force Load = false
   •	Set list of Frameworks used to create the original frameworks. In this case each framework has only two dependencies: Foundation and UIKit. Set it to the Frameworks field:
+    
+![xamarin_ios_setProperties](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/04b4a6f7-48d0-4512-a567-670fec055fd5)
 
 ### 16. Consume the binding library
 
 The final step is to consume the Xamarin.iOS binding library in a Xamarin.iOS application. Create a new Xamarin.iOS project, add reference to the binding library, and activate Swift SDK:
 
-- Create Xamarin.iOS project. You can use the iOS > App > Single View App as a starting point:
+- Create Xamarin.iOS project. You can use the **iOS > App > Single** View App as a starting point:
+    
+![xamarin_ios_singleView](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/c3fb00a4-bb0b-4c3a-a547-fe6fb219235c)
 
 - Add a binding project reference to the target project or .dll created previously. Treat the binding library as a regular Xamarin.iOS library:
+
+![xamarin_ios_addFrameworkProxy](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/7f0ea56b-e7b5-448b-ad6b-a123588febae)
 
 - Update the source code of the app and add the initialization logic to the primary SampleViewController, which activates ZelleSDK.
 
