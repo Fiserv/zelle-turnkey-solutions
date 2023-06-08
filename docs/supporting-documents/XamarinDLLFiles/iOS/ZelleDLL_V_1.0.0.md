@@ -16,7 +16,10 @@ April 30 2023
 
 - Memory leak that was fixed.
 
-#### DLL
+## DLL
+
+[ZelleBindingLibraryIOS.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11690346/ZelleBindingLibraryIOS.zip)
+
 
 
 
