@@ -16,11 +16,15 @@ April 30 2023
 
 - Memory leak that was fixed.
 
-### Dependency
+## Dependency
 
-zxing:core - 3.3.3 ()
+zxing:core - 3.3.3 ([ZxingEmbedded.dll.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11690379/ZxingEmbedded.dll.zip))
 
-#### DLL
+## DLL
+
+[ZelleSDKAndroidBinding.dll.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11690397/ZelleSDKAndroidBinding.dll.zip)
+
+
 
 
 
