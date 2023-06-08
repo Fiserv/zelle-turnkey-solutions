@@ -163,7 +163,7 @@ override fun getValue(name: String) {
 
 ### Dependency
 
-zxing:core - 3.3.3 (QR Code library) 
+zxing:core - 3.3.3 (zxing:core - 3.3.3 ([QR Code library](https://github.com/journeyapps/zxing-android-embedded))) 
 
 ### Sample Project
 
