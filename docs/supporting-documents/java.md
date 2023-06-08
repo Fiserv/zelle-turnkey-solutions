@@ -160,7 +160,7 @@ public void getValue(String name) {
 
 ### Dependency
 
-zxing:core - 3.3.3 (QR Code library) 
+zxing:core - 3.3.3 ([QR Code library](https://github.com/journeyapps/zxing-android-embedded)) 
 
 ### Sample Project
 
