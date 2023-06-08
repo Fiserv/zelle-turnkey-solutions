@@ -13,7 +13,7 @@ August 11 2022
 
 - Prominent Disclosure implementation for Contact, Camera and Gallery Permission.
 
-### Dependency
+## Dependency
 
 zxing:core - 3.3.3 ([ZxingEmbedded.dll.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11690379/ZxingEmbedded.dll.zip))
 
