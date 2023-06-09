@@ -153,7 +153,6 @@
               sections:
                 - title: Android
                   sections:
-                  - open: true
                   - title: ZelleSDK_V_1.0.1
                     link: docs/supporting-documents/XamarinDLLFiles/Android/ZelleDLL_V_1.0.1.md
                   - title: ZelleSDK_V_1.0.0
@@ -161,7 +160,6 @@
 
                 - title: iOS
                   sections:
-                  - open: true
                   - title: ZelleSDK_V_1.0.0
                     link: docs/supporting-documents/XamarinDLLFiles/iOS/ZelleDLL_V_1.0.0.md
 
