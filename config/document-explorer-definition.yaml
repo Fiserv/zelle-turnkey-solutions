@@ -151,7 +151,6 @@
               link: docs/supporting-documents/xamarin.md
             - title: DLL Files
               sections:
-                - open: true
                 - title: Android
                   sections:
                   - open: true
