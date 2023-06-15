@@ -151,14 +151,14 @@
               link: docs/supporting-documents/xamarin.md
             - title: Android
               sections:
-                - title: ZelleSDK_V_1.0.1
+                - title: ZelleDLL_V_1.0.1
                   link: docs/supporting-documents/XamarinDLLFiles/Android/ZelleDLL_V_1.0.1.md
-                - title: ZelleSDK_V_1.0.0
+                - title: ZelleDLL_V_1.0.0
                   link: docs/supporting-documents/XamarinDLLFiles/Android/ZelleDLL_V_1.0.0.md
 
             - title: iOS
               sections:
-                - title: ZelleSDK_V_1.0.0
+                - title: ZelleDLL_V_1.0.0
                   link: docs/supporting-documents/XamarinDLLFiles/iOS/ZelleDLL_V_1.0.0.md
 
         - title: Flutter
