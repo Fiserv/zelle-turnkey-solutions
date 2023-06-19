@@ -499,3 +499,6 @@ var fi_callback = true
 NativeModules.MyModule.NavigateToZelle("Demo Bank", "https://certtransfers.fta.cashedge.com/popnet/faces/loginServlet", "88850000", "zelle", "e78abf35705a6d9b51fbf3939aa82489", fi_callback, loaderColor, b, a); 
 ```
 
+### Sample Project:
+
+[dps-zelle-sdk-testapp-reactnative-master.zip](https://github.com/Fiserv/zelle-turnkey-solutions/raw/develop/dps-zelle-sdk-testapp-reactnative-master.zip)
