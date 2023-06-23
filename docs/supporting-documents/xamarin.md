@@ -527,6 +527,10 @@ public override void ViewDidLoad()
 
 Run the application to launch the Zelle.
 
+### Sample Project:
+
+[dps-zelle-sdk-testapp-xamarin-master.zip](https://github.com/Fiserv/zelle-turnkey-solutions/raw/develop/dps-zelle-sdk-testapp-xamarin-master.zip)
+
 
 
 
