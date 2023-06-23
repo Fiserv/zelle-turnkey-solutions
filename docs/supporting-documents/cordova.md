@@ -25,11 +25,11 @@
 
 ### 6. Screenshot of plugin: - This refers to the plugin folder. 
 
-![cordova_plugin_folder](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/8bc89c67-925e-4ade-906e-ae9c96e9be81)
+![cordova_plugin_folder](../../assets/images/cordova_plugin_folder.jpg)
 
 ### 7. Screenshot of plugin Files: - This refers to the created plugin files.
 
-![cordova_plugin_files](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/a5bb853e-1a48-4031-b5f8-ba10354dcdb3)
+![cordova_plugin_files](../../assets/images/cordova_plugin_files.jpg)
 
 ### 8. Inside ZelleSDK Plugin folder except AAR folder all folders and files are automatically generated.
 
@@ -37,7 +37,7 @@
 
 ### 10. Screenshot refers to SDK file: -
 
-![cordova_plugin_aarfile](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/9d375088-411d-480b-8203-a5bff6914009)
+![cordova_plugin_aarfile](../../assets/images/cordova_plugin_aarfile.png)
 
 ### 11. In src folder, it has two folders which is android and iOS.
 
@@ -49,7 +49,7 @@
 
 ### 15. Screenshot refers to files created inside android folder: -
 
-![cordova_android_folder](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/4c43528e-7fe7-40fc-a25f-1b2fe41f1a4c)
+![cordova_android_folder](../../assets/images/cordova_android_folder.png)
 
 ### 16. For android, new java class and xml files can be created which will act as interface to access ZelleSDK.
 
@@ -68,11 +68,11 @@
 
 ### 21. Screenshot refers to plugin added in Cordova project: -
 
-![cordova_plugin_added](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/61d1ac5a-6632-4fca-809f-85517853e07f)
+![cordova_plugin_added](../../assets/images/cordova_plugin_added.jpg)
 
 ### 22. After plugin is added, plugin files will be included in Cordova project.
 
-![cordova_project_strct](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/105cd4d8-23ca-4004-b7c5-bb6a06b2b664)
+![cordova_project_strct](../../assets/images/cordova_project_strct.jpg)
 
 ### 23. ZelleSDK can be launched from any Cordova application by calling the function created in plugin folder(www/ZellePlugin.js) with the respective parameters like below.
 
@@ -123,7 +123,7 @@ ZellePlugin.zelle_activity(person ,success,failure); //here we need to pass the 
 
 ### 5. Screenshot of plugin: - This refers to the plugin folder.
 
-![cordova_ios_folder](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/7fcbdf53-ff35-4ccf-8d15-ab4f6051c6e8)
+![cordova_ios_folder](../../assets/images/cordova_ios_folder.png)
 
 ### 6. Inside ZelleSDK Plugin folder except Framework folder all folders and files are automatically generated.
 
@@ -131,7 +131,7 @@ ZellePlugin.zelle_activity(person ,success,failure); //here we need to pass the 
 
 ### 8. Screenshot refers to SDK file: -
 
-![cordova_ios_plugin](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/2dd9834c-6afd-41c8-bf9d-f5564d885017)
+![cordova_ios_plugin](../../assets/images/cordova_ios_plugin.jpg)
 
 ### 9. In the src folder it has two folders which is android and iOS.
 
@@ -158,7 +158,7 @@ ZellePlugin.zelle_activity(person ,success,failure); //here we need to pass the 
 
 ### 18. Screenshot refers to plugin added in Cordova project: -
 
-![cordova_ios_strct](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/f7657df7-d990-4d19-9f53-5874e5c5f9ff)
+![cordova_ios_strct](../../assets/images/cordova_ios_strct.jpg)
 
 ### 19. ZelleSDK can be launched from any Cordova application by calling the function created in plugin folder(www/ZellePlugin.js) with the respective parameters like below.
 
