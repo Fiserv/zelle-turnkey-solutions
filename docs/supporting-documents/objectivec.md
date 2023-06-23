@@ -21,7 +21,7 @@
 
 ![ios_embed](../../assets/images/ios_embed.jpg)
 
-![ios_embed sign](../../assets/images/ios_embed&sign.jpg)
+![ios_embed_sign](../../assets/images/ios_embed_sign.jpg)
 
 ### 4. Import ZelleSDK as needed in any source code files. 
 
