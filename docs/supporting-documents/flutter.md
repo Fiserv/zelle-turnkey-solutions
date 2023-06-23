@@ -23,7 +23,7 @@ Select project type as Application and provide respective package name.
 
 Select specific language support for both Android and iOS and click finish to create the project.
 
-![flutter_project_creation](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/de019f59-c08b-4c4e-9a07-e50d1d5eabac)
+![flutter_project_creation](../../assets/images/flutter_project_creation.jpg)
 
 ### 5. Create Zelle dart class
 
@@ -109,7 +109,7 @@ Open Android platform inside android studio and create libs folder inside app.
 
 Place the latest version of ZelleSDK.aar file inside the libs folder.
 
-![flutter_android_sdkpath](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/b2367a94-3490-46f7-aad0-f0add7183c82)
+![flutter_android_sdkpath](../../assets/images/flutter_android_sdkpath.jpg)
 
 ### 14. Add Required Dependencies
 
@@ -151,7 +151,7 @@ intent.putExtra("data", hashMap)startActivity(intent)
 
 Open activity_launch_zelle.xml file inside layout folder and create a framelayout to initialize zelle view.
 
-![flutter_framelayout](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/be3e4867-8f25-4ea5-9aeb-4b542a38a7da)
+![flutter_framelayout](../../assets/images/flutter_framelayout.jpg)
 
 ### 19. Open LauchZelle.kt file inside onCreateView function initialize Zelle, Bridge and BridgeView (or) BridgePopup with respective parameters.
 
@@ -254,7 +254,7 @@ Open iOS platform inside Xcode and create new ViewController to launch Zelle.
 
 ### 25. Place the ZelleSDK XCframework file inside the Runner.
 
-![flutter_ios_sdk](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/7a50c1f9-5151-4dc0-8769-d6fd5f7cdc24)
+![flutter_ios_sdk](../../assets/images/flutter_ios_sdk.jpg)
 
 ### 26. Add the ZelleSDK required permissions in Info.plist file.
 - Example: 
@@ -262,7 +262,7 @@ Open iOS platform inside Xcode and create new ViewController to launch Zelle.
 - 2) Camera permission
 - 3) Gallery Permission
 
-![flutter_ios_info](https://github.com/Fiserv/zelle-turnkey-solutions/assets/114585394/6165de31-cfec-48d1-928b-2670629a8d18)
+![flutter_ios_info](../../assets/images/flutter_ios_info.jpg)
 
 ### 27. Open the file AppDelegate.swift located under Runner > Runner in the Project navigator.
 
