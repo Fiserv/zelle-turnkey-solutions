@@ -3,7 +3,7 @@
 ## Integrating Zelle Plugin with Cordova Project
 
 - Navigate to respective Cordova project folder using terminal to add the [ZellePlugin](?path=docs/supporting-documents/CordovaPluginFiles/ZellePlugin_V_1.0.1.md).
-- Use the command to add plugin to the project —> cordova plugin add "C:\Zelle SDK Plugin"
+- Use the following command to add plugin to the project —> cordova plugin add your-plugin-local-path folder (e.g. cordova plugin add "C:\Zelle SDK Plugin")
 - Create the function named openZelle in your .js file (e.g. index.js) and pass the required parameters to ZellePlugin.
 ```json
 function openZelle(){
