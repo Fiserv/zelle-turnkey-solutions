@@ -2,8 +2,8 @@
 
 ## Integrating Zelle Plugin with Cordova Project
 
-- Navigate to respective Cordova project folder using terminal to add the [ZellePlugin](?path=docs/supporting-documents/CordovaPluginFiles).
-- Use the upcoming comment to add plugin to the project —> cordova plugin add "C:\Zelle SDK Plugin"
+- Navigate to respective Cordova project folder using terminal to add the [ZellePlugin](?path=docs/supporting-documents/CordovaPluginFiles/ZellePlugin_V_1.0.1.md).
+- Use the command to add plugin to the project —> cordova plugin add "C:\Zelle SDK Plugin"
 - Create the function named openZelle in your .js file (e.g. index.js) and pass the required parameters to ZellePlugin.
 ```json
 function openZelle(){
@@ -38,9 +38,14 @@ ZellePlugin.zelle_activity(person ,success,failure); //here we need to pass the 
 
 - Build the project like —> cordova build “platform-name”
 
-Note: e.g. . cordova build android/cordova build ios
+Note: For example cordova build android/cordova build ios
 
 ## Additional Information
+
+## Cordova Plugin for ZelleSDK
+
+To integrate ZelleSDK into any Cordova projects, plugin files will be created, which will act as a bridge between native code and JavaScript. Plugins can be created using Node.js for both Android and iOS platforms. To create a plugin, the plugin name, plugin id, plugin version, and plugin package name are required. (Example package name: com.zelle.sdk.plugin)
+
 
 ### Prerequisites:
 
@@ -50,10 +55,6 @@ Note: e.g. . cordova build android/cordova build ios
 - Xcode
 - Android Emulator (or) Real Device
 - iOS Simulator (or) Real Device
-
-## Cordova Plugin for ZelleSDK
-
-To integrate ZelleSDK into any Cordova projects, plugin files will be created, which will act as a bridge between native code and JavaScript. Plugins can be created using Node.js for both Android and iOS platforms. To create a plugin, the plugin name, plugin id, plugin version, and plugin package name are required. (Example package name: com.zelle.sdk.plugin)
 
 ### 1. Node and npm installation
 
