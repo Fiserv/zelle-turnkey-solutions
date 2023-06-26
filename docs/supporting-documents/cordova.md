@@ -42,10 +42,9 @@ Note: For example cordova build android/cordova build ios
 
 ## Additional Information
 
-## Cordova Plugin for ZelleSDK
+## Creating Cordova Plugin for ZelleSDK
 
 To integrate ZelleSDK into any Cordova projects, plugin files will be created, which will act as a bridge between native code and JavaScript. Plugins can be created using Node.js for both Android and iOS platforms. To create a plugin, the plugin name, plugin id, plugin version, and plugin package name are required. (Example package name: com.zelle.sdk.plugin)
-
 
 ### Prerequisites:
 
@@ -67,20 +66,17 @@ To integrate ZelleSDK into any Cordova projects, plugin files will be created, w
 
 ### 3. Adding android and iOS platform
 
-- Navigate to project folder —>cd PluginName/src
-- Add android platform to plugin ——> plugman platform add --platform_name android
-- Add iOS platform to plugin ——> plugman platform add --platform_name ios
+- Navigate to project folder —> cd PluginName
+- Add android platform to plugin —> plugman platform add --platform_name android
+- Add iOS platform to plugin —> plugman platform add --platform_name ios
 
 ### 4. Create package.json File
 
-- Navigate back to plugin folder ——>cd .. PluginName
-- To create package.json file use the following commands ——>plugman createpackagejson "path of your PluginName" (or) sudo plugman
+- To create package.json file use the following commands —> plugman createpackagejson "path of your PluginName" (or) sudo plugman
 
-### 6. Screenshot of plugin: - This refers to the plugin folder. 
+### 5. Integrating Android ZelleSDK with Cordova Plugin
 
-### 7. Integrating Android ZelleSDK with Cordova Plugin
-
-- Create AAR folder inside the plugin project folder
+- Create new folder named AAR, inside the plugin project folder
 - Then add android SDK (ZelleSDK.aar) into the AAR folder
 - Open ZellePlugin/src/android folder in Android Studio
 - It will contain ZellePlugin.java and android.iml, now we have to create the below files in android folder
@@ -194,7 +190,7 @@ public class ZelleActivity extends AppCompatActivity {
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Zelle Activity"
-        android:id="@+id/textView"
+        android:id="@+id/frame_layout"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
@@ -216,6 +212,10 @@ dependencies {
     implementation "androidx.core:core-ktx:1.5.0"
 }
 ```
+
+### 6. Integrating iOS ZelleSDK with Cordova Plugin
+
+
 
 ### Sample Project:
 
