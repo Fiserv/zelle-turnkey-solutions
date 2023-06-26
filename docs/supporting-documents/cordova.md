@@ -1,90 +1,17 @@
 # Steps for Quick Start
 
-## Project Setup
+## Integrating Zelle Plugin with Cordova Project
 
-### 1. Prerequisites:
-
-- Node JS
-- Cordova
-- Android SDK
-- Xcode
-- Android Emulator (or) Real Device
-- iOS Simulator (or) Real Device
-
-## a. Cordova Plugin for ZelleSDK(Android)
-
-### 2. To integrate ZelleSDK into any Cordova projects, plugin files will be created which will act a bridge between native code and JavaScript. 
-
-### 3. Plugin can be created using node.js for both android and iOS platform. 
-
-### 4. To create a plugin, plugin name, plugin id, plugin version and plugin package name are required. 
-
-- Example package name: - com.zelle.sdk.plugin 
-
-### 5. Once plugin is created, it contains some of the files inside our created plugin folder.
-
-### 6. Screenshot of plugin: - This refers to the plugin folder. 
-
-![cordova_plugin_folder](../../assets/images/cordova_plugin_folder.jpg)
-
-### 7. Screenshot of plugin Files: - This refers to the created plugin files.
-
-![cordova_plugin_files](../../assets/images/cordova_plugin_files.jpg)
-
-### 8. Inside ZelleSDK Plugin folder except AAR folder all folders and files are automatically generated.
-
-### 9. To access our ZelleSDK we can create AAR folder to place our SDK into it.
-
-### 10. Screenshot refers to SDK file: -
-
-![cordova_plugin_aarfile](../../assets/images/cordova_plugin_aarfile.png)
-
-### 11. In src folder, it has two folders which is android and iOS.
-
-### 12. Inside the android and iOS folder, we have one java file for android which extends Cordova plugin.
-
-### 13. And inside www folder we have a js file with same file name of java created in src android folder.
-
-### 14. This js and native file only communicates with each other for passing the parameters from js to java.
-
-### 15. Screenshot refers to files created inside android folder: -
-
-![cordova_android_folder](../../assets/images/cordova_android_folder.png)
-
-### 16. For android, new java class and xml files can be created which will act as interface to access ZelleSDK.
-
-### 17. In the plugin.xml file, location path for the created java, xml files can be added in android platform tag.
-
-### 18. After plugin is created, this can be imported in any Cordova project to access ZelleSDK.
-
-### 19. Below are the steps to integrate the plugin in Cordova project.
-
-### 20. Navigate to respective Cordova project folder inside terminal to add the plugin.
-
--      a. cordova plugin add your-plugin-local-path folder
--         e.g. cordova plugin add "C:\Zelle SDK Plugin"
--      b. cordova build “platform-name”
--         e.g. . cordova build android
-
-### 21. Screenshot refers to plugin added in Cordova project: -
-
-![cordova_plugin_added](../../assets/images/cordova_plugin_added.jpg)
-
-### 22. After plugin is added, plugin files will be included in Cordova project.
-
-![cordova_project_strct](../../assets/images/cordova_project_strct.jpg)
-
-### 23. ZelleSDK can be launched from any Cordova application by calling the function created in plugin folder(www/ZellePlugin.js) with the respective parameters like below.
-
-### 24. Create the openZelle function in your .js file (e.g. index.js) and pass the required parameters to ZellePlugin.
-
+- Navigate to respective Cordova project folder using terminal to add the [ZellePlugin](?path=docs/supporting-documents/CordovaPluginFiles).
+- Use the upcoming comment to add plugin to the project —> cordova plugin add "C:\Zelle SDK Plugin"
+- Create the function named openZelle in your .js file (e.g. index.js) and pass the required parameters to ZellePlugin.
 ```json
 function openZelle(){
-  var baseURL = document.getElementById("base_url");
-  var institutionId = document.getElementById("institution_id");
-  var ssoKey = document.getElementById("sso");
-  var product = document.getElementById("product");
-  var a = {};
+var baseURL = document.getElementById("base_url");
+var institutionId = document.getElementById("institution_id");
+var ssoKey = document.getElementById("sso");
+var product = document.getElementById("product");
+var a = {};
 var b = {};
 var pd_contact= {
 pd.tittle : ”tittle” ,
@@ -109,98 +36,184 @@ ZellePlugin.zelle_activity(person ,success,failure); //here we need to pass the 
 }
 ```
 
-## b. Cordova Plugin for ZelleSDK(iOS)
+- Build the project like —> cordova build “platform-name”
 
-### 1. To integrate ZelleSDK into any Cordova projects, plugin files will be created which will act a bridge between native code and JavaScript.
+Note: e.g. . cordova build android/cordova build ios
 
-### 2. Plugin can be created using node.js for both android and iOS platform.
+## Additional Information
 
-### 3. To create a plugin, plugin name, plugin id, plugin version and plugin package name are required.
+### Prerequisites:
 
-- Example: - com.zelle.sdk.plugin
+- Node JS
+- Cordova
+- Android SDK
+- Xcode
+- Android Emulator (or) Real Device
+- iOS Simulator (or) Real Device
 
-### 4. Once plugin is created, it contains some of the files inside our created plugin folder.
+## Cordova Plugin for ZelleSDK
 
-### 5. Screenshot of plugin: - This refers to the plugin folder.
+To integrate ZelleSDK into any Cordova projects, plugin files will be created, which will act as a bridge between native code and JavaScript. Plugins can be created using Node.js for both Android and iOS platforms. To create a plugin, the plugin name, plugin id, plugin version, and plugin package name are required. (Example package name: com.zelle.sdk.plugin)
 
-![cordova_ios_folder](../../assets/images/cordova_ios_folder.png)
+### 1. Node and npm installation
 
-### 6. Inside ZelleSDK Plugin folder except Framework folder all folders and files are automatically generated.
+- Install Node.js. —> https://nodejs.org/en/download/ (If not installed already)
+- Open terminal and install —> npm install -g plugman (or) sudo npm install -g plugman
 
-### 7. To access our ZelleSDK we can create a Framework folder to place our SDK into it.
+### 2. Create Cordova Plugin
 
-### 8. Screenshot refers to SDK file: -
+- Create cordova plugin using plugman like —> plugman create --name PluginName --plugin_id com.example.sample.plugin --plugin_version 0.0.1
 
-![cordova_ios_plugin](../../assets/images/cordova_ios_plugin.jpg)
+### 3. Adding android and iOS platform
 
-### 9. In the src folder it has two folders which is android and iOS.
+- Navigate to project folder —>cd PluginName/src
+- Add android platform to plugin ——> plugman platform add --platform_name android
+- Add iOS platform to plugin ——> plugman platform add --platform_name ios
 
-### 10. Inside iOS folder we have objective c/swift file which extends Cordova plugin.
+### 4. Create package.json File
 
-### 11. Inside www folder we have a js file with same file name of Objective C/Swift file created in src.
+- Navigate back to plugin folder ——>cd .. PluginName
+- To create package.json file use the following commands ——>plugman createpackagejson "path of your PluginName" (or) sudo plugman
 
-### 12. This js and native file only communicates each other for passing the parameters from js to Objective C/Swift file.
+### 6. Screenshot of plugin: - This refers to the plugin folder. 
 
-### 13. For iOS, new objective c/swift and storyboard files can be created which will act as interface to access ZelleSDK.
+### 7. Integrating Android ZelleSDK with Cordova Plugin
 
-### 14. In the plugin.xml file, location path for the created Objective c/Swift, storyboard files can be added in iOS platform tag.
-
-### 15. After plugin is created, this can be imported in any Cordova project to access ZelleSDK.
-
-### 16. Below are the steps to integrate the plugin in Cordova project.
-
-### 17. Navigate to respective Cordova project folder inside terminal to add our plugin.
-
-- a. cordova plugin add your-plugin-local-path folder
--    e.g., cordova plugin add "Users/Cordova/ZellePlugin"
-- b. cordova build “platform-name”
--    e.g., cordova build ios
-
-### 18. Screenshot refers to plugin added in Cordova project: -
-
-![cordova_ios_strct](../../assets/images/cordova_ios_strct.jpg)
-
-### 19. ZelleSDK can be launched from any Cordova application by calling the function created in plugin folder(www/ZellePlugin.js) with the respective parameters like below.
-
-### 20. Create the openZelle function in your .js file (e.g. index.js) and pass the required parameters to ZellePlugin.
-
+- Create AAR folder inside the plugin project folder
+- Then add android SDK (ZelleSDK.aar) into the AAR folder
+- Open ZellePlugin/src/android folder in Android Studio
+- It will contain ZellePlugin.java and android.iml, now we have to create the below files in android folder
+  - zelleGradle.gradle
+  - ZelleActivity.java
+  - activity_zelle.xml
+- Passing data between plugin and .js file using ZellePlugin.java
 ```json
-function openZelle(){
-  var baseURL = document.getElementById("base_url");
-  var institutionId = document.getElementById("institution_id");
-  var ssoKey = document.getElementById("sso");
-  var product = document.getElementById("product");
-  var a = {};
-var b = {};
-var pd_contact= {
-pd.tittle : ”tittle” ,
-pd.message : ”test”
-};
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CallbackContext;
 
-b.param1 = "value1";
-b.param2 = "value2";
-b.param3 = "value3";
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-var success = function(message) {
+import android.content.Context;
+import android.content.Intent;
+import android.widget.Toast;
+com.fiserv.dps.mobile.sdk.interfaces.GenericTag;
+/**
+ * This class echoes a string called from JavaScript.
+ */
+//implement GenericTag to get session timeout details from SDK        
+public class ZellePlugin extends CordovaPlugin  implements GenericTag {
+	
+	CallbackContext callbackContext1;
 
-console.log(message);
+    @Override
+    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+        Context context = cordova.getActivity().getApplicationContext();
+		BridgeView.genericTag= this;
+		callbackContext1=callbackContext; 
+        
+        //Get the SDK's required details from cordova project(.js file)
+                if(action.equals("zelle_activity")) {
+                    String  message;
+                    String duration;
+                    try {
+                        JSONObject options = args.getJSONObject(0);
+                        Intent intent = new Intent(context, ZelleActivity.class);
+                        intent.putExtra("ZelleObject", options.toString());
+                        this.cordova.getActivity().startActivity(intent);//passing the data to ZelleActivity.java
+                    } catch (JSONException e) {
+                        callbackContext.error("Error encountered: " + e.getMessage());
+                        return false;
+                    }
+                    return true;
+                }
+                return false;
+    }
+
+    private void coolMethod(String message, CallbackContext callbackContext) {
+        if (message != null && message.length() > 0) {
+            //sesstion timeout details passing to the cordova project(.js file)
+            callbackContext.success(message);
+        } else {
+            callbackContext.error("Expected one non-empty string argument.");
+        }
+    }
+    //Handling session timeout        
+	@Override public void sessionTag(@NonNull String s) { this.coolMethod(s, callbackContext1); } }
 }
-// session timeout callback
-var failure =  function()
-{ alert("Error calling Hello Plugin"); }
 
-a.applicationName = "Demo Cordova App";
-a.baseURL = baseURL.value;
-a.institutionId = institutionId.value;
-a.product = product.value;
-a.ssoKey = ssoKey.value;
-a.parameters = b;
-a. appData = pd_contact;
+```
+        
+- Launching Zelle inside ZelleActivity.java class
+```json
+public class ZelleActivity extends AppCompatActivity {
+    
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        String package_name = getApplication().getPackageName();
+        setContentView(getApplication().getResources().getIdentifier("activity_zelle", "layout", package_name));
+        Intent intent = getIntent();
+        try {
+            if (intent != null){
+            JSONObject jsonObject = new JSONObject(intent.getStringExtra("ZelleObject"));
+            HashMap<String, String> param = new Gson().fromJson(jsonObject.getString("parameters"), HashMap.class);
+            Zelle zelle = new Zelle(
+                    jsonObject.getString("applicationName"),
+                    jsonObject.getString("baseURL"),
+                    jsonObject.getString("institutionId"),
+                    jsonObject.getString("product"),
+                    jsonObject.getString("ssoKey"),
+                    param
+            );
+            Bridge bridge = new Bridge(ZelleActivity.this, zelle);
+            zelle.setPreCacheContacts(true);
+            BridgeView view1 = bridge.view();
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, view1).commit();
+          }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
 
+- Creating layout inside activity_zelle.xml
+```json
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.fiserv.dps.mobile.zelleplugin.ZelleActivity">
 
-ZellePlugin.zelle_activity(person ,success,failure); //here we need to pass the data to zelle plugin like this
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Zelle Activity"
+        android:id="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+```
+
+- Adding dependencies inside zelleGradle.gradle
+```json
+repositories {
+    maven { url "https://jitpack.io" }
 }
 
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    implementation "com.google.code.gson:gson:2.8.6"
+    implementation('com.journeyapps:zxing-android-embedded:4.2.0') { transitive = false }
+    implementation "com.google.zxing:core:3.4.0"
+    implementation "androidx.appcompat:appcompat:1.3.1"
+    implementation "androidx.constraintlayout:constraintlayout:2.1.1"
+    implementation "com.google.android.material:material:1.4.0"
+    implementation "androidx.core:core-ktx:1.5.0"
+}
 ```
 
 ### Sample Project:
