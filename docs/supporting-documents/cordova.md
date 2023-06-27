@@ -61,10 +61,10 @@
 
 20. Navigate to respective Cordova project folder inside terminal to add the plugin.
 
-    -      a. cordova plugin add your-plugin-local-path folder
-    -         e.g. cordova plugin add "C:\Zelle SDK Plugin"
-    -      b. cordova build “platform-name”
-    -         e.g. . cordova build android
+    - a. cordova plugin add your-plugin-local-path folder
+    - e.g. cordova plugin add "C:\Zelle SDK Plugin"
+    - b. cordova build “platform-name”
+    - e.g. . cordova build android
 
 21. Screenshot refers to plugin added in Cordova project: -
 
