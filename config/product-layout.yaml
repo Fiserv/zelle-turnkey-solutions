@@ -34,51 +34,17 @@ getStarted: /docs/getting-started.md
 featuredFeatures:
   - title: Android SDK - Upgraded Kotlin
     groupName: Guides
-    description:  REPLACE ME
+    description:  The SDK has been developed using kotlin language and the kotlin version is 1.5.10.
     relatedDocs:
       - relatedDoc:
         title: Latest Zelle SDK
-        description: REPLACEME
+        description: The latest Zelle SDK version is V_1.5.1.  It will support both kotlin and java application.
         link: ./docs/release-notes/Android/updated-kotlin/ZelleSDK_V_1.5.1.md
       - relatedDoc:
-        title: REPLACEME
+        title: Kotlin Integration Document
         description: REPLACEME
-        link: ./docs/REPLACE-ME2.md
+        link: ./docs/supporting-documents/kotlin.md
       - relatedDoc:
-        title: REPLACEME
+        title: Java Integration Document
         description: REPLACEME
-        link: ./docs/REPLACE-ME3.md
-
-  - title: Android SDK - Downgraded Kotlin
-      groupName: Guides
-      description:  REPLACE ME
-      relatedDocs:
-        - relatedDoc:
-          title: REPLACEME
-          description: REPLACEME
-          link: ./docs/REPLACE-ME1.md
-        - relatedDoc:
-          title: REPLACEME
-          description: REPLACEME
-          link: ./docs/REPLACE-ME2.md
-        - relatedDoc:
-          title: REPLACEME
-          description: REPLACEME
-          link: ./docs/REPLACE-ME3.md
-
-  - title: iOS SDK
-      groupName: Guides
-      description:  REPLACE ME
-      relatedDocs:
-        - relatedDoc:
-          title: REPLACEME
-          description: REPLACEME
-          link: ./docs/REPLACE-ME1.md
-        - relatedDoc:
-          title: REPLACEME
-          description: REPLACEME
-          link: ./docs/REPLACE-ME2.md
-        - relatedDoc:
-          title: REPLACEME
-          description: REPLACEME
-          link: ./docs/REPLACE-ME3.md
+        link: ./docs/supporting-documents/java.md
