@@ -117,14 +117,14 @@
               link: docs/version-history/iOS/ZelleSDK_V_1.3.9.md
             - title: ZelleSDK_V_1.3.8
               link: docs/version-history/iOS/ZelleSDK_V_1.3.8.md
-            - title: ZelleSDK_V_1.3.7
-              link: docs/version-history/iOS/ZelleSDK_V_1.3.7.md
-            - title: ZelleSDK_V_1.3.6
-              link: docs/version-history/iOS/ZelleSDK_V_1.3.6.md
-            - title: ZelleSDK_V_1.3.5
-              link: docs/version-history/iOS/ZelleSDK_V_1.3.5.md
-            - title: ZelleSDK_V_1.3.4
-              link: docs/version-history/iOS/ZelleSDK_V_1.3.4.md
+#            - title: ZelleSDK_V_1.3.7
+#              link: docs/version-history/iOS/ZelleSDK_V_1.3.7.md
+#            - title: ZelleSDK_V_1.3.6
+#              link: docs/version-history/iOS/ZelleSDK_V_1.3.6.md
+#            - title: ZelleSDK_V_1.3.5
+#              link: docs/version-history/iOS/ZelleSDK_V_1.3.5.md
+#            - title: ZelleSDK_V_1.3.4
+#              link: docs/version-history/iOS/ZelleSDK_V_1.3.4.md
 
 - sections:
     - title: Supporting Platforms
