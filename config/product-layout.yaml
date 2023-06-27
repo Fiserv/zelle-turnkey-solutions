@@ -48,3 +48,19 @@ featuredFeatures:
         title: Java Integration Document
         description: REPLACEME
         link: ./docs/supporting-documents/java.md
+  - title: Android SDK - Downgraded Kotlin
+    groupName: Guides
+    description: The SDK has been developed using kotlin language and the kotlin version is 1.3.72.
+    relatedDocs:
+      - relatedDoc:
+        title: Latest Zelle SDK
+        description: The latest Zelle SDK version is V_1.3.72.  It will support both kotlin and java application.
+        link: ./docs/release-notes/Android/downgraded-kotlin/ZelleSDK_V_2.1.3.md
+      - relatedDoc:
+        title: Kotlin Integration Document
+        description: REPLACEME
+        link: ./docs/supporting-documents/kotlin.md
+      - relatedDoc:
+        title: Java Integration Document
+        description: REPLACEME
+        link: ./docs/supporting-documents/java.md
