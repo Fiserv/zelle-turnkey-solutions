@@ -19,7 +19,7 @@
 
 4. To create a plugin, plugin name, plugin id, plugin version and plugin package name are required.
 
-- Example package name: - com.zelle.sdk.plugin
+   - Example package name: - com.zelle.sdk.plugin
 
 5. Once plugin is created, it contains some of the files inside our created plugin folder.
 
@@ -203,6 +203,6 @@ ZellePlugin.zelle_activity(person ,success,failure); //here we need to pass the 
 
 ```
 
-### Sample Project:
+## Sample Project:
 
 [dps-zelle-sdk-testapp-cordova-master.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11654405/dps-zelle-sdk-testapp-cordova-master.zip)
