@@ -61,10 +61,10 @@
 
 20. Navigate to respective Cordova project folder inside terminal to add the plugin.
 
--      a. cordova plugin add your-plugin-local-path folder
--         e.g. cordova plugin add "C:\Zelle SDK Plugin"
--      b. cordova build “platform-name”
--         e.g. . cordova build android
+    -      a. cordova plugin add your-plugin-local-path folder
+    -         e.g. cordova plugin add "C:\Zelle SDK Plugin"
+    -      b. cordova build “platform-name”
+    -         e.g. . cordova build android
 
 21. Screenshot refers to plugin added in Cordova project: -
 
@@ -117,7 +117,7 @@ ZellePlugin.zelle_activity(person ,success,failure); //here we need to pass the 
 
 3. To create a plugin, plugin name, plugin id, plugin version and plugin package name are required.
 
-- Example: - com.zelle.sdk.plugin
+   - Example: - com.zelle.sdk.plugin
 
 4. Once plugin is created, it contains some of the files inside our created plugin folder.
 
@@ -151,10 +151,10 @@ ZellePlugin.zelle_activity(person ,success,failure); //here we need to pass the 
 
 17. Navigate to respective Cordova project folder inside terminal to add our plugin.
 
-- a. cordova plugin add your-plugin-local-path folder
--    e.g., cordova plugin add "Users/Cordova/ZellePlugin"
-- b. cordova build “platform-name”
--    e.g., cordova build ios
+    - a. cordova plugin add your-plugin-local-path folder
+    - e.g., cordova plugin add "Users/Cordova/ZellePlugin"
+    - b. cordova build “platform-name”
+    - e.g., cordova build ios
 
 18. Screenshot refers to plugin added in Cordova project: -
 
