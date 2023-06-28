@@ -133,3 +133,7 @@ if ([name isEqualToString: @ “TAG_NAME”]) {
 ### 14. Dependency:
 
 QRCodeReader - 10.1.0 (QR Code library) 
+
+### Sample Project
+
+[dps-zelle-sdk-testapp-objective-c-master.zip](https://github.com/Fiserv/zelle-turnkey-solutions/raw/develop/dps-zelle-sdk-testapp-objective-c-master.zip)
