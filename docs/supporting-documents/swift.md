@@ -143,4 +143,8 @@ if (name == “TAG_NAME”) {
 
 QRCodeReader - 10.1.0 (QR Code library) 
 
+### Sample Project
+
+[dps-zelle-sdk-testapp-ios-master.zip](https://github.com/Fiserv/zelle-turnkey-solutions/raw/develop/dps-zelle-sdk-testapp-ios-master.zip)
+
 
