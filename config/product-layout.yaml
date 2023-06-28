@@ -29,8 +29,8 @@
 ################################################################################
 header:
   productName: Zelle SDK
-  productionDescription: This document serves as technical integration guide for the Turnkey Service for Zelle® Mobile SDK (Mobile SDK). This technical integration guide is intended to provide the mobile banking application provider with detailed information for upgrading the current Zelle® WebView implementation to include the Mobile SDK.
-getStarted: /docs/getting-started.md
+  productionDescription: This technical integration guide is intended to provide the mobile banking application provider with detailed information for upgrading the current Zelle® WebView implementation to include the Mobile SDK.
+  getStarted: /docs/getting-started.md
 featuredFeatures:
   - title: Android SDK - Upgraded Kotlin
     groupName: Guides
