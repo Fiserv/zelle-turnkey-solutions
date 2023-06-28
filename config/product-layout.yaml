@@ -50,9 +50,7 @@ featuredFeatures:
         link: ./docs/supporting-documents/java.md
   - title: Android SDK - Downgraded Kotlin
     groupName: Guides
-    description: The Kotlin programming language was used to create the SDK, which has a version of 1.3.72.
-                 Supports Minimum SDK - 24
-                 Supports Minimum OS - Android 7.0 Nougat
+    description: The Kotlin programming language was used to create the SDK, which has a version of 1.3.72. The SDK will support Minimum SDK Version - 24 and Minimum OS Version - Android 7.0 Nougat.
     relatedDocs:
       - relatedDoc:
         title: Latest Zelle SDK
