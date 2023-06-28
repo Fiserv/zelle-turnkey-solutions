@@ -35,6 +35,8 @@ featuredFeatures:
   - title: Android SDK - Upgraded Kotlin
     groupName: Guides
     description: The Kotlin programming language was used to create the SDK, which has a version of 1.5.10.
+                 Supports Minimum SDK - 24
+                 Supports Minimum OS - Android 7.0 Nougat
     relatedDocs:
       - relatedDoc:
         title: Latest Zelle SDK
