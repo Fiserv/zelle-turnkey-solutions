@@ -2,7 +2,9 @@
 
 ## Project Setup
 
-### 1. Open the file info.plist (right-click > Open As > Source Code). Add the following keys to the file:
+### 1. Add Required Permission
+
+Open the file info.plist (right-click > Open As > Source Code). Add the following keys to the file:
 
 ```json
 <key>NSContactsUsageDescription</key>
@@ -15,7 +17,9 @@
 <string>[PERMISSION_DESCRIPTION]</string> 
 ```
 
-### 2. Import ZelleSDK.xcframework for the required target under project settings (Project > Target > Frameworks, Libraries, and Embedded Contents).
+### 2. Import ZelleSDK.xcframework File
+
+Import ZelleSDK.xcframework for the required target under project settings (Project > Target > Frameworks, Libraries, and Embedded Contents).
 
 ### 3. Set ZelleSDK.xcframework to “Embed & Sign”:
 
