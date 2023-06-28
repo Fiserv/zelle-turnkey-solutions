@@ -38,7 +38,7 @@ featuredFeatures:
     relatedDocs:
       - relatedDoc:
         title: Latest Zelle SDK
-        description: The latest Zelle SDK version is V_1.5.1.  It will support both kotlin and java application.
+        description: The latest Zelle SDK version is V_1.5.1. It will support both kotlin and java application.
         link: ./docs/release-notes/Android/updated-kotlin/ZelleSDK_V_1.5.1.md
       - relatedDoc:
         title: Kotlin Integration Document
@@ -54,7 +54,7 @@ featuredFeatures:
     relatedDocs:
       - relatedDoc:
         title: Latest Zelle SDK
-        description: The latest Zelle SDK version is V_2.1.3.  It will support both kotlin and java application.
+        description: The latest Zelle SDK version is V_2.1.3. It will support both kotlin and java application.
         link: ./docs/release-notes/Android/downgraded-kotlin/ZelleSDK_V_2.1.3.md
       - relatedDoc:
         title: Kotlin Integration Document
@@ -70,7 +70,7 @@ featuredFeatures:
     relatedDocs:
       - relatedDoc:
         title: Latest Zelle SDK
-        description: The latest Zelle SDK version is 1.4.5.  It will support both swift and objective-C application.
+        description: The latest Zelle SDK version is 1.4.5. It will support both swift and objective-C application.
         link: ./docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
       - relatedDoc:
         title: Swift Integration Document
