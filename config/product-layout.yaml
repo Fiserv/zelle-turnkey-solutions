@@ -29,7 +29,7 @@
 ################################################################################
 header:
   productName: Zelle SDK
-  productionDescription: This technical integration guide is intended to provide the mobile banking application provider with detailed information for upgrading the current Zelle® WebView implementation to include the Mobile SDK.
+  productionDescription: rZelleSDK offers the flexibility to access the mobile device capabilities for Zelle® UI (e.g., contact list, camera, photo gallery, and sharing).
   getStarted: /docs/getting-started.md
 featuredFeatures:
   - title: Android SDK - Upgraded Kotlin
