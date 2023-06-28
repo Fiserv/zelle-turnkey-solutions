@@ -58,19 +58,19 @@
   },
   "supportConfig": [{ 
     "bug": {
-      "label": "bug,CommerceHub",
+      "label": "bug,Zelle Solutions",
       "template": "bug.md",
-      "assignees": "<github-id>"
+      "assignees": "gowtham-fiserv"
     },  
     "feedback": {
-      "label": "feedback,CommerceHub",
+      "label": "feedback,Zelle Solutions",
       "template": "feedback.md",
-      "assignees": "<github-id>"
+      "assignees": "gowtham-fiserv"
     },
     "enhancement": {
-      "label": "enhancement,CommerceHub",
+      "label": "enhancement,Zelle Solutions",
       "template": "feature.md",
-      "assignees": "<github-id>"
+      "assignees": "gowtham-fiserv"
     }
   }]
 }
