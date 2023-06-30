@@ -14,3 +14,5 @@ May 09 2022
 
 ## Build
 
+[ZelleSDK_V_1.3.7.xcframework.zip](https://github.com/Fiserv/zelle-turnkey-solutions/raw/develop/docs/builds/iOS/ZelleSDK_V_1.3.7.xcframework.zip)
+
