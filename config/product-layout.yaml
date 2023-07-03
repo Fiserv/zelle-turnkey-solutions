@@ -42,11 +42,11 @@ featuredFeatures:
         link: ./docs/release-notes/Android/updated-kotlin/ZelleSDK_V_1.5.1.md
       - relatedDoc:
         title: Kotlin Integration Document
-        description: Technical integration guide for kotlin
+        description: This document serves as technical integration guide for the Turnkey Service for Zelle® - Mobile SDK (Kotlin). This technical integration guide is intended to provide the mobile banking application provider with detailed information for upgrading the current Zelle® WebView implementation to include the Mobile SDK. This guide includes sample code snippets as part of the Mobile SDK upgrade project with Fiserv.
         link: ./docs/supporting-documents/kotlin.md
       - relatedDoc:
         title: Java Integration Document
-        description: Technical integration guide for java
+        description: This document serves as technical integration guide for the Turnkey Service for Zelle® - Mobile SDK (Java). This technical integration guide is intended to provide the mobile banking application provider with detailed information for upgrading the current Zelle® WebView implementation to include the Mobile SDK. This guide includes sample code snippets as part of the Mobile SDK upgrade project with Fiserv.
         link: ./docs/supporting-documents/java.md
   - title: Android SDK - Downgraded Kotlin
     groupName: Guides
