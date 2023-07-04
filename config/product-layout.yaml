@@ -66,7 +66,7 @@ featuredFeatures:
         link: ./docs/supporting-documents/java.md
   - title: iOS SDK
     groupName: Guides
-    description: The Swift programming language was used to create the SDK, which has a version of .
+    description: The Swift programming language was used to create the SDK, which has a version of 5.  The SDK will support minimum OS Version - 13 and the Xcode version - 14.0.1.
     relatedDocs:
       - relatedDoc:
         title: Latest Zelle SDK
@@ -74,9 +74,9 @@ featuredFeatures:
         link: ./docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
       - relatedDoc:
         title: Swift Integration Document
-        description: Technical integration guide for swift
+        description: This document serves as technical integration guide for the Turnkey Service for Zelle® - Mobile SDK (Swift). This technical integration guide is intended to provide the mobile banking application provider with detailed information for upgrading the current Zelle® WebView implementation to include the Mobile SDK. This guide includes sample code snippets as part of the Mobile SDK upgrade project with Fiserv.
         link: ./docs/supporting-documents/swift.md
       - relatedDoc:
         title: Object-C Integration Document
-        description: Technical integration guide for objective-C
+        description: This document serves as technical integration guide for the Turnkey Service for Zelle® - Mobile SDK (Objective-C). This technical integration guide is intended to provide the mobile banking application provider with detailed information for upgrading the current Zelle® WebView implementation to include the Mobile SDK. This guide includes sample code snippets as part of the Mobile SDK upgrade project with Fiserv.
         link: ./docs/supporting-documents/objectivecs.md
