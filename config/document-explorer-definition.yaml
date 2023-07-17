@@ -56,7 +56,7 @@
         - title: Android
           link:
           sections:
-            - title: Updated Kotlin(1.5.10)
+            - title: Updated Kotlin - 1.5.10
               sections:
               - title: ZelleSDK_V_1.5.0
                 link: docs/version-history/Android/updated-kotlin/ZelleSDK_V_1.5.0.md
@@ -78,7 +78,7 @@
                 link: docs/version-history/Android/updated-kotlin/ZelleSDK_V_1.4.2.md
               - title: ZelleSDK_V_1.4.1
                 link: docs/version-history/Android/updated-kotlin/ZelleSDK_V_1.4.1.md
-            - title: Downgraded Kotlin(1.3.72)
+            - title: Downgraded Kotlin - 1.3.72
               sections:
               - title: ZelleSDK_V_2.1.2
                 link: docs/version-history/Android/downgraded-kotlin/ZelleSDK_V_2.1.2.md
