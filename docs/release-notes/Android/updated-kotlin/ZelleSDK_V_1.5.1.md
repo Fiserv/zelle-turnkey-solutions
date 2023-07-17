@@ -2,6 +2,10 @@
 
 April 30 2023
 
+## Kotlin Version
+
+1.5.10
+
 ## V_1.5.1 (SDK version)
 
 ## What's New
