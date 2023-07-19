@@ -501,4 +501,3 @@ NativeModules.MyModule.NavigateToZelle("Demo Bank", "https://certtransfers.fta.c
 
 ### Sample Project:
 
-[dps-zelle-sdk-testapp-reactnative-master.zip](https://github.com/Fiserv/zelle-turnkey-solutions/raw/develop/dps-zelle-sdk-testapp-reactnative-master.zip)
