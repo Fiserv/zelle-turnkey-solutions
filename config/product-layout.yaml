@@ -30,7 +30,7 @@
 header:
   productName: Zelle SDK
   productionDescription: ZelleSDK offers the flexibility to access the mobile device capabilities for Zelle® UI (e.g., contact list, camera, photo gallery, and sharing).
-  getStarted: /docs/getting-started.md
+getStarted: /docs/getting-started.md
 featuredFeatures:
   - title: Android SDK - Upgraded Kotlin
     groupName: Guides
