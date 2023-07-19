@@ -8,9 +8,17 @@ November 22 2022
 
 - When the parent app has passed true for the fi_callback parameter, if the user clicks on a web link such as the "Privacy Policy" link on the Zelle UI, then the getValue method will be triggered and pass "privacy policy" as the value for the name parameter. The parent app handles this callback on their side.
 
-## Enhancements
+## Updates
 
-- Generic Callback Update.
+- Generic Callback Update
+- Custom Callback Implemented
+- WebView height and width were fixed
+- Implemented the AppCompat and Material Themes
+- Prominent Disclosure implementation for Contact, Camera and Gallery Permission
+- Custom callback method was implemented for session timeout
+- Prominent Disclosure implementation for Contact Permission
+- Notification bar color fix
+- ZelleSDK theme issue fix
 
 ### Generic Callback Implementation
 

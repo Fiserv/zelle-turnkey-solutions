@@ -8,9 +8,12 @@ August 03 2022
 
 - When the Zelle UI session has ended, the Zelle SDK will call the FI app's session timeout callback function.
 
-## Enhancements
+## Updates
 
-- Custom callback method was implemented for session timeout.
+- Custom callback method was implemented for session timeout
+- Prominent Disclosure implementation for Contact Permission
+- Notification bar color fix
+- ZelleSDK theme issue fix
 
 ### Session Timeout Implementation
 

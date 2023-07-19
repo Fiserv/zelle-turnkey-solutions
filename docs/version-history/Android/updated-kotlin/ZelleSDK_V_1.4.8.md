@@ -8,9 +8,16 @@ October 21 2022
 
 - This feature will make it easier for Zelle UI and the parent app to open the desired screen out of Zelle Screen.
 
-## Enhancements
+## Updates
 
-- Custom Callback Implemented.
+- Custom Callback Implemented
+- WebView height and width were fixed
+- Implemented the AppCompat and Material Themes
+- Prominent Disclosure implementation for Contact, Camera and Gallery Permission
+- Custom callback method was implemented for session timeout
+- Prominent Disclosure implementation for Contact Permission
+- Notification bar color fix
+- ZelleSDK theme issue fix
 
 ### Generic Callback Implementation
 

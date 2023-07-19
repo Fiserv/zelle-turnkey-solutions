@@ -77,6 +77,6 @@ featuredFeatures:
         description: This document serves as technical integration guide for the Turnkey Service for Zelle® - Mobile SDK (Swift). This technical integration guide is intended to provide the mobile banking application provider with detailed information for upgrading the current Zelle® WebView implementation to include the Mobile SDK. This guide includes sample code snippets as part of the Mobile SDK upgrade project with Fiserv.
         link: ./docs/supporting-documents/swift.md
       - relatedDoc:
-        title: Object-C Integration Document
+        title: Objective-C Integration Document
         description: This document serves as technical integration guide for the Turnkey Service for Zelle® - Mobile SDK (Objective-C). This technical integration guide is intended to provide the mobile banking application provider with detailed information for upgrading the current Zelle® WebView implementation to include the Mobile SDK. This guide includes sample code snippets as part of the Mobile SDK upgrade project with Fiserv.
         link: ./docs/supporting-documents/objectivec.md

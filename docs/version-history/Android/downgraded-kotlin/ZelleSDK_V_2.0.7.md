@@ -9,9 +9,13 @@ August 11 2022
 - FI can customize the prominent disclosure popup title and message for Contact, Camera and Gallery permission, which will
   trigger before accessing the native contact permission alert.
 
-## Enhancements
+## Updates
 
-- Prominent Disclosure implementation for Contact, Camera and Gallery Permission.
+- Prominent Disclosure implementation for Contact, Camera and Gallery Permission
+- Custom callback method was implemented for session timeout
+- Prominent Disclosure implementation for Contact Permission
+- Notification bar color fix
+- ZelleSDK theme issue fix
 
 ### Prominent Disclosure Initialization
 

@@ -10,13 +10,13 @@ March 22 2022
 - Added few more parameters such baseUrl, version in Zelle constructor parameter.
 - Implemented new features such as Session timeout, contact callback etc.
 
-## Enhancements
+## Updates
 
-- ZelleSDK Supports iOS 13.
-- Objective C/ Swift.
-- Contact callback methods changed as per UI requirement.
-- BaseUrl parameter enabled.
-- New enhancement: Device info, Version, SessionTimeout.
+- ZelleSDK Supports iOS 13
+- Objective C/ Swift
+- Contact callback methods changed as per UI requirement
+- BaseUrl parameter enabled
+- New enhancement: Device info, Version, SessionTimeout
 
 ###  Zelle Constructor
 

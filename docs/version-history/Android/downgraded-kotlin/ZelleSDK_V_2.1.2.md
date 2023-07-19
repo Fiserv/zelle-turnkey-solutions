@@ -8,9 +8,18 @@ February 17 2023
 
 - To prevent crashing while executing in the main thread, a secondary thread was created to open the PD alert.
 
-## Fixed
+## Updates
 
-- Prominent Disclosure issue fix.
+- Prominent Disclosure popup issue fix
+- Generic Callback Update
+- Custom Callback Implemented
+- WebView height and width were fixed
+- Implemented the AppCompat and Material Themes
+- Prominent Disclosure implementation for Contact, Camera and Gallery Permission
+- Custom callback method was implemented for session timeout
+- Prominent Disclosure implementation for Contact Permission
+- Notification bar color fix
+- ZelleSDK theme issue fix
 
 ## Build
 

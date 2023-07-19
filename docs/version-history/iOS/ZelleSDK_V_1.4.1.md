@@ -8,9 +8,22 @@ October 21 2022
 
 - This feature will make it easier for Zelle UI and the parent app to open the desired screen out of Zelle Screen.
 
-## Enhancements
+## Updates
 
 - Custom Callback implemented
+- WKUIDelegate method implementation
+- WebView height and width were fixed
+- Custom callback method added for session timeout
+- Camera cancel button issue fixed
+- Removed location permission
+- Popup dismissal
+- Device Orientation
+- QRCode issue fix
+- ZelleSDK Supports iOS 13
+- Objective C/ Swift
+- Contact callback methods changed as per UI requirement
+- BaseUrl parameter enabled
+- New enhancement: Device info, Version, SessionTimeout
 
 ### Generic Callback Implementation
 

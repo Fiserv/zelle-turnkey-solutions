@@ -8,9 +8,26 @@ March 30 2023
 
 - FI can customize the loader color and it's background during the loading time.
 
-## Enhancements
+## Updates
 
 - Custom loader implementation
+- Memory leak that was fixed
+- iOS 14 gallery permission updates
+- App domain for iOS 14 to whitelist the url
+- Custom Callback implemented
+- WKUIDelegate method implementation
+- WebView height and width were fixed
+- Custom callback method added for session timeout
+- Camera cancel button issue fixed
+- Removed location permission
+- Popup dismissal
+- Device Orientation
+- QRCode issue fix
+- ZelleSDK Supports iOS 13
+- Objective C/ Swift
+- Contact callback methods changed as per UI requirement
+- BaseUrl parameter enabled
+- New enhancement: Device info, Version, SessionTimeout
 
 ### Custom Loader Implementation
 

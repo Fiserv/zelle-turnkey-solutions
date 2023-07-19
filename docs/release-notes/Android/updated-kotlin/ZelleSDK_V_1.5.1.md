@@ -12,13 +12,20 @@ April 30 2023
 
 - FI can customize the loader color and it's background during the loading time.
 
-## Enhancements
+## Updates
 
 - Custom loader implementation
-
-## Fixed
-
-- Memory leak that was fixed.
+- Memory leak that was fixed
+- Prominent Disclosure popup issue fix
+- Generic Callback Update
+- Custom Callback Implemented
+- WebView height and width were fixed
+- Implemented the AppCompat and Material Themes
+- Prominent Disclosure implementation for Contact, Camera and Gallery Permission
+- Custom callback method was implemented for session timeout
+- Prominent Disclosure implementation for Contact Permission
+- Notification bar color fix
+- ZelleSDK theme issue fix
 
 ### Custom Loader Implementation
 

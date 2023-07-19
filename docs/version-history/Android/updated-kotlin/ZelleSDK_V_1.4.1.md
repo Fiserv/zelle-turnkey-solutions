@@ -8,9 +8,9 @@ June 20 2022
 
 - The default theme color has been taken out of ZelleSDK.
 
-## Fixed
+## Update
 
-- ZelleSDK theme issue fix.
+- ZelleSDK theme issue fix
 
 ## Build
 

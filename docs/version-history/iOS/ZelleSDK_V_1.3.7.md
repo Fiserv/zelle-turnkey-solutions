@@ -8,9 +8,18 @@ May 09 2022
 
 - User were experiencing issue of coming out of ZelleSDK after clicking on Cancel button on Camera UI from ZelleSDK.
 
-## Fixed
+## Updates
 
-- Camera cancel button issue fixed.
+- Camera cancel button issue fixed
+- Removed location permission
+- Popup dismissal
+- Device Orientation
+- QRCode issue fix
+- ZelleSDK Supports iOS 13
+- Objective C/ Swift
+- Contact callback methods changed as per UI requirement
+- BaseUrl parameter enabled
+- New enhancement: Device info, Version, SessionTimeout
 
 ## Build
 

@@ -8,9 +8,10 @@ June 23 2022
 
 - The default notification bar color has been taken out of ZelleSDK.
 
-## Fixed
+## Updates
 
-- Notification bar color fix.
+- Notification bar color fix
+- ZelleSDK theme issue fix
 
 ## Build
 

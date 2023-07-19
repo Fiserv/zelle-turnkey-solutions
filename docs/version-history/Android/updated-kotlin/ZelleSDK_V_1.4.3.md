@@ -9,9 +9,12 @@ July 15 2022
 - FI can customize the prominent disclosure popup title and message for Contact permission, which will
   trigger before accessing the native Contact permission alert.
 
-## Enhancements
+## Updates
 
 - Prominent Disclosure implementation for Contact Permission
+- Notification bar color fix
+- Notification bar color fix
+- ZelleSDK theme issue fix
 
 ### Prominent Disclosure Initialization
 
