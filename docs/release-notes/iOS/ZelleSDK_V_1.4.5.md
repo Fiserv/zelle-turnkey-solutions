@@ -6,7 +6,7 @@ March 30 2023
 
 ## What's New
 
-- FI can customize the loader color and it's background during the loading time.
+- Custom Loader: FI can customise the loader colour and the background colour while launching Zelle.
 
 ## Updates
 
