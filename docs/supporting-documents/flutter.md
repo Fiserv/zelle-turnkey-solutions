@@ -382,6 +382,9 @@ nextVC.getData = data as? NSDictionary
 nextVC.flutterResult = result
 navigationController.pushViewController(nextVC, animated: true)
 ```
+### Kotlin Version Used in Sample Project
+
+1.6.10
 
 ### Sample Project:
 

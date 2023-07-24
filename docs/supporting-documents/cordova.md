@@ -203,6 +203,10 @@ ZellePlugin.zelle_activity(person ,success,failure); //here we need to pass the 
 
 ```
 
+### Kotlin Version Used in Sample Project
+
+1.3.50
+
 ## Sample Project:
 
 [dps-zelle-sdk-testapp-cordova-master.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11654405/dps-zelle-sdk-testapp-cordova-master.zip)

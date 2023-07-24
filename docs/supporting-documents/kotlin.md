@@ -157,6 +157,10 @@ override fun getValue(name: String) {
 - Minimum SDK: 24
 - Minimum OS: Android 7.0 Nougat
 
+### Kotlin Version Used in Sample Project
+
+1.5.0
+
 ### Zelle Mobile SDK Size
 
 224 KB
