@@ -184,7 +184,7 @@
                 - title: ZellePlugin_V_1.0.0
                   link: docs/supporting-documents/CordovaPluginFiles/ZellePlugin_V_1.0.0.md
 
-        - title: Kony
+        - title: Kony (Temenos)
           sections:
             - title: Integration Steps
               link: docs/supporting-documents/kony.md
