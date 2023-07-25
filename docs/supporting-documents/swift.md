@@ -147,6 +147,10 @@ if (name == “TAG_NAME”) {
 
 QRCodeReader - 10.1.0 (QR Code library) 
 
+### Swift Version Used in Sample Project:
+
+5.0
+
 ### Sample Project
 
 [dps-zelle-sdk-testapp-ios-master.zip](https://github.com/Fiserv/zelle-turnkey-solutions/raw/develop/dps-zelle-sdk-testapp-ios-master.zip)
