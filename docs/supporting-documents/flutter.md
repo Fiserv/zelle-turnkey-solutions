@@ -2,42 +2,41 @@
 
 ## Project Setup
 
-### 1. Prerequisites:
+Prerequisites:
 
-- Android studio (or) Visual Studio Code
+- Android studio or Xcode
 - Flutter SDK
-- Android Emulator (or) Real Device
-- iOS Simulator (or) Real Device
+- Android Emulator or Real Device
+- iOS Simulator or Real Device
 - Android SDK
-- Xcode    
 
-### 2. Create new flutter application
+### 1. Create new Flutter application
 
-Create new flutter application with both Android and iOS platform enabled. 
+Create new Flutter application with both Android and iOS platforms enabled.
 
-### 3. Set Package Name
+- Set Package Name
 
-Select project type as Application and provide respective package name. 
+  Select the project type as Application and provide a project name.
 
-### 4. Set Project Language
+- Set Project Language
 
-Select specific language support for both Android and iOS and click finish to create the project.
+  Select specific language support for both Android and iOS and click Finish to create the project.
 
 ![flutter_project_creation](../../assets/images/flutter_project_creation.jpg)
 
-### 5. Create Zelle dart class
+### 2. Create Zelle Dart class
 
-Once project has created navigate to lib folder and create dart class with respective widget to lauch Zelle.
+After the project has been created, navigate to the src folder and create a Dart class with respective widget to launch Zelle®.
 
-### 6. Create a Method Channel
+### 3. Create a Method Channel
 
-To create a bridge between native and dart, First construct the channel. Use a Method channel with a single platform method that returns the data from dart to native and wise versa.
+To create a bridge between native code and Dart, construct a channel. Use a Method channel with a single platform method that returns the data from Dart to native code and vice versa.
 
-### 7. Provide Channel Name
+### 4. Provide Channel Name
 
-The client and host sides of a channel are connected through a channel name passed in the channel constructor. 
+The client and host sides of a channel are connected through a channel name passed in the channel constructor.
 
-### 8. All channel names used in single app must be unique; prefix the channel name with a unique ‘domain prefix’. 
+All channel names used in a single app must be unique. Prefix the channel name with a unique ‘domain prefix’.
 - Example: static const platform = MethodChannel(‘zellesdk.launch’);
 
 ```json
@@ -45,11 +44,11 @@ class _MyHomePageState extends State<MyHomePage> {
   static const platform = MethodChannel('zellesdk.launch');
 ```
 
-### 9. Invoke a method on the method channel
+### 5. Invoke a method on the method channel
 
-Next, invoke a method on the method channel, specifying the concrete method to call using the String identifier launchZelle. 
+Next, invoke a method on the method channel, specifying the concrete method to call using the String identifier launchZelle.
 
-### 10. Pass the respective parameter to lauch zellesdk in key, value pair in invokeMethod.
+Pass the parameters to launch ZelleSDK.
 
 ```json
 // Loader Data Initialization:
@@ -97,23 +96,23 @@ final String result = await platform.invokeMethod('launchZelle',{
 'parameter':map}); //optional
 ```
 
-### 11. Use the returned result to update the user interface state.
+Use the returned result to update the user interface state.
 
 ## Android Platform:
 
-### 12. Create a lib folder
+### 1. Create the libs folder
 
-Open Android platform inside android studio and create libs folder inside app.
+Open the Android platform inside Android studio and create the libs folder inside the app.
 
-### 13. Import ZelleSDK.aar file
+### 2. Import the ZelleSDK.aar file
 
-Place the latest version of ZelleSDK.aar file inside the libs folder.
+Place the latest version of the ZelleSDK.aar file inside the libs folder.
 
 ![flutter_android_sdkpath](../../assets/images/flutter_android_sdkpath.jpg)
 
-### 14. Add Required Dependencies
+### 3. Add Required Dependencies
 
-To add respective dependencies, open build.gradle file and inside dependencies add required dependency given below.
+Open the build.gradle file and inside dependencies add the required dependencies given below:
 
 ```json
 implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -126,15 +125,15 @@ implementation 'androidx.core:core-ktx:1.6.0'
 implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
 ```
 
-### 15. Create a MethodChannel Inside Android Platform
+### 4. Create a MethodChannel Inside Android Platform
 
 Open the file MainActivity.kt located in the kotlin folder in the Project view. Inside the configureFlutterEngine() method, create a MethodChannel and call setMethodCallHandler(). Make sure to use the same channel name as was used on the Flutter client side.
 
-### 16. Create LauchZelle class file
+### 5. Create LaunchZelle class file
 
-Create new activity to initialize and launch our ZelleSDK.
+Create a new activity to initialize and launch the ZelleSDK.
 
-### 17. Get the arguments from the client side and pass those arguments to LaunchZelle.kt.
+### 6. Get the arguments from the client side and pass those arguments to LaunchZelle.kt.
 
 ```json
 MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL).setMethodCallHandler {
@@ -147,13 +146,13 @@ intent.putExtra("data", hashMap)startActivity(intent)
 }
 ```
 
-### 18. Create Framelayout
+### 7. Create FrameLayout
 
-Open activity_launch_zelle.xml file inside layout folder and create a framelayout to initialize zelle view.
+Open the activity_launch_zelle.xml file inside the layout folder and create a FrameLayout to initialize the Zelle view.
 
 ![flutter_framelayout](../../assets/images/flutter_framelayout.jpg)
 
-### 19. Open LauchZelle.kt file inside onCreateView function initialize Zelle, Bridge and BridgeView (or) BridgePopup with respective parameters.
+### 8. Open the LaunchZelle.kt file and inside the onCreateView function initialize Zelle, Bridge, and BridgeView (or) BridgePopup with respective parameters.
 
 ```json
 class LaunchZelle : AppCompatActivity() {
@@ -187,9 +186,9 @@ class LaunchZelle : AppCompatActivity() {
   }
 }
 ```
-### 20. Set Theme for SDK
+### 9. Set the Theme for SDK
 
-Create ZelleTheme inside Styles (or) Theme.xml file.
+Create ZelleTheme inside Styles (or) the Theme.xml file.
 
 ```json
 <style name="ZelleTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
@@ -197,7 +196,7 @@ Create ZelleTheme inside Styles (or) Theme.xml file.
 </style>
 ```
 
-### 21. Register the LaunchZelle.kt activity inside application AndroidManifest.xml file with respective theme.
+### 10. Register the LaunchZelle.kt activity inside the application AndroidManifest.xml file with the respective theme.
 
 ```json
 <application
@@ -213,24 +212,24 @@ android:exported="false" />
 ```
 
 #### Note:
-- AppData parameter passed in Zelle is an optional one. It is used to show the customized alert passed from FI (only for android not for iOS).
+- The appData parameter passed in Zelle is optional. It is used to show the customized alert passed from FI (only for Android, not for iOS).
 
 - Default values:
-  1) Contacts:
-     “title” => “We would like to access your phone contacts”,
-     “message” => “We only sync phone numbers and email address from your contact list to help you add and pay a new recipient in zelle®.
-  2) Camera:
-     “title” => “We would like to access your camera”,
-     “message” => “We only access your camera to help you add and pay a new recipient in zelle®.
-  3) Gallery:
-     “title” => “We would like to access your photos”,
-     “message” => “We only access your photos to help you add and pay a new recipient in zelle®.
+    - Contacts:
+      “title” => “We would like to access your phone contacts”,
+      “message” => “We only sync phone numbers and email address from your contact list to help you add and pay a new recipient in Zelle®.
+    - Camera:
+      “title” => “We would like to access your camera”,
+      “message” => “We only access your camera to help you add and pay a new recipient in Zelle®.
+    - Gallery:
+      “title” => “We would like to access your photos”,
+      “message” => “We only access your photos to help you add and pay a new recipient in Zelle®.
 
-- ZelleSDK launches from MinimumSDK version 24.
-- After zelle session is closed. To get the session tag value to client side, initialize genericTag and implement GenericTag to get the sessionTag value from ZelleSDK.
-- “loaderData” is an optional parameter to pass hex color codes for custome loader. Keys to be used “loaderColor” and ”bgColor”.
+- ZelleSDK launches from Minimum SDK version 24.
+- To get the session tag value to the client side after the Zelle® session is closed, initialize genericTag and implement GenericTag to get the sessionTag value from ZelleSDK.
+- “loaderData” is an optional parameter to pass hex color codes for custom loader. Keys to be used: “loaderColor” and ”bgColor”.
 
-### 22. Inside sessionTag override method get the data from Zelle and send result back to client side.
+### 11. Inside the sessionTag override method, get the data from Zelle and send the result back to the client side.
 
 ```json
 zelleResult = result as String;
@@ -242,31 +241,27 @@ zelleResult = "Failed to get result: '${e.message}'.";
 }
 ```
 
-### 23. Initialize GenericTag
+### 12. Initialize GenericTag
 
-Inside getValue override method get the data from Zelle and send result back to client side.
+Inside the getValue override method get the data from Zelle and send the result back to the client side.
 
 ## iOS Platform:
 
-### 24. Create a ViewController
+### 1. Create a ViewController
 
-Open iOS platform inside Xcode and create new ViewController to launch Zelle.
+Open the iOS platform inside Xcode and create a new ViewController to launch Zelle®.
 
-### 25. Place the ZelleSDK XCframework file inside the Runner.
+### 2. Place the ZelleSDK XCframework file inside the Runner.
 
 ![flutter_ios_sdk](../../assets/images/flutter_ios_sdk.jpg)
 
-### 26. Add the ZelleSDK required permissions in Info.plist file.
-- Example: 
-- 1) Contact permission
-- 2) Camera permission
-- 3) Gallery Permission
+### 3. Add the ZelleSDK required permissions (i.e., contact, camera, gallery) in the Info.plist file.
 
 ![flutter_ios_info](../../assets/images/flutter_ios_info.jpg)
 
-### 27. Open the file AppDelegate.swift located under Runner > Runner in the Project navigator.
+### 4. Open the file AppDelegate.swift located under Runner > Runner in the Project navigator.
 
-### 28. Override the application:didFinishLaunchingWithOptions: function and create a FlutterMethodChannel tied to the channel name zellesdk.launch.
+### 5. Override the application:didFinishLaunchingWithOptions: function and create a FlutterMethodChannel tied to the channel name zellesdk.launch.
 
 ```json
   override func application(
@@ -283,7 +278,7 @@ let zelleChannel = FlutterMethodChannel(name: "zellesdk.launch",
 binaryMessenger: controller.binaryMessenger)
 ```
 
-### 29. Get the arguments from the client side and pass that arguments to created ViewController inside FlutterMethodChannel in AppDelegate.
+### 6. Get the arguments from the client side and pass them to the created ViewController inside the FlutterMethodChannel in AppDelegate.
 
 ```json
 let zelleChannel = FlutterMethodChannel(name: "zellesdk.launch",
@@ -306,7 +301,7 @@ return
 })
 ```
 
-### 30. Now open created ViewController, Inside viewDidLoad() function initialize Zelle, Bridge, and BridgeView (or) BridgePopup to launch Zelle.
+### 7. Open the created ViewController, and inside the viewDidLoad() function initialize Zelle, Bridge, and BridgeView (or) BridgePopup to launch Zelle.
 
 ```json
 override func viewDidLoad() {
@@ -343,12 +338,12 @@ view.addSubview(zelleView)
 }
 ```
 
-### 31. Pass the required variables to the Zelle Class which is passed from the client side.
+### 8. Pass the required variables to the Zelle class that is passed from the client side.
 
-#### Note:
+#### Notes:
 - XCframework requires minimum version iOS - 13.
-- “loaderData” is an optional parameter to pass hex color codes for custome loader. Keys to be used “loaderColor” and ”bgColor”.
-- After zelle session is closed. To get the session tag value to client side initialize genericTag and implement GenericTagDelegate to get the tag value from ZelleSDK.
+- “loaderData” is an optional parameter to pass hex color codes for custom loader. Keys to be used “loaderColor” and ”bgColor”.
+- To get the session tag value to the client side after the Zelle® session is closed, initialize genericTag and implement GenericTagDelegate to get the tag value from ZelleSDK.
 
 ```json
 import UIKit
@@ -372,8 +367,8 @@ func sessionTag(name tag: String) {
 flutterResult!("\(tag)")
 }
 ```
-- Inside sessionTag override method get the data from Zelle and send result back to client side.
-- Before sending data back to client side initialize the FlutterResult variable created in ViewController from AppDelegate.
+- Inside the sessionTag override method, get the data from Zelle and send the result back to the client side.
+- Before sending data back to the client side, initialize the FlutterResult variable created in ViewController from AppDelegate.
 
 ```json
 let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LaunchZelleViewController") as!
