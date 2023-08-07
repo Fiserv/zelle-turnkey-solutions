@@ -27,9 +27,9 @@ Import ZelleSDK.xcframework for the required target under project settings (Proj
 
 ![ios_embed_sign](../../assets/images/ios_embed_sign.jpg)
 
-### 4. Import ZelleSDK as needed in any source code files. 
+### 4. Import ZelleSDK as needed in any source code files.
 
-### 5. Create a Zelle bridge configuration object. 
+### 5. Create a Zelle bridge configuration object.
 
 ```json
 Zelle* zelle = [[Zelle alloc] initWith
@@ -49,17 +49,17 @@ Zelle* zelle = [[Zelle alloc] initWith
     @"key3": @"value3"}]; // Optional (Nullable) unless Zelle is accessed via Bill Pay 
 ```
 
-#### Note: 
-- Since loaderData is an optional parameter, you may pass nil or empty (e.g., loaderData: nil). 
+#### Notes:
+- Since loaderData is an optional parameter, you may pass nil or empty (e.g., loaderData: nil).
 
-- Parameters is an optional parameter unless Zelle® is accessed through Bill Pay. If Zelle® is accessed through Bill Pay, the name value pair flowtype-BillPay is required. Otherwise, you may pass nil or empty (e.g., parameters: nil or parameters: @{}.
+- parameters is an optional parameter unless Zelle® is accessed through Bill Pay. If Zelle® is accessed through Bill Pay, the name value pair flowtype-BillPay is required. Otherwise, you may pass nil or empty (e.g., parameters: nil or parameters: @{}.
 
-- ZelleSDK will automatically add the appropriate default values for these parameters to the URL: product.version and container (mobile_sdk_ios). 
+- ZelleSDK will automatically add the appropriate default values for these parameters to the URL: product.version and container (mobile_sdk_ios).
 
-### 6. Create a Bridge object (optional lazy implementation). 
+### 6. Create a Bridge object (optional lazy implementation).
 
-#### Note: 
-- Pass the appropriate parent ViewController (type UIViewController) to self. 
+#### Note:
+- Pass the appropriate parent ViewController (type UIViewController) to self.
 
 ```json
 Bridge* bridge = [[Bridge alloc]
@@ -136,7 +136,7 @@ if ([name isEqualToString: @ “TAG_NAME”]) {
 
 ### 14. Dependency:
 
-QRCodeReader - 10.1.0 (QR Code library) 
+QRCodeReader - 10.1.0 (QR Code library)
 
 ### Sample Project
 
