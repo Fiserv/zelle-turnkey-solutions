@@ -2,81 +2,64 @@
 
 ## Project Setup
 
- 1. Prerequisites:
+Prerequisites:
 
 - Node JS
 - Cordova
 - Android SDK
 - Xcode
-- Android Emulator (or) Real Device
-- iOS Simulator (or) Real Device
+- Android Emulator or Real Device
+- iOS Simulator or Real Device
 
 ## Cordova Plugin for ZelleSDK(Android)
 
-2. To integrate ZelleSDK into any Cordova projects, plugin files will be created which will act a bridge between native code and JavaScript.
+To integrate ZelleSDK into any Cordova projects, plugin files will be created that will act a bridge between native code and JavaScript.
 
-3. Plugin can be created using node.js for both android and iOS platform.
+- A plugin can be created using node.js for both Android and iOS platforms.
 
-4. To create a plugin, plugin name, plugin id, plugin version and plugin package name are required.
+- To create a plugin, a plugin name, plugin ID, plugin version, and plugin package name are required. An example package name is com.zelle.sdk.plugin
 
-   - Example package name: - com.zelle.sdk.plugin
-
-5. Once plugin is created, it contains some of the files inside our created plugin folder.
-
-6. Screenshot of plugin: - This refers to the plugin folder.
+- After a plugin is created, it contains some files inside the created plugin folder. Screenshot of the plugin folder:
 
 ![cordova_plugin_folder](../../assets/images/cordova_plugin_folder.jpg)
 
-7. Screenshot of plugin Files: - This refers to the created plugin files.
+- Screenshot of the plugin files:
 
 ![cordova_plugin_files](../../assets/images/cordova_plugin_files.jpg)
 
-8. Inside ZelleSDK Plugin folder except AAR folder all folders and files are automatically generated.
-
-9. To access our ZelleSDK we can create AAR folder to place our SDK into it.
-
-10. Screenshot refers to SDK file: -
+- Inside the ZelleSDK Plugin folder, all folders and files are automatically generated except for the AAR folder. Create the AAR folder and move ZelleSDK.aar into it:
 
 ![cordova_plugin_aarfile](../../assets/images/cordova_plugin_aarfile.png)
 
-11. In src folder, it has two folders which is android and iOS.
+- The src/android folder contains a java file that extends the Cordova plugin.
 
-12. Inside the android and iOS folder, we have one java file for android which extends Cordova plugin.
-
-13. And inside www folder we have a js file with same file name of java created in src android folder.
-
-14. This js and native file only communicates with each other for passing the parameters from js to java.
-
-15. Screenshot refers to files created inside android folder: -
+- The www folder contains a js file with same filename of the java file created in the src/android folder. This js and native file only communicate with each other for passing the parameters from js to java.
 
 ![cordova_android_folder](../../assets/images/cordova_android_folder.png)
 
-16. For android, new java class and xml files can be created which will act as interface to access ZelleSDK.
+- New java class and xml files can be created that will act as the interface to access ZelleSDK. In the plugin.xml file, the location path for the created files can be added in the android platform tag.
 
-17. In the plugin.xml file, location path for the created java, xml files can be added in android platform tag.
+- After the plugin is created, it can be imported in any Cordova project to access ZelleSDK.
 
-18. After plugin is created, this can be imported in any Cordova project to access ZelleSDK.
+1. To integrate the plugin in the Cordova project, navigate to the Cordova project folder inside the terminal to add the plugin:
 
-19. Below are the steps to integrate the plugin in Cordova project.
+```
+cordova plugin add "C:\Zelle SDK Plugin"
+```
 
-20. Navigate to respective Cordova project folder inside terminal to add the plugin.
+2.Build the Cordova project:
 
-    - a. cordova plugin add your-plugin-local-path folder
-    - e.g. cordova plugin add "C:\Zelle SDK Plugin"
-    - b. cordova build “platform-name”
-    - e.g. . cordova build android
-
-21. Screenshot refers to plugin added in Cordova project: -
+```
+cordova build android
+```
 
 ![cordova_plugin_added](../../assets/images/cordova_plugin_added.jpg)
 
-22. After plugin is added, plugin files will be included in Cordova project.
+- After the plugin is added, plugin files will be included in the Cordova project.
 
 ![cordova_project_strct](../../assets/images/cordova_project_strct.jpg)
 
-23. ZelleSDK can be launched from any Cordova application by calling the function created in plugin folder(www/ZellePlugin.js) with the respective parameters like below.
-
-24. Create the openZelle function in your .js file (e.g. index.js) and pass the required parameters to ZellePlugin.
+3. Launch ZelleSDK from any Cordova application by calling ZellePlugin. Create the openZelle function in your .js file (index.js) and pass the required parameters to ZellePlugin:
 
 ```json
 function openZelle(){
@@ -85,15 +68,37 @@ function openZelle(){
   var ssoKey = document.getElementById("sso");
   var product = document.getElementById("product");
   var a = {};
-var b = {};
-var pd_contact= {
-pd.tittle : ”tittle” ,
-pd.message : ”test”
+var pdContact = {
+title :"Contact Title",
+message :"Contact Message",
 };
 
-b.param1 = "value1";
-b.param2 = "value2";
-b.param3 = "value3";
+var pdCamera = {
+title :"Camera Title",
+message :"Camera Message",
+};
+
+var pdPhoto = {
+title :"Gallery Title",
+message :"Gallery Message",
+};
+
+var appData = {
+pd_contact :pdContact,
+pd_camera  :pdCamera,
+pd_gallery :pdPhoto,
+};
+
+var loaderData = {
+loaderColor :"hex color code",
+bgColor :"hex color code",
+};
+
+var zelleparam = {
+param1 :"value1",
+param2 :"value2",
+param3 :"value3",
+};
 
 
 var success = function(message) { console.log(message); }
@@ -103,66 +108,51 @@ a.baseURL = baseURL.value;
 a.institutionId = institutionId.value;
 a.product = product.value;
 a.ssoKey = ssoKey.value;
-a.parameters = b;
-a. appData = pd.contact; // only pass contact
-ZellePlugin.zelle_activity(person ,success,failure); //here we need to pass the data to zelle plugin like this
+a.fiCallback = true;
+a.loaderData = loaderData;
+a.appData = appData;
+a.parameters = zelleparam;
+ZellePlugin.zelle_activity(person ,success,failure); //here we need to pass the data to Zelle plugin like this
 }
 ```
 
 ## Cordova Plugin for ZelleSDK(iOS)
 
-1. To integrate ZelleSDK into any Cordova projects, plugin files will be created which will act a bridge between native code and JavaScript.
+To integrate ZelleSDK into any Cordova projects, plugin files will be created that will act a bridge between native code and JavaScript.
 
-2. Plugin can be created using node.js for both android and iOS platform.
+- A plugin can be created using node.js for both Android and iOS platforms.
 
-3. To create a plugin, plugin name, plugin id, plugin version and plugin package name are required.
+- To create a plugin, the plugin name, plugin ID, plugin version, and plugin package name are required. An example package name is com.zelle.sdk.plugin
 
-   - Example: - com.zelle.sdk.plugin
-
-4. Once plugin is created, it contains some of the files inside our created plugin folder.
-
-5. Screenshot of plugin: - This refers to the plugin folder.
+After a plugin is created, it contains some files inside the created plugin folder. Screenshot of the plugin folder:
 
 ![cordova_ios_folder](../../assets/images/cordova_ios_folder.png)
 
-6. Inside ZelleSDK Plugin folder except Framework folder all folders and files are automatically generated.
-
-7. To access our ZelleSDK we can create a Framework folder to place our SDK into it.
-
-8. Screenshot refers to SDK file: -
+- Inside the ZelleSDK Plugin folder, all folders and files are automatically generated except for the Framework folder. Create a Framework folder and place ZelleSDK.xcframework into it:
 
 ![cordova_ios_plugin](../../assets/images/cordova_ios_plugin.jpg)
 
-9. In the src folder it has two folders which is android and iOS.
+- The src/iOS folder contains an Objective C/Swift file that extends the Cordova plugin.
 
-10. Inside iOS folder we have objective c/swift file which extends Cordova plugin.
+- The www folder contains a js file with same filename of the Objective C/Swift file created in the src/iOS folder. This js and native file only communicate with each other for passing the parameters from js to Objective C/Swift.
 
-11. Inside www folder we have a js file with same file name of Objective C/Swift file created in src.
+- New Objective C/Swift and storyboard files can be created that will act as the interface to access ZelleSDK. In the plugin.xml file, the location path for the created files can be added in the iOS platform tag.
 
-12. This js and native file only communicates each other for passing the parameters from js to Objective C/Swift file.
+1. To integrate the plugin in the Cordova project, navigate to the Cordova project folder inside the terminal to add the plugin:
 
-13. For iOS, new objective c/swift and storyboard files can be created which will act as interface to access ZelleSDK.
+```
+cordova plugin add "Users/Cordova/ZellePlugin"
+```
 
-14. In the plugin.xml file, location path for the created Objective c/Swift, storyboard files can be added in iOS platform tag.
+2. Build the Cordova project:
 
-15. For iOS, new Objective-C/Swift file e.g., HomeViewController and Storyboard file e.g., Main. Storyboard can be created which will act as interface to access ZelleSDK.
-
-16. Below are the steps to integrate the plugin in Cordova project.
-
-17. Navigate to respective Cordova project folder inside terminal to add our plugin.
-
-    - a. cordova plugin add your-plugin-local-path folder
-    - e.g., cordova plugin add "Users/Cordova/ZellePlugin"
-    - b. cordova build “platform-name”
-    - e.g., cordova build ios
-
-18. Screenshot refers to plugin added in Cordova project: -
+```
+cordova build ios
+```
 
 ![cordova_ios_strct](../../assets/images/cordova_ios_strct.jpg)
 
-19. ZelleSDK can be launched from any Cordova application by calling the function created in plugin folder(www/ZellePlugin.js) with the respective parameters like below.
-
-20. Create the openZelle function in your .js file (e.g. index.js) and pass the required parameters to ZellePlugin.
+3. Launch ZelleSDK from any Cordova application by calling ZellePlugin. Create the openZelle function in your .js file (index.js) and pass the required parameters to ZellePlugin.
 
 ```json
 function openZelle(){
@@ -171,15 +161,37 @@ function openZelle(){
   var ssoKey = document.getElementById("sso");
   var product = document.getElementById("product");
   var a = {};
-var b = {};
-var pd_contact= {
-pd.tittle : ”tittle” ,
-pd.message : ”test”
+var pdContact = {
+title :"Contact Title",
+message :"Contact Message",
 };
 
-b.param1 = "value1";
-b.param2 = "value2";
-b.param3 = "value3";
+var pdCamera = {
+title :"Camera Title",
+message :"Camera Message",
+};
+
+var pdPhoto = {
+title :"Gallery Title",
+message :"Gallery Message",
+};
+
+var appData = {
+pd_contact :pdContact,
+pd_camera  :pdCamera,
+pd_gallery :pdPhoto,
+};
+
+var loaderData = {
+loaderColor :"hex color code",
+bgColor :"hex color code",
+};
+
+var zelleparam = {
+param1 :"value1",
+param2 :"value2",
+param3 :"value3",
+};
 
 var success = function(message) {
 
@@ -194,11 +206,12 @@ a.baseURL = baseURL.value;
 a.institutionId = institutionId.value;
 a.product = product.value;
 a.ssoKey = ssoKey.value;
-a.parameters = b;
-a. appData = pd_contact;
+a.fiCallback = true;
+a.loaderData = loaderData;
+a.appData = appData;
+a.parameters = zelleparam;
 
-
-ZellePlugin.zelle_activity(person ,success,failure); //here we need to pass the data to zelle plugin like this
+ZellePlugin.zelle_activity(person ,success,failure); //here we need to pass the data to Zelle plugin like this
 }
 
 ```
