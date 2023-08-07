@@ -1,33 +1,33 @@
 # Kony Integration (Android)
 
-Prerequisites: Kony Visualizer 8, Android, Xcode, Android emulator/android phone, iOS simulator/iPhone
+Prerequisites: Kony Visualizer 8, Android, Xcode, Android emulator/Android phone, iOS simulator/iPhone
 
 There are 2 approaches to integrate ZelleSDK with Kony Project
 
-- Integrating ZelleSDK with Kony using KonyAdapter class to launch the ZelleSDK in separate window.
-- Integrating ZelleSDK with Kony using KonyWrapper method in android studio to embed the ZelleSDK in Kony Container.
+- Integrating ZelleSDK with Kony using KonyAdapter class to launch the ZelleSDK in a separate window.
+- Integrating ZelleSDK with Kony using KonyWrapper method in Android studio to embed the ZelleSDK in Kony Container.
 
 ## I. Integrating ZelleSDK with Kony using KonyAdapter
 
-### 1. Create Android Application with an Activity 
+### 1. Create Android Application with an Activity
 
-Go to Android Studio and create a new project with an activity. Name the app “ZelleKonyFFI”. 
+Go to Android Studio and create a new project with an activity. Name the app “ZelleKonyFFI”.
 
 ### 2. Create konyAdapter Class
 
-The adapter class will be the bridge between Kony and Android.  
+The adapter class will be the bridge between Kony and Android.
 
 - Import KonyWidget.jar and ZelleSDK.aar in the Android project:
-  - To add KonyWidget.jar, right click on your project > Open Module settings > Modules > +(click to add new Modules) > Import JAR/AAR Package > Next. Select the KonyWidget.jar 
-  - To add ZelleSDK.aar, right click on your project > Open Module settings > Modules > +(click to add new Modules) > Import JAR/AAR Package > Next. Select the ZelleSDK.aar or move ZelleSDK.aar to the libs folder.  
+  - To add KonyWidget.jar, right click on your project > Open Module settings > Modules > +(click to add new Modules) > Import JAR/AAR Package > Next. Select the KonyWidget.jar
+  - To add ZelleSDK.aar, right click on your project > Open Module settings > Modules > +(click to add new Modules) > Import JAR/AAR Package > Next. Select the ZelleSDK.aar or move ZelleSDK.aar to the libs folder.
 
-- Update build.gradle with the following dependency: 
+- Update build.gradle with the following dependency:
 
 ```json
 implementation project(path: ':konywidgets') 
 ```
 
-- Create the adapter class. Go to app > java > (package name) > Right click > New > Java class. Name the java file “konyAdapter”: 
+- Create the adapter class. Go to app > java > (package name) > Right click > New > Java class. Name the java file “konyAdapter”:
 
 ```json
 public class konyAdapter  {   
@@ -45,7 +45,7 @@ public class konyAdapter  {
 } 
 ```
 
-- Update the MainActivity.java class with the following code. 
+- Update the MainActivity.java class with the following code.
 
 ```json
 public class MainActivity extends AppCompatActivity implements GenericTag { 
@@ -58,13 +58,18 @@ public class MainActivity extends AppCompatActivity implements GenericTag {
       try { 
         if (intent != null){ 
           JSONObject jsonObject = new JSONObject(intent.getStringExtra("ZelleObject")); 
-          HashMap<String, String> param = new Gson().fromJson(jsonObject.getString("parameters"), HashMap.class); 
+          HashMap<String, String> param = new Gson().fromJson(jsonObject.getString("parameters"), HashMap.class);
+          HashMap<String, String> loaderData = new Gson().fromJson(jsonObject.getString("loaderData"), HashMap.class);
+          HashMap<String, HashMap<String, String>> appData = new Gson().fromJson(jsonObject.getString("appData"), HashMap.class);
           Zelle zelle = new Zelle( 
             jsonObject.getString("applicationName"), 
             jsonObject.getString("baseURL"), 
             jsonObject.getString("institutionId"), 
             jsonObject.getString("product"), 
-            jsonObject.getString("ssoKey"), 
+            jsonObject.getString("ssoKey"),
+            jsonObject.getBoolean("fi_callback"),
+            loaderData,
+            appData,
             param 
           ); 
           Bridge bridge = new Bridge(ZelleActivity.this, zelle); 
@@ -110,23 +115,23 @@ public class MainActivity extends AppCompatActivity implements GenericTag {
 </androidx.constraintlayout.widget.ConstraintLayout> 
 ```
 
-- Update the build.gradle file “com.android.application” to “com.android.library”. 
+- Update the build.gradle file “com.android.application” to “com.android.library”.
 
 ### 3. Generate AAR File
 
 - Update the build configuration dialogue from app to ZelleKonyFFI: app[build] and run the project.
 
-- The AAR file will be generated and can be accessed from the location as ZelleKonyFFI > app > build > output > aar > app-release.aar 
+- The AAR file will be generated and can be accessed from the location as ZelleKonyFFI > app > build > output > aar > app-release.aar
 
-### 4. Create Kony App 
+### 4. Create Kony App
 
 - Go to Kony Visualizer File > New Project > Create custom app. Name the project “ZelleKonyFFI”.
 
 - Create a new mobile form with a welcome label and button.
 
-- Copy the “app-release.aar” file into the Kony folder ZelleKonyFFI > resources > customlibs > lib > android. 
+- Copy the “app-release.aar” file into the Kony folder ZelleKonyFFI > resources > customlibs > lib > android.
 
-### 5. Import AAR in Kony and Configure Kony FFI 
+### 5. Import AAR in Kony and Configure Kony FFI
 
 - In Kony Visualizer, go to Edit > Integrate Third Party > Manage Custom Libraries.
 
@@ -140,7 +145,7 @@ public class MainActivity extends AppCompatActivity implements GenericTag {
 
 - Select Finish to generate the Foreign Function Interface (FFI). An FFI is a mechanism that provides support for an application written in one programming language to use the methods, functions, and services written in another programming language.
 
-- Go to Project Settings > Native > Android > Gradle entries and add the AAR dependencies: 
+- Go to Project Settings > Native > Android > Gradle entries and add the AAR dependencies:
 
 ```json
 dependencies{ 
@@ -154,12 +159,39 @@ dependencies{
   android { defaultConfig { renderscriptSupportModeEnabled false}} 
 ```
 
-- For the Kony button action, add the following code: 
+- For the Kony button action, add the following code:
 
 ```json
 //Invokes function 'initializeFFI' 
-var j = self.view.url.text; 
-var b = { 
+var j = self.view.url.text;
+
+var pdContact = {
+title :"Contact Title",
+message :"Contact Message",
+};
+
+var pdCamera = {
+title :"Camera Title",
+message :"Camera Message",
+};
+
+var pdPhoto = {
+title :"Gallery Title",
+message :"Gallery Message",
+};
+
+var appData = {
+pd_contact :pdContact,
+pd_camera  :pdCamera,
+pd_gallery :pdPhoto,
+};
+
+var loaderData = {
+loaderColor :"hex color code",
+bgColor :"hex color code",
+};
+
+var zelleparam = { 
   param1 :"value1", 
   param2 :"value2", 
   param3 :"value3", 
@@ -171,7 +203,10 @@ var Zelleparam = {
   institutionId : "institutionId.value", 
   product : "", 
   ssoKey :"", 
-  parameters : b 
+  fi_callback : false,
+  loaderData : loaderData,
+  appData :  appData,       
+  parameters : zelleparam 
 } 
 
 //Zelle Function call  
@@ -187,23 +222,23 @@ function ffiCallback(data){
 
 ### 1. Create Android Application with a Wrapper class
 
-Go to Android Studio and create a new project with a class. Name the app “ZelleKonyNFI”. 
+Go to Android Studio and create a new project with a class. Name the app “ZelleKonyNFI”.
 
 ### 2. Create KonyWrapper Class
 
-The wrapper class will contain the method which will return the ZelleUI to Kony app to embed in Kony container.  
+The wrapper class will contain the method that will return the ZelleUI to the Kony app to embed in the Kony container.
 
-- Import KonyWidget.jar and ZelleSDK.aar in the Android project:  
-  - To add KonyWidget.jar, right click on your project > Open Module settings > Modules > + (click to add new Modules) > Import JAR/AAR Package > Next. Select the KonyWidget.jar 
-  - To add ZelleSDK.aar, right click on your project > Open Module settings > Modules > + (click to add new Modules) > Import JAR/AAR Package > Next. Select the ZelleSDK.aar or move ZelleSDK.aar to the libs folder.  
+- Import KonyWidget.jar and ZelleSDK.aar in the Android project:
+  - To add KonyWidget.jar, right click on your project > Open Module settings > Modules > + (click to add new Modules) > Import JAR/AAR Package > Next. Select the KonyWidget.jar
+  - To add ZelleSDK.aar, right click on your project > Open Module settings > Modules > + (click to add new Modules) > Import JAR/AAR Package > Next. Select the ZelleSDK.aar or move ZelleSDK.aar to the libs folder.
 
-- Update build.gradle with the following dependency: 
+- Update build.gradle with the following dependency:
 
 ```json
 implementation project (path: ':konywidgets') 
 ```
 
-- Create the wrapper class. Go to app > java > (package name) > Right click > New > Java class. Name the java file “KonyWrapper”. 
+- Create the wrapper class. Go to app > java > (package name) > Right click > New > Java class. Name the java file “KonyWrapper”:
 
 ```json
 public class KonyWrapper { 
@@ -222,17 +257,23 @@ public class KonyWrapper {
             ViewGroup.LayoutParams.MATCH_PARENT));
             this.linearLayout.setOrientation(LinearLayout.VERTICAL);
             this.linearLayout.setPadding(100, 0, 0, 0);
-            LinearLayout.LayoutParams rightGravityParams = new LinearLayout.LayoutParams(-1, -1); 
+            LinearLayout.LayoutParams rightGravityParams = new LinearLayout.LayoutParams(-1, -1);
 
-                  Zelle zelle = new Zelle(
+            HashMap<String, String> param = new Gson().fromJson(jsonObject.getString("parameters"), HashMap.class);
+            HashMap<String, String> loaderData = new Gson().fromJson(jsonObject.getString("loaderData"), HashMap.class);
+            HashMap<String, HashMap<String, String>> appData = new Gson().fromJson(jsonObject.getString("appData"), HashMap.class);
+
+              Zelle zelle = new Zelle(
                    jsonObject.getString("applicationName"), //applicationName (Optional)
                    jsonObject.getString("baseURL"), //baseURL
                    jsonObject.getString("institutionId"), //institutionId
                    jsonObject.getString("product"), //product
                    jsonObject.getString("ssoKey"), // ssoKey
-                   null,
-                   null
-                 ); 
+                   jsonObject.getBoolean("fi_callback"),
+                   loaderData,
+                   appData,
+                   param
+               ); 
 
           Bridge bridge = new Bridge (KonyMain.getActivityContext(), zelle);
           zelle.setPreCacheContacts(true);
@@ -246,27 +287,27 @@ public class KonyWrapper {
             bridgeLayout.setId(1234);
             konyManager.beginTransaction().add(bridgeLayout.getId(), bridgeView,
             "BridgeView").commit();
-                  return bridgeLayout;
+         return bridgeLayout;
     } 
 ```
 
-- Update the build.gradle file “com.android.application” to “com.android.library”. 
+- Update the build.gradle file “com.android.application” to “com.android.library”.
 
 ### 3. Generate AAR File
 
 - Update the build configuration dialogue from app to ZelleKonyNFI: app[build] and run the project.
 
-- The AAR file will be generated and can be accessed from the location as ZelleKonyNFI > app > build > output > aar > app-release.aar. 
+- The AAR file will be generated and can be accessed from the location as ZelleKonyNFI > app > build > output > aar > app-release.aar.
 
-### 4. Create Kony App 
+### 4. Create Kony App
 
 - Go to Kony Visualizer File > New Project > Create custom app. Name the project “ZelleKonyNFI”.
 
 - Create a new mobile form with a welcome label and button.
 
-- Copy the “app-release.aar” file into the Kony folder ZelleKonyNFI > resources > customlibs > lib > android. 
+- Copy the “app-release.aar” file into the Kony folder ZelleKonyNFI > resources > customlibs > lib > android.
 
-### 5. Import AAR in Kony and Configure Kony NFI 
+### 5. Import AAR in Kony and Configure Kony NFI
 
 - In Kony Visualizer, go to Edit > Integrate Third Party > Manage Custom Libraries.
 
@@ -280,7 +321,7 @@ public class KonyWrapper {
 
 - Select Finish to generate the Native Function Interface (NFI). An NFI is a mechanism that provides support for an application written in one programming language to use the methods, functions, and services written in another programming language.
 
-- Go to Project Settings > Native > Android > Gradle entries and add the AAR dependencies: 
+- Go to Project Settings > Native > Android > Gradle entries and add the AAR dependencies:
 
 ```json
 dependencies { 
@@ -294,41 +335,71 @@ dependencies {
   android {defaultConfig { renderscriptSupportModeEnabled false}} 
 ```
 
-- For the Kony button action, add the following code: 
+- For the Kony button action, add the following code:
 
 ```json
 //Invokes function 'initializeNFI' 
-var j = self.view.url.text; 
-var b = { 
-  param1 :"value1", 
-  param2 :"value2", 
-  param3 :"value3", 
-}; 
+var j = self.view.url.text;
 
-var Zelleparam = { 
-  applicationName :"Demo Kony App", 
-  baseURL: j, 
-  institutionId : "institutionId.value", 
-  product : "", 
-  ssoKey :"", 
-  parameters : b 
-} 
+var pdContact = {
+title :"Contact Title",
+message :"Contact Message",
+};
 
-//Zelle Function call which will return ZelleView which can integrated in Kony Container. 
+var pdCamera = {
+title :"Camera Title",
+message :"Camera Message",
+};
+
+var pdPhoto = {
+title :"Gallery Title",
+message :"Gallery Message",
+};
+
+var appData = {
+pd_contact :pdContact,
+pd_camera  :pdCamera,
+pd_gallery :pdPhoto,
+};
+
+var loaderData = {
+loaderColor :"hex color code",
+bgColor :"hex color code",
+};
+
+var zelleparam = {
+param1 :"value1",
+param2 :"value2",
+param3 :"value3",
+};
+
+var Zelleparam = {
+applicationName :"Demo Kony App",
+baseURL: j ,
+institutionId : "institutionId.value",
+product : "",
+ssoKey :"",
+fi_callback : false,
+loaderData : loaderData,
+appData :  appData,
+parameters : zelleparam
+}
+
+//Zelle Function call that will return ZelleView that can integrated in Kony Container. 
 com.mki.zellekonyffi.initializeNFI(Zelleparam); 
 ```
 
 - Launch the app in the simulator/device and click on the button to launch the Turnkey Service for Zelle® Mobile SDK.
 
-Note: Kony plugin should be used with latest Turnkey Service for Zelle Mobile SDK version. 
+Note: Kony plugin should be used with latest Turnkey Service for Zelle Mobile SDK version.
 
-# Kony Integration (iOS) 
+# Kony Integration (iOS)
 
-### 1. Create a Sample iOS Application with a ViewController 
+### 1. Create a Sample iOS Application with a ViewController
 
 - Go to Xcode and create a new iOS (Objective-C) application with the name “DemoFFI”.
 
-- Add the file ZelleSDK.xcframework in the dependency module. 
+- Add the file ZelleSDK.xcframework in the dependency module.
 
 ![K_ZelleSDK.xcframework](../../assets/images/K_ZelleSDK.xcframework.png)
 
@@ -339,52 +410,52 @@ Note: Kony plugin should be used with latest Turnkey Service for Zelle Mobile SD
 ViewController.h
 ![K_ViewControllerh](../../assets/images/K_ViewControllerh.png)
 
-ViewController.m 
+ViewController.m
 ![K_ViewControllerm](../../assets/images/K_ViewControllerm.png)
 
-- Copy the ViewController.h, ViewController.m, and Main.storyboard files from the project to a separate folder named DemoFFI. Create a zip file of the folder. 
+- Copy the ViewController.h, ViewController.m, and Main.storyboard files from the project to a separate folder named DemoFFI. Create a zip file of the folder.
 
 ![K_DemoFFI](../../assets/images/K_DemoFFI.png)
 
-### 2. Create the KonyiOSDemo Project in Kony Visualizer 
+### 2. Create the KonyiOSDemo Project in Kony Visualizer
 
-- Create a project and name it “KonyiOSDemo”. When you create the project, it will auto generate several files and folders. 
+- Create a project and name it “KonyiOSDemo”. When you create the project, it will auto generate several files and folders.
 
 ![K_KonyProject](../../assets/images/K_KonyProject.png)
 
-- Navigate to KonyiOSDemo/resources/customlibs/lib/iPhone and paste the DemoFFI.zip here. 
+- Navigate to KonyiOSDemo/resources/customlibs/lib/iPhone and paste the DemoFFI.zip here.
 
 ![K_KonyiOSDemo](../../assets/images/K_KonyiOSDemo.png)
 
-- Go to Edit > Integrate Third Party > Manage Custom Libraries to create the FFI (Foreign Function Interface). 
+- Go to Edit > Integrate Third Party > Manage Custom Libraries to create the FFI (Foreign Function Interface).
 
 ![K_FFI](../../assets/images/K_FFI.png)
 
-- Create a package named TestZelle. 
+- Create a package named TestZelle.
 
 ![K_TestZelle](../../assets/images/K_TestZelle.png)
 
-- Create a javascript class ZelleClass inside the TestZelle package. 
+- Create a javascript class ZelleClass inside the TestZelle package.
 
 ![K_javascript](../../assets/images/K_javascript.png)
 
-- Navigate to Native Mappings > Mobile > iPhone and add the details for the DemoFFI.zip file. 
+- Navigate to Native Mappings > Mobile > iPhone and add the details for the DemoFFI.zip file.
 
 ![K_NativeMapping](../../assets/images/K_NativeMapping.png)
 
-- Navigate to JavaScript Definition and create a javascript function named loadSDK. 
+- Navigate to JavaScript Definition and create a javascript function named loadSDK.
 
 ![K_loadSDK](../../assets/images/K_loadSDK.png)
 
-- Navigate to Native Mappings and map loadSDK to the class method definition (ViewController’s loadZelleSDK). Select Finish. 
+- Navigate to Native Mappings and map loadSDK to the class method definition (ViewController’s loadZelleSDK). Select Finish.
 
 ![K_MapWithClass](../../assets/images/K_MapWithClass.png)
 
-- In Forms, add a button (btnSDK in this example) to Form1 with the label name “Launch Zelle”.  
+- In Forms, add a button (btnSDK in this example) to Form1 with the label name “Launch Zelle”.
 
 ![K_LaunchZelle](../../assets/images/K_LaunchZelle.png)
 
-- Create a listener.js file in the Modules folder and add the following code snippets. 
+- Create a listener.js file in the Modules folder and add the following code snippets.
 
 ```json
 function launchSDK() { 
@@ -396,11 +467,11 @@ function launchSDK() {
 ```
 ![K_listener](../../assets/images/K_listener.png)
 
-- Connect the launchSDK function created in the listener.js file with the button’s onClick event (in this example, ACTION_ID: AS_Button_ac7a6fa704074ad68a17f9daa05d736c). 
+- Connect the launchSDK function created in the listener.js file with the button’s onClick event (in this example, ACTION_ID: AS_Button_ac7a6fa704074ad68a17f9daa05d736c).
 
 ![K_ButtonEvent](../../assets/images/K_ButtonEvent.png)
 
-- Launch the app in the simulator/device and click on the Launch Zelle button to launch the Turnkey Service for Zelle® Mobile SDK. 
+- Launch the app in the simulator/device and click on the Launch Zelle button to launch the Turnkey Service for Zelle® Mobile SDK.
 
 ![ZelleLanding](../../assets/images/ZelleLanding.png)
 
