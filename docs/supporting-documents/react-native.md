@@ -1,10 +1,10 @@
 # Steps for Quick Start
 
-## Creating POC (Proof of Concepts) with React Native 
+## Creating POC (Proof of Concepts) with React Native
 
 ### Prerequisites:
 
-Nodejs, react-native-cli or expo-cli, android emulator or real device, iOS simulator or real device 
+Nodejs, react-native-cli or expo-cli, Android emulator or real device, iOS simulator or real device
 
 ### 1. Create new project (ReactDemo) using Terminal
 
@@ -12,7 +12,7 @@ Nodejs, react-native-cli or expo-cli, android emulator or real device, iOS simul
  npx create-expo-app ReactDemo
 ```
 
-### 2. Move to project directory
+### 2. Navigate to project directory
 
 ```json
 cd ReactDemo
@@ -24,7 +24,7 @@ cd ReactDemo
 npm start
 ```
 
-Note: you can also use: npx expo start
+Note: You can also use: npx expo start
 
 ### 4. Add android/iOS package and bundle name in app.json file
 
@@ -51,7 +51,7 @@ Note: you can also use: npx expo start
 expo eject
 ```
 
-Note: Now you will get android/ios folders in your project folder
+Note: Now you will get android/ios folders in your project folder.
 
 ### 6. Launch the application
 
@@ -59,27 +59,27 @@ Note: Now you will get android/ios folders in your project folder
 expo start
 ```
 
-Note: This step ensures that the Metro bundler is running and serving your app's JS bundle for development. Leave this running and continue with the following steps
+Note: This step ensures that the Metro bundler is running and serving your app's JS bundle for development. Leave this running and continue with the following steps.
 
-### 7. Running android 
+### 7. Running android
 
-Open the android directory in Android Studio, then build and run the project on an Android device or emulator
+Open the android directory in Android Studio, then build and run the project on an Android device or emulator.
 
 ### 8. Running iOS project
 
-Note: For iOS navigate to ios folder and run "npx pod-install" to link the native iOS packages.  Now you will get "xcworkspace" in ios folder
+Note: For iOS, navigate to the ios folder and run "npx pod-install" to link the native iOS packages.  Now you will get "xcworkspace" in the ios folder.
 
-Open "xcworkspace" using Xcode to build, install and run the project on your test device or simulator.
+Open "xcworkspace" using Xcode to build, install, and run the project on your test device or simulator.
 
-## Integrating Android ZelleSDK with POC 
+## Integrating Android ZelleSDK with POC
 
 ### 1. Add ZelleSDK.aar to your project libs folder:
 
-Open android folder in Android Studio and add ZelleSDK.aar file in android/app/libs
+Open the android folder in Android Studio and add the ZelleSDK.aar file in android/app/libs.
 
 ### 2. Create MyModule.java class
 
-Create MyModule.java file inside android/app/src/main/java/com/your-app-name/ then add the following content 
+Create the file MyModule.java inside android/app/src/main/java/com/your-app-name/ and then add the following content:
 
 ```json
 import android.content.Intent;
@@ -133,7 +133,7 @@ public class MyModule extends ReactContextBaseJavaModule implements GenericTag {
     } 
                     
     @Override
-    public void sessionTag(@NonNull String s) {//ovvride method for session timeout
+    public void sessionTag(@NonNull String s) {//override method for session timeout
         if (!s.equals("")){
          try {
                 WritableMap event = Arguments.createMap();
@@ -147,7 +147,7 @@ public class MyModule extends ReactContextBaseJavaModule implements GenericTag {
     }
 
    @Override
-    public void getValue(@NonNull String s) {//ovvride method for custom callback
+    public void getValue(@NonNull String s) {//override method for custom callback
         
         if (!s.equals("")){
             try {
@@ -165,7 +165,7 @@ public class MyModule extends ReactContextBaseJavaModule implements GenericTag {
 
 ### 3. Add your Native Module to ReactPackage
 
-First create a new Java Class named (MyPackage.java) that implements ReactPackage inside the android/app/src/main/java/com/your-app-name/, then add the following content
+First create a new Java Class named MyPackage.java that implements ReactPackage inside the android/app/src/main/java/com/your-app-name/, then add the following content:
 
 ```json
 import androidx.annotation.NonNull;
@@ -197,7 +197,7 @@ public class MyPackage implements ReactPackage {
 
 ### 4. Create LaunchZelleActivity.kt class
 
-Create LaunchZelleActivity.kt and add the below content
+Create LaunchZelleActivity.kt and add the following content:
 
 ```json
 import android.os.Bundle
@@ -243,7 +243,7 @@ class LaunchZelleActivity : AppCompatActivity() {
 
 ### 5. Create layout.activity_launch_zelle.xml
 
-layout.activity_launch_zelle.xml file should be like below
+Create the layout.activity_launch_zelle.xml file and add the following content:
 
 ```json
 <?xml version="1.0" encoding="utf-8"?>
@@ -265,7 +265,7 @@ layout.activity_launch_zelle.xml file should be like below
 
 ### 6. Add dependencies in app level build.gradle
 
-Add below dependencies in app level build.gradle file 
+Add these dependencies in the app level build.gradle file:
 
 ```json
  implementation fileTree(dir: "libs", include: ["*.jar","*.aar"])    
@@ -275,24 +275,24 @@ Add below dependencies in app level build.gradle file
  implementation 'com.google.zxing:core:3.4.0'
 ```
 
-### 7. Add permissions in Andridmanifest.xml
+### 7. Add permissions in AndroidManifest.xml
 
 ```json
 <uses-permission android:name="android.permission.INTERNET" /> 
 <uses-permission android:name="android.permission.CAMERA"/> 
 ```
 
-Note: Minimum SDK version is 24 
+Note: Minimum SDK version is 24.
 
 ## Integrating iOS ZelleSDK with POC
 
 ### 1. Add ZelleSDK.xcframework  to your project folder:
 
-Open "xcworkspace" using Xcode and add ZelleSDK.xcframework file in ios/ReactDemo
+Open "xcworkspace" using Xcode and add ZelleSDK.xcframework in ios/ReactDemo.
 
 ### 2. Create MyModule.m class
 
-Create the file named as "MyModule.m". Then add the below content
+Create the file MyModule.m and add the following content:
 
 ```json
 #import <Foundation/Foundation.h>
@@ -307,7 +307,7 @@ RCT_EXTERN_METHOD(NavigateToZelle: (NSString *)appName baseUrl:(NSString *)baseU
 
 ### 3. Create MyModule.swift class
 
-Create a file named "MyModule.swift" and add the below content
+Create the file MyModule.swift and add the following content:
 
 ```json
 import Foundation
@@ -363,7 +363,7 @@ class MyModule: RCTEventEmitter, GenericTagDelegate{//Implement GenericTagDelega
 
 ### 4. Create ZelleViewController.swift class
 
-Create ZelleViewController.swift and it should be like below,
+Create ZelleViewController.swift and add the following content:
 
 ```json
 import UIKit
@@ -413,11 +413,11 @@ class ZelleViewController: UIViewController {
 
 ### 5. Create a new storyboard
 
-Create a new storyboard and reference it with ZelleViewController.swift
+Create a new storyboard and reference it with ZelleViewController.swift.
 
-### 6. Create new View 
+### 6. Create a new view
 
-Create a View inside the storyboard and reference it with viewContainer
+Create a view inside the storyboard and reference it with viewContainer.
 
 ### 7. Add permission in info.plist
 
@@ -432,13 +432,13 @@ Open the file info.plist (right-click > Open As > Source Code). Add the followin
 <string>[PERMISSION_DESCRIPTION] </string> 
 ```
 
-Note: Minimum Xcode Version: 11 & Minimum OS: iOS 13 
+Note: Minimum Xcode Version: 11 & Minimum OS: iOS 13
 
-## Integrating Native code with React Native 
+## Integrating Native code with React Native
 
-### 1. Add Event Listener in App.js
+### 1. Add Event Listener in app.js
 
-Import the below line in App.js file
+Add the following content to the app.js file:
 
 ```json
 import { NativeModules } from 'react-native';
@@ -463,38 +463,38 @@ componentDidMount(){
  } 
 ```
 
-### 2. Calling native android and ios methods
+### 2. Calling native Android and iOS methods
 
-From App.js file call the android and ios methods like 
+Call the Android and iOS methods from the app.js file:
 
 ```json
 var a = {};
-var b = {};//here you can send added key value pair data to the Zelle
+var b = {};//here you can send added key value pair data to Zelle
 b.param1 = "param1_value";
-b.param2 = "param2_value"; 
-b.param3 = "param3_value"; 
-        
-var c = {};//Prominent disclosure customized data for contact 
-c.title = "We would like to access your phone contacts"; 
-c.message = "We only sync phone numbers and email addresses from your contact list to help you add and pay a new recipient in Zelle ®"; 
-        
-var d = {};//Prominent disclosure customized data for camera 
-d.title = "We would like to access your camera"; 
-d.message = "We only access your camera to help you add and pay a new recipient in Zelle ®"; 
-        
-var e = {};//Prominent disclosure customized data for gallery 
-e.title = "We would like to access your photos"; 
-e.message = "We only access your photos to help you add and pay a new recipient in Zelle ®"; 
+b.param2 = "param2_value";
+b.param3 = "param3_value";
 
-a.pd_contact = c; 
-a.pd_camera = d; 
-a.pd_gallery = e; 
+var c = {};//Prominent disclosure customized data for contact 
+c.title = "We would like to access your phone contacts";
+c.message = "We only sync phone numbers and email addresses from your contact list to help you add and pay a new recipient in Zelle®";
+
+var d = {};//Prominent disclosure customized data for camera 
+d.title = "We would like to access your camera";
+d.message = "We only access your camera to help you add and pay a new recipient in Zelle®";
+
+var e = {};//Prominent disclosure customized data for gallery 
+e.title = "We would like to access your photos";
+e.message = "We only access your photos to help you add and pay a new recipient in Zelle®";
+
+a.pd_contact = c;
+a.pd_camera = d;
+a.pd_gallery = e;
 
 var loaderData = {}; //Customized loader data 
-loaderData.loaderColor = “hex color code”; 
-loaderData.bgColor = “hex color code” 
+loaderData.loaderColor = “hex color code”;
+loaderData.bgColor = “hex color code”
 
-var fi_callback = true   
+var fi_callback = true
 
 NativeModules.MyModule.NavigateToZelle("Demo Bank", "base_url", "institution_id", "product", "sso_key", fi_callback, loaderColor, b, a); 
 ```
