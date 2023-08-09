@@ -2,24 +2,24 @@
 
 ## Project Setup
 
-### 1. Prerequisites:
+Prerequisites:
 
 - Visual studio
 - Xamarin
 - Android SDK
 - Xcode
-- Android Emulator (or) Real Device
-- iOS Simulator (or) Real Device
+- Android Emulator or Real Device
+- iOS Simulator or Real Device
 
-### 2. Create Interface Class
+### 1. Create Interface Class
 
-Create a IZelleService.cs interface class inside Xamarin Solution.
+Create the IZelleService.cs interface class inside a Xamarin solution.
 
-This IZelleService.cs class will create a bridge between Xamarin Solution to Xamarin Android and iOS.
+This IZelleService.cs class will create a bridge between the Xamarin solution to Xamarin Android and iOS.
 
-![Xamarin_service](../../assets/images/Xamarin_service.jpg)
+![Xamarin_service](../../assets/images/Xamarin_service.png)
 
-### 3. Code Snippet for IZelleService Interface class:
+Code Snippet for IZelleService Interface class:
 
 ```json
 using System;
@@ -29,14 +29,14 @@ namespace FIApp
 {
     public interface IZelleService
   {
-      void launchZell(String applicationName, String baseUrl, String institutionId, String ssoKey, String product, IDictionary data);
+      void launchZelle(String applicationName, String baseUrl, String institutionId, String ssoKey, String product, IDictionary data);
   }
 }
 ```
 
-### 4. Launch Zelle using DependencyService
+### 4. Launch Zelle® using DependencyService
 
-In Xamarin solution launch the Zelle by passing the required parameters through interface by using DependencyService.
+In the Xamarin solution, launch Zelle® by passing the required parameters through the interface by using DependencyService.
 
 ![xamarin_launchzelle](../../assets/images/xamarin_launchzelle.png)
 
@@ -60,7 +60,7 @@ public void Button_Clicked(object sender, EventArgs args)
     if (callZelle != null)
       {
 
-      callZelle.launchZell(ApplicationName.Text, BaseUrl.Text, InstitutionId.Text, SSOKey.Text, ProductId.Text, null);
+      callZelle.launchZelle(ApplicationName.Text, BaseUrl.Text, InstitutionId.Text, SSOKey.Text, ProductId.Text, null);
 
      }
     }
@@ -68,19 +68,19 @@ public void Button_Clicked(object sender, EventArgs args)
 }
 ```
 
-## a) ZelleSDK Integration for Xamarin(Android)
+## ZelleSDK Integration for Xamarin(Android)
 
 ### 1. Import Library
 
-Add the required library’s from NuGet for Xamarin android inside <AppName.android>.Packages.
+Add the required libraries from NuGet for Xamarin Android inside <AppName.android>.Packages.
 
-The library’s which is shown in the below image packages folder is required to launch ZelleSDK.
+The libraries shown in the below image packages folder are required to launch ZelleSDK.
 
 ![xamarin_android_package](../../assets/images/xamarin_android_package.jpg)
 
 ### 2. Add Required Permission
 
-Add the required permission and declare the respective class file path and tools:node="replace" inside application tag in Properties.AndroidManifest.xml file.
+Add the required permission and declare the respective class file path and tools:node="replace" inside the application tag in the Properties.AndroidManifest.xml file.
 
 ![xamarin_android_manifest](../../assets/images/xamarin_android_manifest.jpg)
 
@@ -106,19 +106,19 @@ android:theme="@style/MainTheme">
 </manifest>
 ``` 
 
-### 3. Import DLL File
+### 3. Import DLL Files
 
-Add the ZelleSDKAndroidBinding and ZxingEmbedded .dll file inside References folder.
+Add the ZelleSDKAndroidBinding and ZxingEmbedded .dll files inside the References folder.
 
 ![xamarin_android_reference](../../assets/images/xamarin_android_reference.jpg)
 
-Open the MainActivity.cs file and implement the interface class inside <ProjectName.android> folder.
+### 4. Open the MainActivity.cs file and implement the interface class inside the <ProjectName.android> folder.
 
 ![xamarin_android_mainactivity](../../assets/images/xamarin_android_mainactivity.png)
 
-Add the assembly for the interface communication connection from Xamarin solution to Xamarin android and ios.
+Add the assembly for the interface communication connection from the Xamarin solution to Xamarin Android and iOS.
 
-This IZelleService.cs interface class will override launchZell function.
+This IZelleService.cs interface class will override the launchZelle function.
 
 ```json
 using Android.App;
@@ -154,7 +154,7 @@ Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions,
 base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 }
 
-public void launchZell(string applicationName, string baseUrl, string institutionId, string ssoKey, string product, IDictionary parameters)
+public void launchZelle(string applicationName, string baseUrl, string institutionId, string ssoKey, string product, IDictionary parameters)
 {
 //Intent intent = new Intent(Forms.Context, typeof(ZelleActivity));
 //Forms.Context.StartActivity(intent);
@@ -171,12 +171,12 @@ MainActivity.Instance.StartActivity(intent);
 }
 ``` 
 
-Get the values from launchZelle function and by using intent pass the values from one page to another.
+Get the values from the launchZelle function and use intent to pass the values from one page to another.
 
-![xamarin_android_intent](../../assets/images/xamarin_android_intent.jpg)
+![xamarin_android_intent](../../assets/images/xamarin_android_intent.png)
 
 ```json
-public void launchZell(string applicationName, string baseUrl, string institutionId, string ssoKey, string product, IDictionary parameters)
+public void launchZelle(string applicationName, string baseUrl, string institutionId, string ssoKey, string product, IDictionary parameters)
 {
 //Intent intent = new Intent(Forms.Context, typeof(ZelleActivity));
 //Forms.Context.StartActivity(intent);
@@ -190,9 +190,9 @@ intent.PutExtra("product", product);
 MainActivity.Instance.StartActivity(intent);   }
 ``` 
 
-### 4. Create a Framelayout
+### 5. Create a FrameLayout
 
-Create XML file inside layout folder to design the framelayout to access Zelle.
+Create an XML file inside the layout folder to design the FrameLayout to access Zelle®.
 
 ![xamarin_android_xml](../../assets/images/xamarin_android_xml.png)
 
@@ -211,21 +211,24 @@ android:layout_height="match_parent" />
 </LinearLayout>
 ``` 
 
-### 5. Create a ZelleLaunch Class 
+### 6. Create a ZelleLaunch Class
 
-Create a new class which extends AppCompatActivity and override OnCreate function.
+Create a new class that extends AppCompatActivity and overrides the OnCreate function.
 
-Set the View for that class inside OnCreate function:
-- SetContentView(Resource.Layout.zelle_activity);
+Set the View for that class inside the OnCreate function:
 
-### 6. Initialize Zelle
+```
+SetContentView(Resource.Layout.zelle_activity);
+```
 
-Get the values from the previous activity using intent and initialize Zelle with respective params.
+### 7. Initialize Zelle®
+
+Get the values from the previous activity using intent and initialize Zelle® with the respective parameters.
 
 ![xamarin_android_zelle](../../assets/images/xamarin_android_zelle.jpg)
 
 ```json
-Code Snippet of  Zelle Class:
+Code Snippet of  Zelle class:
 
 using Android.App;
 using Android.OS;
@@ -284,7 +287,7 @@ Bridge bridge = new Bridge(this, zelle);
 zelle.PreCacheContacts = true;
 BridgePopup bridgeView = bridge.Popup();
 
-//To show the zelle view in popup
+//To show the Zelle view in popup
 // bridgeView.Show(SupportFragmentManager, bridgeView.Tag);
 
 
@@ -299,79 +302,83 @@ SupportFragmentManager // Get the support fragment manager instead of the Fragme
 }
 ``` 
 
-### 6. Launch Zelle
+### 7. Launch Zelle®
 
-Run the application to launch the Zelle.
+Run the application to launch Zelle®.
 
-## b) ZelleSDK Integration for Xamarin(iOS)
+## ZelleSDK Integration for Xamarin(iOS)
 
-### 1. There are 2 approaches to integrate the swift library with Xamarin Application Project.
+There are 2 approaches to integrate the Swift library with Xamarin Application Project.
 
-- * By updating the Swift source code to generate the header and mark the required members with @objc attribute
+- Update the Swift source code to generate the header and mark the required members with @objc attribute.
 
-- * By creating a proxy framework where you control the public interface and proxy all the calls to underlying framework.  
+- Create a proxy framework where you control the public interface and proxy all the calls to the underlying framework.
 
-We have followed the second approach where we are creating Proxy Framework which embeds the ZelleSDK framework.
+This documentation follows the second approach by creating a Proxy Framework that embeds the ZelleSDK framework.
 
-### 2. Steps to create the Proxy Framework Project is as follows.
+### 1. Create the Proxy Framework Project
 
-Open Xcode and create new Swift framework, which will be a proxy between Xamarin.iOS code and ZelleSDK Swift framework. Click File > New > Project and follow the wizard steps:
+Open Xcode and create a new Swift framework, which will be a proxy between Xamarin.iOS code and ZelleSDK Swift framework. Click File > New > Project and follow the wizard steps:
 
 ![xamarin_ios_createframework](../../assets/images/xamarin_ios_createframework.jpg)
 
 ![xamarin_ios_frameworkName](../../assets/images/xamarin_ios_frameworkName.jpg)
 
-Select the SwiftFrameworkProxy from the project files explorer then select the General tab.
+Select the SwiftFrameworkProxy from the project files explorer and select the General tab.
 
-### 3. Import ZelleSDK.xcframework:
+### 2. Import ZelleSDK.xcframework
 
-Drag and drop the ZelleSDK.xcframework package to the Xcode Frameworks and Libraries list under the General tab check the Copy items if needed option while adding the framework.
+Drag and drop the ZelleSDK.xcframework package into the Xcode Frameworks and Libraries list under the General tab. Check the **Copy items if needed** option while adding the framework.
 
 ![xamarin_ios_dropxcframework](../../assets/images/xamarin_ios_dropxcframework.jpg)
 
-Verify that the Swift framework has been added to the project otherwise the following options will not be available.
+Verify that the Swift framework has been added to the project (otherwise the following options will not be available).
 
-Ensure that the **Do Not Embed** option is selected, which will be later controlled manually.
+Ensure that the **Do Not Embed** option is selected (manually controlled later).
 
 ![xamarin_ios_donotEmbed](../../assets/images/xamarin_ios_donotEmbed.jpg)
 
-Ensure that the Build Settings option **Always Embed Swift Standard Libraries**, which includes Swift libraries with the framework is set to No. It will be later manually controlled, which Swift dylibs are included into the final package.
+Ensure that the Build Settings option **Always Embed Swift Standard Libraries** (which includes Swift libraries with the framework) is set to No. The Swift dylibs that are included into the final package will be manually controlled later.
 
 ![xamarin_ios_alwaysEmbed](../../assets/images/xamarin_ios_alwaysEmbed.jpg)
 
-Ensure that the **Enable Bitcode** option is set to No. As of right now Xamarin.iOS doesn't include Bitcode while Apple requires all libraries to support the same architectures.
+Ensure that the **Enable Bitcode** option is set to No. Currently, Xamarin.iOS does not include Bitcode.
 
 ![xamarin_ios_enableBitcode](../../assets/images/xamarin_ios_enableBitcode.jpg)
 
-You can verify that the resulted framework has the Bitcode option disabled by running the following terminal command against the framework:
+You can verify that the resulting framework has the Bitcode option disabled by running the following terminal command against the framework:
 
-- otool -l SwiftFrameworkProxy.framework/SwiftFrameworkProxy | grep __LLVM
+```
+otool -l SwiftFrameworkProxy.framework/SwiftFrameworkProxy | grep __LLVM
+```
 
-The output should be empty otherwise you want to review the project settings for your specific configuration.
+The output should be empty. (Otherwise, review the project settings for your specific configuration.)
 
-### 4. Specifies a Header Name
+### 3. Specify a Header Name
 
 Ensure that the **Objective-C Generated interface Header Name** option is enabled and specifies a header name. The default name is <FrameworkName>-Swift.h:
-    
+
 ![xamarin_ios_objectiveC](../../assets/images/xamarin_ios_objectiveC.jpg)
 
-Expose desired methods and mark them with @objc attribute and apply additional rules defined below. If you build the framework without this step, the generated Objective-C header will be empty and Xamarin.iOS won't be able to access the Swift framework members. Expose the initialization logic for the underlying Gigya Swift SDK by creating a new Swift file **ZelleProxy.swift** and defining the following code:
-    
+Expose desired methods and mark them with the @objc attribute. Apply additional rules defined below. If you build the framework without this step, the generated Objective-C header will be empty and Xamarin.iOS will not be able to access the Swift framework members. Expose the initialization logic for the underlying Gigya Swift SDK by creating a new Swift file **ZelleProxy.swift** and defining the following code:
+
 ![xamarin_ios_zelleProxy](../../assets/images/xamarin_ios_zelleProxy.jpg)
 
-### 5. Set Release Build
+### 4. Set Release Build
 
 Change the scheme build configuration from **Debug** to **Release**. In order to do that, open the **Xcode > Target > Edit Scheme** dialog and then set the **Build Configuration** option to **Release**:
-    
+
 ![xamarin_ios_release](../../assets/images/xamarin_ios_release.jpg)
 
 ![xamarin_ios_releaseBuild](../../assets/images/xamarin_ios_releaseBuild.jpg)
 
-At this point, the Framework is ready to be created. Build the framework for both simulator and device architectures and then combine the outputs as a single framework package. Identify installed SDK versions in order to build the source code using **xcodebuild tool**:
+At this point, the framework is ready to be created. Build the framework for both simulator and device architectures and then combine the outputs as a single framework package. Identify installed SDK versions in order to build the source code using the **xcodebuild tool**:
 
-**- xcodebuild -showsdks**
+```
+xcodebuild -showsdks
+```
 
-### 6. The output will be similar to the following:
+The output will be similar to the following:
 
 ```json
 iOS SDKs:
@@ -391,51 +398,63 @@ watchOS Simulator SDKs:
 Simulator - watchOS 6.1         -sdk watchsimulator6.1
 ```
 
-### 7. Generate framework file for iphoneOS and iphoneSimulator
+### 5. Generate the framework file for iphoneos and iphoneSimulator
 
-Pick a desired iOS SDK and iOS Simulator SDK version, in this case version 13.2 and execute the build with the following command
+Pick a desired iOS SDK and iOS Simulator SDK version (in this case, version 13.2) and execute the build with the following commands:
 
-- xcodebuild -sdk iphonesimulator13.2 -project "Swift/SwiftFrameworkProxy/SwiftFrameworkProxy.xcodeproj" -configuration Release
-- xcodebuild -sdk iphoneos13.2 -project "Swift/SwiftFrameworkProxy/SwiftFrameworkProxy.xcodeproj" -configuration Release
+```
+xcodebuild -sdk iphonesimulator13.2 -project "Swift/SwiftFrameworkProxy/SwiftFrameworkProxy.xcodeproj" -configuration Release
 
-### 8. Create a fat framework
+xcodebuild -sdk iphoneos13.2 -project "Swift/SwiftFrameworkProxy/SwiftFrameworkProxy.xcodeproj" -configuration Release
+```
 
-There are two Swift frameworks, one for each platform, combine them as a single package to be embedded into a Xamarin.iOS binding project later. In order to create a fat framework, which combines both architectures, you need to do the following steps. The framework package is just a folder so you can do all types of operations, such as adding, removing, and replacing files:
+### 6. Create a fat framework
 
-Navigate to the build output folder with Release-iphoneos and Release-iphonesimulator subfolders and copy one of the frameworks as an initial version of the final output (fat framework).
+There are two Swift frameworks, one for each platform. Combine them as a single package to be embedded into a Xamarin.iOS binding project later. The framework package is just a folder so you can do all types of operations, such as adding, removing, and replacing files. In order to create a fat framework, which combines both architectures, perform the following steps.
 
-- cp -R "Release-iphoneos" "Release-fat"
+Navigate to the build output folder with the Release-iphoneos and Release-iphonesimulator subfolders and copy one of the frameworks as an initial version of the final output (fat framework):
 
-Combine modules from another build with the fat framework modules
+```
+cp -R "Release-iphoneos" "Release-fat"
+```
 
-- cp -R "Release-iphonesimulator/SwiftFrameworkProxy.framework/Modules/SwiftFrameworkProxy.swiftmodule/" "Release-fat/SwiftFrameworkProxy.framework/Modules/SwiftFrameworkProxy.swiftmodule/"
+Combine modules from another build with the fat framework modules:
 
-### 9. Combine iphoneos + iphonesimulator configuration as a fat framework
+```
+cp -R "Release-iphonesimulator/SwiftFrameworkProxy.framework/Modules/SwiftFrameworkProxy.swiftmodule/" "Release-fat/SwiftFrameworkProxy.framework/Modules/SwiftFrameworkProxy.swiftmodule/"
+```
 
-- lipo -create -output "Release-fat/SwiftFrameworkProxy.framework/SwiftFrameworkProxy" "Release-iphoneos/SwiftFrameworkProxy.framework/SwiftFrameworkProxy" "Release-iphonesimulator/SwiftFrameworkProxy.framework/SwiftFrameworkProxy"
+### 7. Combine iphoneos and iphonesimulator configuration as a fat framework
 
-### 10. Verify results
+```
+lipo -create -output "Release-fat/SwiftFrameworkProxy.framework/SwiftFrameworkProxy" "Release-iphoneos/SwiftFrameworkProxy.framework/SwiftFrameworkProxy" "Release-iphonesimulator/SwiftFrameworkProxy.framework/SwiftFrameworkProxy"
+```
 
-- lipo -info "Release-fat/SwiftFrameworkProxy.framework/SwiftFrameworkProxy"
+### 8. Verify results
 
-The output should render the following, reflecting the name of the framework and included architectures:
+```
+lipo -info "Release-fat/SwiftFrameworkProxy.framework/SwiftFrameworkProxy"
+```
 
-- Architectures in the fat file: Release-fat/SwiftFrameworkProxy.framework/SwiftFrameworkProxy are: x86_64 arm64
-- Note:  If you want to support just a single platform (for example, you are building an app, which can be run on a device only) you can skip the step to create the fat library and use the output framework from the device build earlier.
+The output should reflect the name of the framework and the included architectures: x86_64 arm64
 
-### 11. Prepare metadata
+Note that if you want to support just a single platform (for example, you are building an app that can be run on a device only), you can skip the step to create the fat library and use the output framework from the device build earlier.
 
-At this time, you should have the framework with the Objective-C generated interface header ready to be consumed by a Xamarin.iOS binding. The next step is to prepare the API definition interfaces, which are used by a binding project to generate C# classes. These definitions could be created manually or automatically by the Objective Sharpie tool and the generated header file. Use Sharpie to generate the metadata:
+### 9. Prepare metadata
 
-### 12. Objective Sharpie
+At this time, you should have the framework with the Objective-C generated interface header ready to be consumed by a Xamarin.iOS binding. The next step is to prepare the API definition interfaces, which are used by a binding project to generate C# classes. These definitions could be created manually or automatically by the Objective Sharpie tool and the generated header file.
 
-Download the latest Objective Sharpie tool from the official downloads website and install it by following the wizard. Once the installation is completed, you can verify it by running the sharpie command:
+To use Objective Sharpie to generate metadata, download the latest Objective Sharpie tool from the official downloads website and install it by following the wizard. Once the installation is completed, you can verify it by running the sharpie command:
 
-- sharpie -v
+```
+sharpie -v
+```
 
 Generate metadata using sharpie and the autogenerated Objective-C header file:
 
-- sharpie bind --sdk=iphoneos13.2 --output="XamarinApiDef" --namespace="Binding" --scope="Release-fat/SwiftFrameworkProxy.framework/Headers/" "Release-fat/SwiftFrameworkProxy.framework/Headers/SwiftFrameworkProxy-Swift.h"
+```
+sharpie bind --sdk=iphoneos13.2 --output="XamarinApiDef" --namespace="Binding" --scope="Release-fat/SwiftFrameworkProxy.framework/Headers/" "Release-fat/SwiftFrameworkProxy.framework/Headers/SwiftFrameworkProxy-Swift.h"
+```
 
 The output reflects the metadata files being generated: ApiDefinitions.cs and StructsAndEnums.cs. Save these files for the next step to include them into a Xamarin.iOS binding project along with the native references:
 
@@ -446,30 +465,30 @@ Binding...
 [write] StructsAndEnums.cs
 ```
 
-The tool will generate C# metadata for each exposed Objective-C member, which will look similar to the following code. As you can see it could be defined manually because it has a human-readable format and straightforward members mapping:
+The tool will generate C# metadata for each exposed Objective-C member, which will look similar to the following code. This could be defined manually since it has a human-readable format and straightforward members mapping:
 
 ```json
 [Export ("launchZelleWithViewController:applicationName:baseUrl:institutionId:ssoKey:product:")]
 void LaunchZelleWithViewController (UIViewController viewController, string applicationName, string baseUrl, string institutionId, string ssoKey, string product);
 ```
 
-### 13. Build a binding library
+### 10. Build a binding library
 
-The next step is to create a Xamarin.iOS binding project using the Visual Studio binding template, add required metadata, native references and then build the project to produce a consumable library:
+The next step is to create a Xamarin.iOS binding project using the Visual Studio binding template, add required metadata and native references, and then build the project to produce a consumable library.
 
-Open Visual Studio for Mac and create a new Xamarin.iOS binding library project, give it a name, in this case SwiftFrameworkProxy.Binding and complete the wizard. The Xamarin.iOS binding template is located by the following path: **iOS > Library > Binding Library**:
-    
+Open Visual Studio for Mac and create a new Xamarin.iOS binding library project. Give it a name (in this case, SwiftFrameworkProxy.Binding) and complete the wizard. The Xamarin.iOS binding template is located by the following path: **iOS > Library > Bindings Library**:
+
 ![xamarin_ios_bindinglib](../../assets/images/xamarin_ios_bindinglib.jpg)
 
-### 14. Add ApiDefinition.cs and Structs.cs file
+### 11. Add ApiDefinition.cs and Structs.cs file
 
-Delete existing metadata files **ApiDefinition.cs** and **Structs.cs** as they will be replaced completely with the metadata generated by the Objective Sharpie tool.
+Delete the existing metadata files **ApiDefinition.cs** and **Structs.cs** because they will be replaced completely with the metadata generated by the Objective Sharpie tool.
 
-Copy metadata generated by Sharpie at one of the previous steps, select the following Build Action in the properties window: **ObjBindingApiDefinition** for the **ApiDefinitions.cs** file and **ObjBindingCoreSource** for the **StructsAndEnums.cs** file:
-        
+Copy the metadata generated by Sharpie previously and select the following Build Action in the properties window: **ObjBindingApiDefinition** for the **ApiDefinitions.cs** file and **ObjBindingCoreSource** for the **StructsAndEnums.cs** file:
+
 ![xamarin_ios_addApiDef](../../assets/images/xamarin_ios_addApiDef.jpg)
 
-The metadata itself describes each exposed Objective-C class and member using C# language. You are able to see the original Objective-C header definition alongside with the C# declaration:
+The metadata itself describes each exposed Objective-C class and member using C# language. You are able to see the original Objective-C header definition alongside the C# declaration:
 
 ```json
 // @interface SwiftFrameworkProxy : NSObject
@@ -483,49 +502,50 @@ LaunchZelleWithViewController (UIViewController viewController, string applicati
 }
 ```
 
-Even though it's a valid C# code, it's not used as is but instead is used by Xamarin.iOS tools to generate C# classes based on this metadata definition. As a result, instead of the interface SwiftFrameworkProxy you get a C# class with the same name, which can be instantiated by your Xamarin.iOS code. This class gets methods, properties, and other members defined by your metadata, which you will call in a C# manner.
+Even though it is valid C# code, it is not used as is, but instead is used by Xamarin.iOS tools to generate C# classes based on this metadata definition. As a result, instead of the interface SwiftFrameworkProxy, you get a C# class with the same name, which can be instantiated by your Xamarin.iOS code. This class gets methods, properties, and other members defined by your metadata, which you will call in a C# manner.
 
-### 15. Add Native Reference
+### 12. Add Native References
 
-Add native reference to the generated earlier fat framework, as well as each dependency of that framework. In this case, add both SwiftFrameworkProxy and ZelleSDK framework native references to the binding project:
+Add native references to the fat framework generated earlier, as well as each dependency of that framework. In this case, add both SwiftFrameworkProxy and ZelleSDK framework native references to the binding project:
 
-- To add native framework references, open finder and navigate to the folder with the frameworks. Drag and drop the frameworks under the Native References location in the Solution Explorer. Alternatively, you can use the context menu option on the Native References folder and click **Add Native Reference** to look up the frameworks and add them:
-    
+To add native framework references, open the finder and navigate to the folder with the frameworks. Drag and drop the frameworks under the Native References location in the Solution Explorer. Alternatively, you can use the context menu option on the Native References folder and click **Add Native Reference** to look up the frameworks and add them:
+
 ![xamarin_ios_addReference](../../assets/images/xamarin_ios_addReference.jpg)
 
-- Update properties of every native reference and check three important options:
-  •	Set Smart Link = true
-  •	Set Force Load = false
-  •	Set list of Frameworks used to create the original frameworks. In this case each framework has only two dependencies: Foundation and UIKit. Set it to the Frameworks field:
-    
+Update the properties of every native reference and review three important options:
+
+- Set **Smart Link** = true
+- Set **Force Load** = false
+- Set the list of frameworks used to create the original frameworks. In this case, each framework has only two dependencies: Foundation and UIKit. Set it in the **Frameworks** field:
+
 ![xamarin_ios_setProperties](../../assets/images/xamarin_ios_setProperties.jpg)
 
-### 16. Consume the binding library
+### 13. Consume the binding library
 
-The final step is to consume the Xamarin.iOS binding library in a Xamarin.iOS application. Create a new Xamarin.iOS project, add reference to the binding library, and activate Swift SDK:
+The final step is to consume the Xamarin.iOS binding library in a Xamarin.iOS application. Create a new Xamarin.iOS project, add a reference to the binding library, and activate Swift SDK.
 
-- Create Xamarin.iOS project. You can use the **iOS > App > Single** View App as a starting point:
-    
+To create a Xamarin.iOS project, use the **iOS > App > Single View App** as a starting point:
+
 ![xamarin_ios_singleView](../../assets/images/xamarin_ios_singleView.jpg)
 
-- Add a binding project reference to the target project or .dll created previously. Treat the binding library as a regular Xamarin.iOS library:
+Add a binding project reference to the target project or .dll created previously. Treat the binding library as a regular Xamarin.iOS library:
 
 ![xamarin_ios_addFrameworkProxy](../../assets/images/xamarin_ios_addFrameworkProxy.jpg)
 
-- Update the source code of the app and add the initialization logic to the primary SampleViewController, which activates ZelleSDK.
+Update the source code of the app and add the initialization logic to the primary SampleViewController, which activates ZelleSDK.
 
 ```json
 public override void ViewDidLoad()
 {
   base.ViewDidLoad();
   var zelle = new ZelleProxy();
-  zelle.LaunchZelleWithViewController (this, “Demo Xamarin App”, "https://rxp-ui-test1.checkfreeweb.com/ftk/", “homeId”,  “key generated from payload url”, “zelle”);
+  zelle.LaunchZelleWithViewController (this, “applicationName”, "baseURL", “homeId”,  “zelle”, “sso”, true);
 }
 ```
 
-### 17. Launch Zelle
+### 14. Launch Zelle
 
-Run the application to launch the Zelle.
+Run the application to launch Zelle®.
 
 ### Sample Project:
 
