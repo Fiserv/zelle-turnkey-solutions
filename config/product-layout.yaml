@@ -29,7 +29,7 @@
 ################################################################################
 header:
   productName: Zelle SDK
-  productionDescription: The Turnkey Service for Zelle®":" Mobile SDK enables access to the mobile device capabilities for the Zelle® UI (e.g., contact list, camera, photo gallery, and sharing).
+  productionDescription: The Turnkey Service for Zelle®: Mobile SDK enables access to the mobile device capabilities for the Zelle® UI (e.g., contact list, camera, photo gallery, and sharing).
 getStarted: /docs/getting-started.md
 featuredFeatures:
   - title: Android SDK - Upgraded Kotlin
