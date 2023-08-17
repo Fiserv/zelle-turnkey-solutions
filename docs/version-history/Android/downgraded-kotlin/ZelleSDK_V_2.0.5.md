@@ -20,18 +20,15 @@ July 15 2022
 
 ```json
 val pdContact = mapOf(
-"title" to "Contact Title",
-"message" to "Contact Message")
-
-val appData = mapOf(
-"pd_contact" to pdContact )
+"pd_title" to "Contact Title",
+"pd_message" to "Contact Message")
 ``` 
 
 ### Prominent Disclosure Implementation
 
 ```json
 val zelle = Zelle(
-appData = appData
+appData = pdContact
 )
 ``` 
 
