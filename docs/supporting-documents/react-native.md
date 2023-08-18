@@ -501,6 +501,6 @@ NativeModules.MyModule.NavigateToZelle("Demo Bank", "base_url", "institution_id"
 
 ### Sample Project:
 
-[dps-zelle-sdk-testapp-reactnative.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/12104454/dps-zelle-sdk-testapp-reactnative.zip)
+[dps-zelle-sdk-testapp-reactnative.zip](https://github.com/Fiserv/zelle-turnkey-solutions/raw/develop/dps-zelle-sdk-testapp-reactnative.zip)
 
 

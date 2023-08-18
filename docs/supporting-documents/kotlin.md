@@ -171,7 +171,7 @@ zxing:core - 3.3.3 ([QR Code library](https://github.com/journeyapps/zxing-andro
 
 ### Sample Project
 
-[dps-zelle-sdk-testapp.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/12375764/dps-zelle-sdk-testapp.zip)
+[dps-zelle-sdk-testapp.zip](https://github.com/Fiserv/zelle-turnkey-solutions/raw/develop/dps-zelle-sdk-testapp.zip)
 
 
 
