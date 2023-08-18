@@ -164,4 +164,4 @@ zxing:core - 3.3.3 ([QR Code library](https://github.com/journeyapps/zxing-andro
 
 ### Sample Project
 
-[Zelle Payment.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/11689585/Zelle.Payment.zip)
+[dps-zelle-sdk-testapp.zip](https://github.com/Fiserv/zelle-turnkey-solutions/files/12375764/dps-zelle-sdk-testapp.zip)
