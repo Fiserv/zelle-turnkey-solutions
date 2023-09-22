@@ -2,9 +2,9 @@
 
 April 30 2023
 
-## Kotlin Version
+## Downgraded Kotlin Version
 
-1.3.72
+The SDK will support from kotlin version of 1.3.72
 
 ## V_2.1.3 (SDK version)
 
