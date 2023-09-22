@@ -14,7 +14,7 @@ July 15 2022
 - Prominent Disclosure implementation for Contact Permission
 - Notification bar color fix
 - Notification bar color fix
-- ZelleSDK theme issue fix
+
 
 ### Prominent Disclosure Initialization
 
