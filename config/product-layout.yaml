@@ -28,43 +28,55 @@
 # the delivery of this work
 ################################################################################
 header:
-  productName: REPLACEME
-  productionDescription: REPLACEME
-  whoIsItFor: REPLACEME
-  image: 
-    link: "/assets/images/Fiserv_Logo.jpg"
-    altText: REPLACEME™
+  productName: Zelle SDK
+  productionDescription: The Turnkey Service for Zelle® - Mobile SDK enables access to the mobile device capabilities for the Zelle® UI (e.g., contact list, camera, photo gallery, and sharing).
+getStarted: /docs/getting-started.md
 featuredFeatures:
-  - title: REPLACE ME
-    description:  REPLACE ME
-    tags: ["REPLACEME", "REPLACEME", "REPLACEME"]
-    bullets: ["REPLACEME", "REPLACEME" ]  
+  - title: Android SDK - Upgraded Kotlin
+    groupName: Guides
+    description: The Kotlin programming language (version 1.5.10) was used to create the SDK. The SDK will support Minimum SDK Version - 24 and Minimum OS Version - Android 7.0 Nougat.
     relatedDocs:
-      - relatedDoc: 
-        title: REPLACEME
-        description: REPLACEME
-        link: ./docs/REPLACE-ME1.md
-      - relatedDoc: 
-        title: REPLACEME
-        description: REPLACEME
-        link: ./docs/REPLACE-ME2.md
-      - relatedDoc: 
-        title: REPLACEME
-        description: REPLACEME
-        link: ./docs/REPLACE-ME3.md
-    relatedAPIs:
-      - relatedAPI: 
-        title: REPLACEME
-        description: REPLACEME
-        type: "patch"        
-        path: "/v1/REPLACEME1"
-      - relatedAPI: 
-        title: REPLACEME
-        description: REPLACEME
-        type: "post"        
-        path: "/v1/REPLACEME2"
-      - relatedAPI: 
-        title: REPLACEME
-        description: REPLACEME
-        type: "get"        
-        path: "/v1/REPLACEME3"
+      - relatedDoc:
+        title: Latest Zelle SDK
+        description: The latest Zelle SDK version is V_1.5.1. It will support both kotlin and java application.
+        link: ./docs/release-notes/Android/updated-kotlin/ZelleSDK_V_1.5.1.md
+      - relatedDoc:
+        title: Kotlin Integration Document
+        description: This document serves as technical integration guide for the Turnkey Service for Zelle® - Mobile SDK (Kotlin). This technical integration guide is intended to provide the mobile banking application provider with detailed information for upgrading the current Zelle® WebView implementation to include the Mobile SDK. This guide includes sample code snippets as part of the Mobile SDK upgrade project with Fiserv.
+        link: ./docs/supporting-documents/kotlin.md
+      - relatedDoc:
+        title: Java Integration Document
+        description: This document serves as technical integration guide for the Turnkey Service for Zelle® - Mobile SDK (Java). This technical integration guide is intended to provide the mobile banking application provider with detailed information for upgrading the current Zelle® WebView implementation to include the Mobile SDK. This guide includes sample code snippets as part of the Mobile SDK upgrade project with Fiserv.
+        link: ./docs/supporting-documents/java.md
+  - title: Android SDK - Downgraded Kotlin
+    groupName: Guides
+    description: The Kotlin programming language (version 1.3.72) was used to create the SDK. The SDK will support Minimum SDK Version - 24 and Minimum OS Version - Android 7.0 Nougat.
+    relatedDocs:
+      - relatedDoc:
+        title: Latest Zelle SDK
+        description: The latest Zelle SDK version is V_2.1.3. It will support both kotlin and java application.
+        link: ./docs/release-notes/Android/downgraded-kotlin/ZelleSDK_V_2.1.3.md
+      - relatedDoc:
+        title: Kotlin Integration Document
+        description: This document serves as technical integration guide for the Turnkey Service for Zelle® - Mobile SDK (Kotlin). This technical integration guide is intended to provide the mobile banking application provider with detailed information for upgrading the current Zelle® WebView implementation to include the Mobile SDK. This guide includes sample code snippets as part of the Mobile SDK upgrade project with Fiserv.
+        link: ./docs/supporting-documents/kotlin.md
+      - relatedDoc:
+        title: Java Integration Document
+        description: This document serves as technical integration guide for the Turnkey Service for Zelle® - Mobile SDK (Java). This technical integration guide is intended to provide the mobile banking application provider with detailed information for upgrading the current Zelle® WebView implementation to include the Mobile SDK. This guide includes sample code snippets as part of the Mobile SDK upgrade project with Fiserv.
+        link: ./docs/supporting-documents/java.md
+  - title: iOS SDK
+    groupName: Guides
+    description: The Swift programming language (version 5) was used to create the SDK. The SDK will support minimum OS Version - 13 and minimum Xcode version - 11.
+    relatedDocs:
+      - relatedDoc:
+        title: Latest Zelle SDK
+        description: The latest Zelle SDK version is 1.4.5. It will support both swift and objective-C application.
+        link: ./docs/release-notes/iOS/ZelleSDK_V_1.4.5.md
+      - relatedDoc:
+        title: Swift Integration Document
+        description: This document serves as technical integration guide for the Turnkey Service for Zelle® - Mobile SDK (Swift). This technical integration guide is intended to provide the mobile banking application provider with detailed information for upgrading the current Zelle® WebView implementation to include the Mobile SDK. This guide includes sample code snippets as part of the Mobile SDK upgrade project with Fiserv.
+        link: ./docs/supporting-documents/swift.md
+      - relatedDoc:
+        title: Objective-C Integration Document
+        description: This document serves as technical integration guide for the Turnkey Service for Zelle® - Mobile SDK (Objective-C). This technical integration guide is intended to provide the mobile banking application provider with detailed information for upgrading the current Zelle® WebView implementation to include the Mobile SDK. This guide includes sample code snippets as part of the Mobile SDK upgrade project with Fiserv.
+        link: ./docs/supporting-documents/objectivec.md
